@@ -1,0 +1,1922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leck Construction Ltd — Building South Cumbria Since 1946</title>
+  <meta name="description" content="One of South Cumbria's most experienced construction companies. Private housing, commercial, heritage restoration and civil engineering across the Lake District and Furness Peninsula.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leckconstruction.co.uk">
+  <meta property="og:title" content="Leck Construction Ltd — Building South Cumbria Since 1946">
+  <meta property="og:description" content="One of South Cumbria's most experienced construction companies. Private housing, commercial, heritage restoration and civil engineering since 1946.">
+  <meta property="og:image" content="https://www.leckconstruction.co.uk/wp-content/uploads/2018/03/Leck-home-header-1.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Leck Construction Ltd — Building South Cumbria Since 1946">
+  <meta name="twitter:description" content="One of South Cumbria's most experienced construction companies.">
+  <meta name="twitter:image" content="https://www.leckconstruction.co.uk/wp-content/uploads/2018/03/Leck-home-header-1.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Leck Construction Ltd",
+    "description": "Premium construction company serving South Cumbria since 1946",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Leck House, Ironworks Road",
+      "addressLocality": "Barrow-in-Furness",
+      "addressRegion": "Cumbria",
+      "postalCode": "LA14 2PQ",
+      "addressCountry": "GB"
+    },
+    "telephone": "01229820394",
+    "email": "info@leckconstruction.co.uk",
+    "url": "https://leckconstruction.co.uk",
+    "foundingDate": "1946",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "bestRating": "5"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"],
+        "opens": "08:30",
+        "closes": "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Friday",
+        "opens": "08:00",
+        "closes": "15:30"
+      }
+    ]
+  }
+  </script>
+
+  <script>(function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:light)').matches?'light':'dark');if(t==='light')document.documentElement.setAttribute('data-theme','light')})();</script>
+
+  <link rel="stylesheet" href="fonts.css">
+
+  <style>
+    /* ─── Reset ──────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --dark:        #1C1917;
+      --dark-2:      #242120;
+      --dark-3:      #44403C;
+      --gold:        #A16207;
+      --gold-light:  #CA8A04;
+      --gold-pale:   #FEF3C7;
+      --gold-glow:   rgba(161,98,7,.15);
+      --off-white:   #FAFAF9;
+      --white:       #FFFFFF;
+      --muted:       #A8A29E;
+      --border-dark: rgba(255,255,255,.07);
+      --border-gold: rgba(202,138,4,.35);
+      --serif:       'Bodoni Moda', Georgia, serif;
+      --sans:        'Jost', system-ui, sans-serif;
+      --ease:        cubic-bezier(.4,0,.2,1);
+      --ease-out:    cubic-bezier(0,0,.2,1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    @keyframes pageFadeIn { from { opacity: 0; } to { opacity: 1; } }
+    body {
+      font-family: var(--sans);
+      background: var(--dark);
+      color: var(--off-white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      animation: pageFadeIn .38s ease-out both;
+    }
+
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+
+    /* Subtle noise grain */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: .03;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+    }
+
+    /* ─── Layout helpers ─────────────────────────────────────────── */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .eyebrow {
+      font-family: var(--sans);
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .eyebrow::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .eyebrow--dark { color: var(--gold); }
+    .eyebrow--dark::before { background: var(--gold); }
+
+    /* ─── Reveal animations ──────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s var(--ease-out), transform .7s var(--ease-out);
+      will-change: opacity, transform;
+    }
+    .reveal.in { opacity: 1; transform: none; }
+    .d1 { transition-delay: .1s; }
+    .d2 { transition-delay: .2s; }
+    .d3 { transition-delay: .3s; }
+    .d4 { transition-delay: .4s; }
+    .d5 { transition-delay: .5s; }
+
+    /* ─── Navigation ─────────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 100;
+      padding: 22px 0;
+      transition: background .35s var(--ease), padding .35s var(--ease), box-shadow .35s var(--ease);
+    }
+    .nav.scrolled {
+      background: rgba(28,25,23,.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      padding: 14px 0;
+      box-shadow: 0 1px 0 var(--border-dark);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .nav-logo img {
+      height: 34px;
+      width: auto;
+      object-fit: contain;
+    }
+    .nav-logo-fallback {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      font-weight: 500;
+      letter-spacing: .06em;
+      color: var(--white);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.65);
+      transition: color .25s;
+    }
+    .nav-links a:hover { color: var(--white); }
+
+    .nav-cta {
+      font-size: .7rem !important;
+      font-weight: 600 !important;
+      background: var(--gold) !important;
+      color: var(--white) !important;
+      padding: 10px 24px !important;
+      letter-spacing: .13em !important;
+      transition: background .25s !important;
+    }
+    .nav-cta:hover { background: var(--gold-light) !important; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 32px;
+      height: 32px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+      flex-shrink: 0;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--white);
+      transition: .3s var(--ease);
+      transform-origin: center;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--dark);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 36px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-family: var(--serif);
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--off-white);
+      transition: color .25s;
+    }
+    .mobile-menu a:hover { color: var(--gold-light); }
+    .mobile-menu .mm-tel {
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--gold-light);
+      letter-spacing: .08em;
+      margin-top: 12px;
+    }
+
+    /* ─── Hero ────────────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      height: 100svh;
+      min-height: 580px;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 96px;
+      overflow: hidden;
+    }
+
+    .hero-parallax {
+      position: absolute;
+      inset: -15%;
+      will-change: transform;
+    }
+    .hero-bg {
+      width: 100%;
+      height: 100%;
+      background: url('https://www.leckconstruction.co.uk/wp-content/uploads/2018/03/Leck-home-header-1.jpg') center/cover no-repeat;
+      animation: kenBurns 24s ease-in-out infinite alternate;
+      will-change: transform;
+    }
+    @keyframes kenBurns {
+      from { transform: scale(1) translate(0,0); }
+      to   { transform: scale(1.07) translate(-1.5%,-1%); }
+    }
+
+    .hero-shade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        160deg,
+        rgba(12,10,9,.15) 0%,
+        rgba(12,10,9,.45) 40%,
+        rgba(12,10,9,.88) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    .hero-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid var(--border-gold);
+      padding: 7px 14px 7px 10px;
+      margin-bottom: 28px;
+      background: rgba(161,98,7,.08);
+    }
+    .hero-chip-dot {
+      width: 5px;
+      height: 5px;
+      background: var(--gold-light);
+      border-radius: 50%;
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity: 1; }
+      50%      { opacity: .3; }
+    }
+    .hero-chip span {
+      font-size: .65rem;
+      font-weight: 600;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(3rem, 7.5vw, 6rem);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -.015em;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+    .hero-title em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--gold-pale);
+    }
+
+    .hero-sub {
+      font-size: clamp(.88rem, 1.8vw, 1rem);
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba(255,255,255,.7);
+      max-width: 440px;
+      margin-bottom: 44px;
+      letter-spacing: .02em;
+    }
+
+    .hero-actions { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+
+    .btn-gold {
+      display: inline-block;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      background: var(--gold);
+      color: var(--white);
+      padding: 15px 34px;
+      cursor: pointer;
+      border: none;
+      transition: background .25s, transform .25s;
+    }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.7);
+      transition: color .25s;
+    }
+    .btn-ghost:hover { color: var(--white); }
+    .btn-ghost svg { transition: transform .25s; }
+    .btn-ghost:hover svg { transform: translateX(4px); }
+
+    /* ─── Hero content entrance ─────────────────────────────────── */
+    @keyframes heroFadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: none; }
+    }
+    .hero-chip    { animation: heroFadeUp .8s var(--ease-out) .15s both; }
+    .hero-title   { animation: heroFadeUp .9s var(--ease-out) .35s both; }
+    .hero-sub     { animation: heroFadeUp .8s var(--ease-out) .55s both; }
+    .hero-actions { animation: heroFadeUp .8s var(--ease-out) .72s both; }
+
+    .hero-scroll-cue {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+    .hero-scroll-cue span {
+      font-size: .58rem;
+      font-weight: 600;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.3);
+    }
+    .scroll-line {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, var(--gold-light), transparent);
+      animation: drawLine 2.2s ease-in-out infinite;
+    }
+    @keyframes drawLine {
+      0%   { transform: scaleY(0); transform-origin: top; opacity: 0; }
+      30%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
+      70%  { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
+      100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+    }
+
+    /* ─── Stats bar ──────────────────────────────────────────────── */
+    .stats {
+      background: var(--dark-2);
+      border-top: 1px solid var(--border-dark);
+      border-bottom: 1px solid var(--border-dark);
+      padding: 48px 0;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .stat {
+      padding: 0 36px;
+      text-align: center;
+      position: relative;
+    }
+    .stat + .stat::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8%;
+      height: 84%;
+      width: 1px;
+      background: var(--border-dark);
+    }
+    .stat-num {
+      font-family: var(--serif);
+      font-size: 2.8rem;
+      font-weight: 400;
+      color: var(--gold-light);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-num sup {
+      font-size: 1.4rem;
+      vertical-align: super;
+    }
+    .stat-label {
+      font-size: .66rem;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ─── About ──────────────────────────────────────────────────── */
+    .about {
+      padding: 128px 0;
+      background: var(--dark);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 88px;
+      align-items: center;
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+    .about-img-wrap::before {
+      content: '';
+      position: absolute;
+      top: -18px;
+      left: -18px;
+      right: 18px;
+      bottom: 18px;
+      border: 1px solid var(--border-gold);
+      pointer-events: none;
+    }
+    .about-img-wrap img {
+      width: 100%;
+      height: 540px;
+      object-fit: cover;
+      display: block;
+    }
+    .about-year-plate {
+      position: absolute;
+      bottom: -24px;
+      right: -24px;
+      background: var(--gold);
+      padding: 22px 30px;
+      text-align: center;
+      min-width: 110px;
+    }
+    .about-year-plate .yr {
+      font-family: var(--serif);
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1;
+      display: block;
+    }
+    .about-year-plate .est {
+      font-size: .58rem;
+      font-weight: 600;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.75);
+      margin-top: 4px;
+      display: block;
+    }
+
+    .about-copy h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 26px;
+    }
+    .about-copy p {
+      font-size: .97rem;
+      font-weight: 300;
+      line-height: 1.85;
+      color: rgba(250,250,249,.62);
+      margin-bottom: 18px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 36px;
+    }
+    .badge {
+      font-size: .62rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      border: 1px solid var(--border-gold);
+      padding: 8px 15px;
+      background: var(--gold-glow);
+      transition: .25s;
+    }
+    .badge:hover {
+      border-color: var(--gold-light);
+      background: rgba(202,138,4,.12);
+    }
+
+    /* ─── Services ───────────────────────────────────────────────── */
+    .services {
+      padding: 128px 0;
+      background: #F5F3F0;
+    }
+
+    .services-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 56px;
+      gap: 24px;
+    }
+    .services-head h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--dark);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+      background: #E0DDD8;
+    }
+
+    .svc-card {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      cursor: pointer;
+      background: var(--dark);
+    }
+    .svc-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .65s var(--ease-out);
+    }
+    .svc-card:hover img { transform: scale(1.06); }
+
+    .svc-shade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(12,10,9,.94) 0%,
+        rgba(12,10,9,.38) 55%,
+        rgba(12,10,9,.08) 100%
+      );
+      transition: background .5s;
+    }
+    .svc-card:hover .svc-shade {
+      background: linear-gradient(
+        to top,
+        rgba(12,10,9,.97) 0%,
+        rgba(12,10,9,.62) 60%,
+        rgba(12,10,9,.15) 100%
+      );
+    }
+
+    .svc-body {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 26px 28px;
+    }
+    .svc-num {
+      font-size: .58rem;
+      font-weight: 600;
+      letter-spacing: .22em;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+    }
+    .svc-title {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.25;
+      margin-bottom: 0;
+    }
+    .svc-desc {
+      font-size: .82rem;
+      font-weight: 300;
+      line-height: 1.65;
+      color: rgba(255,255,255,.68);
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      margin-top: 0;
+      transition: max-height .55s var(--ease-out), opacity .35s ease .1s, margin-top .35s;
+    }
+    .svc-card:hover .svc-desc {
+      max-height: 90px;
+      opacity: 1;
+      margin-top: 10px;
+    }
+    .svc-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .62rem;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-top: 14px;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity .3s ease .18s, transform .3s ease .18s;
+    }
+    .svc-card:hover .svc-more {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ─── Projects ──────────────────────────────────────────────── */
+    .projects {
+      padding: 128px 0;
+      background: var(--dark);
+    }
+    .projects-head {
+      margin-bottom: 56px;
+    }
+    .projects-head h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.15;
+      max-width: 480px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 16px;
+    }
+
+    .proj-card {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      background: var(--dark-2);
+    }
+    .proj-card:first-child {
+      grid-row: span 2;
+    }
+    .proj-card img {
+      width: 100%;
+      height: 100%;
+      min-height: 260px;
+      object-fit: cover;
+      transition: transform .65s var(--ease-out);
+      display: block;
+    }
+    .proj-card:first-child img { min-height: 540px; }
+    .proj-card:hover img { transform: scale(1.05); }
+
+    .proj-shade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(12,10,9,.88) 0%, transparent 55%);
+      transition: background .5s;
+    }
+    .proj-card:hover .proj-shade {
+      background: rgba(12,10,9,.72);
+    }
+
+    .proj-body {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 22px 24px;
+    }
+    .proj-tag {
+      display: inline-block;
+      font-size: .58rem;
+      font-weight: 600;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      background: var(--gold);
+      color: var(--white);
+      padding: 4px 10px;
+      margin-bottom: 9px;
+    }
+    .proj-title {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1.25;
+    }
+    .proj-loc {
+      font-size: .75rem;
+      font-weight: 300;
+      color: rgba(255,255,255,.5);
+      margin-top: 4px;
+    }
+    .proj-detail {
+      font-size: .8rem;
+      font-weight: 300;
+      line-height: 1.6;
+      color: rgba(255,255,255,.7);
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      margin-top: 0;
+      transition: max-height .5s var(--ease-out), opacity .3s ease .1s, margin-top .3s;
+    }
+    .proj-card:hover .proj-detail {
+      max-height: 90px;
+      opacity: 1;
+      margin-top: 10px;
+    }
+
+    /* ─── Accreditations strip ───────────────────────────────────── */
+    .accreditations {
+      padding: 72px 0;
+      background: var(--dark-2);
+      border-top: 1px solid var(--border-dark);
+    }
+    .accreditations h3 {
+      font-family: var(--serif);
+      font-size: 1.4rem;
+      font-weight: 400;
+      text-align: center;
+      color: var(--white);
+      margin-bottom: 36px;
+    }
+    .accred-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .accred {
+      font-size: .66rem;
+      font-weight: 600;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      border: 1px solid var(--border-dark);
+      padding: 12px 22px;
+      background: rgba(255,255,255,.02);
+      transition: .25s;
+    }
+    .accred:hover {
+      border-color: var(--border-gold);
+      color: var(--gold-light);
+      background: var(--gold-glow);
+    }
+
+    /* ─── Contact ────────────────────────────────────────────────── */
+    .contact {
+      padding: 128px 0;
+      background: var(--dark);
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 88px;
+      align-items: start;
+    }
+    .contact-copy h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 3.8vw, 3rem);
+      font-weight: 400;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 44px;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 26px;
+    }
+    .contact-icon {
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--border-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--gold-light);
+    }
+    .contact-detail-lbl {
+      font-size: .6rem;
+      font-weight: 600;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .contact-detail-val {
+      font-size: .95rem;
+      font-weight: 400;
+      color: var(--off-white);
+      line-height: 1.5;
+    }
+    .contact-detail-val a {
+      transition: color .25s;
+    }
+    .contact-detail-val a:hover { color: var(--gold-light); }
+
+    .hours {
+      margin-top: 36px;
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .hours tr { border-bottom: 1px solid var(--border-dark); }
+    .hours tr:last-child { border-bottom: none; }
+    .hours td {
+      padding: 11px 0;
+      font-size: .85rem;
+      font-weight: 300;
+      color: rgba(250,250,249,.62);
+    }
+    .hours td:last-child {
+      text-align: right;
+      color: var(--off-white);
+      font-weight: 500;
+    }
+    .hours .closed { color: var(--muted); }
+
+    .map-wrap {
+      border: 1px solid var(--border-dark);
+      overflow: hidden;
+      height: 440px;
+    }
+    .map-wrap iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: grayscale(30%) invert(95%) hue-rotate(180deg) brightness(.94);
+    }
+    .map-addr {
+      font-size: .72rem;
+      font-weight: 300;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 14px;
+    }
+
+    /* ─── Contact form ───────────────────────────────────────────── */
+    .bot-trap { display: none; }
+    .cf-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .cf-field { display: flex; flex-direction: column; gap: 7px; margin-bottom: 16px; }
+    .cf-label {
+      font-size: .6rem;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .cf-label span { color: var(--gold); }
+    .cf-input {
+      background: var(--dark-2);
+      border: 1px solid var(--border-dark);
+      color: var(--off-white);
+      font-family: var(--sans);
+      font-size: .9rem;
+      font-weight: 300;
+      padding: 13px 16px;
+      width: 100%;
+      transition: border-color .2s;
+      outline: none;
+      -webkit-appearance: none;
+    }
+    .cf-input::placeholder { color: rgba(168,162,158,.35); }
+    .cf-input:focus { border-color: var(--border-gold); }
+    .cf-input:user-invalid { border-color: rgba(239,68,68,.45); }
+    .cf-textarea { resize: vertical; min-height: 126px; }
+    .cf-submit {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--gold);
+      color: var(--white);
+      font-family: var(--sans);
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      border: none;
+      padding: 16px 32px;
+      cursor: pointer;
+      width: 100%;
+      transition: background .25s, transform .2s;
+      margin-top: 4px;
+    }
+    .cf-submit:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .cf-submit:disabled { opacity: .55; cursor: not-allowed; transform: none; }
+    .cf-arrow { transition: transform .25s; display: inline-block; }
+    .cf-submit:not(:disabled):hover .cf-arrow { transform: translateX(4px); }
+    .cf-success {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 380px;
+      border: 1px solid var(--border-gold);
+      background: var(--gold-glow);
+    }
+    .cf-success-inner { text-align: center; padding: 40px; }
+    .cf-tick {
+      width: 48px; height: 48px;
+      border: 1px solid var(--border-gold);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+      color: var(--gold-light);
+      font-size: 1.2rem;
+    }
+    .cf-success-inner h3 {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .cf-success-inner p { font-size: .88rem; font-weight: 300; color: var(--muted); }
+
+    /* ─── Map strip (below contact section) ─────────────────────── */
+    .map-strip {
+      height: 280px;
+      border-top: 1px solid var(--border-dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .map-strip iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: grayscale(30%) invert(95%) hue-rotate(180deg) brightness(.94);
+    }
+
+    /* ─── Focus styles ───────────────────────────────────────────── */
+    a:focus-visible,
+    button:focus-visible {
+      outline: 2px solid var(--gold-light);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    /* ─── Footer logo image fix ──────────────────────────────────── */
+    .footer-logo-img {
+      height: 30px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      margin-bottom: 18px;
+    }
+
+    /* ─── Footer ─────────────────────────────────────────────────── */
+    .footer {
+      background: var(--dark-2);
+      border-top: 1px solid var(--border-dark);
+      padding: 64px 0 40px;
+    }
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 48px;
+      padding-bottom: 48px;
+      margin-bottom: 40px;
+      border-bottom: 1px solid var(--border-dark);
+    }
+    .footer-logo img {
+      height: 30px;
+      margin-bottom: 18px;
+      object-fit: contain;
+    }
+    .footer-logo-fallback {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--white);
+      margin-bottom: 18px;
+      display: block;
+    }
+    .footer-tagline {
+      font-size: .82rem;
+      font-weight: 300;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 280px;
+    }
+    .footer-links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px 56px;
+      flex-shrink: 0;
+    }
+    .footer-links a {
+      font-size: .78rem;
+      font-weight: 400;
+      color: var(--muted);
+      transition: color .25s;
+    }
+    .footer-links a:hover { color: var(--gold-light); }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .footer-legal {
+      font-size: .7rem;
+      font-weight: 300;
+      color: rgba(168,162,158,.45);
+    }
+    .footer-reg {
+      font-size: .7rem;
+      font-weight: 300;
+      color: rgba(168,162,158,.35);
+      text-align: right;
+    }
+
+    /* ─── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .about-grid,
+      .contact-grid { grid-template-columns: 1fr; gap: 64px; }
+      .about-img-wrap img { height: 420px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .projects-grid { grid-template-columns: repeat(2, 1fr); }
+      .proj-card:first-child { grid-row: span 1; }
+      .proj-card:first-child img { min-height: 300px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); row-gap: 32px; }
+      .stat:nth-child(2n)::before { display: none; }
+      .stat:nth-child(n+3)::before { display: none; }
+      .stat:nth-child(3)::before { display: block; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .services-grid { grid-template-columns: 1fr; }
+      .services-head { flex-direction: column; align-items: flex-start; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .footer-top { flex-direction: column; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .footer-reg { text-align: center; }
+      .about, .services, .projects, .contact { padding: 88px 0; }
+      .about-year-plate { right: -12px; bottom: -16px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .stat:nth-child(3)::before { display: none; }
+      .cf-row-2 { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-title { font-size: 2.6rem; }
+      .stat { padding: 0 20px; }
+      .stat-num { font-size: 2.2rem; }
+      .about-img-wrap img { height: 320px; }
+      .container { padding: 0 20px; }
+      .services-grid { background: transparent; gap: 12px; }
+    }
+
+    /* ─── Scroll Progress Bar ────────────────────────────────────── */
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--gold-light);
+      z-index: 101;
+      transition: width .08s linear;
+      transform-origin: left;
+      pointer-events: none;
+    }
+
+    /* ─── Mobile CTA Bar ─────────────────────────────────────────── */
+    .mobile-cta { display: none; }
+    @media (max-width: 768px) {
+      .mobile-cta {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 98;
+        background: var(--gold);
+      }
+      .mobile-cta-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 15px 24px;
+        padding-bottom: calc(15px + env(safe-area-inset-bottom));
+        font-size: .72rem;
+        font-weight: 600;
+        letter-spacing: .16em;
+        text-transform: uppercase;
+        color: var(--white);
+        transition: background .2s;
+      }
+      .mobile-cta-link:hover { background: rgba(0,0,0,.1); }
+      .footer { padding-bottom: calc(40px + 56px + env(safe-area-inset-bottom)); }
+    }
+
+    /* ─── Lazy Map Placeholder ───────────────────────────────────── */
+    .map-placeholder {
+      width: 100%;
+      height: 100%;
+      background: var(--dark-2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      cursor: pointer;
+      border: none;
+      transition: background .25s;
+    }
+    .map-placeholder:hover { background: var(--dark-3); }
+    .map-placeholder svg { color: var(--gold-light); opacity: .7; }
+    .map-placeholder-text {
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* ─── Theme Toggle Button ─────────────────────────────────────── */
+    .theme-toggle {
+      background: none;
+      border: 1px solid rgba(255,255,255,.15);
+      color: rgba(255,255,255,.55);
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color .25s, border-color .25s;
+      padding: 0;
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .theme-toggle:hover { color: var(--white); border-color: rgba(255,255,255,.3); }
+    .theme-toggle .icon-moon { display: none; }
+    .theme-toggle .icon-sun  { display: block; }
+    .mobile-menu .theme-toggle { width: 44px; height: 44px; border-color: var(--border-gold); margin-top: 8px; }
+
+    /* ─── Light Mode ──────────────────────────────────────────────── */
+    html[data-theme="light"] {
+      --dark:        #F8F6F3;
+      --dark-2:      #EDE9E4;
+      --dark-3:      #E2DDD7;
+      --off-white:   #1C1917;
+      --border-dark: rgba(0,0,0,.09);
+      --border-gold: rgba(161,98,7,.42);
+      --gold-glow:   rgba(161,98,7,.07);
+      --muted:       #6B6560;
+    }
+    html[data-theme="light"] .theme-toggle .icon-sun  { display: none; }
+    html[data-theme="light"] .theme-toggle .icon-moon { display: block; }
+
+    html[data-theme="light"] .nav.scrolled {
+      background: rgba(248,246,243,.96);
+      box-shadow: 0 1px 0 rgba(0,0,0,.09);
+    }
+    html[data-theme="light"] .nav.scrolled .nav-links a { color: rgba(28,25,23,.6); }
+    html[data-theme="light"] .nav.scrolled .nav-links a:hover { color: #1C1917; }
+    html[data-theme="light"] .nav.scrolled .hamburger span { background: #1C1917; }
+    html[data-theme="light"] .nav.scrolled .theme-toggle { color: rgba(28,25,23,.5); border-color: rgba(0,0,0,.13); }
+    html[data-theme="light"] .nav.scrolled .theme-toggle:hover { color: #1C1917; border-color: rgba(0,0,0,.25); }
+
+    html[data-theme="light"] .services-head h2 { color: #1C1917; }
+    html[data-theme="light"] .about-copy h2 { color: #1C1917; }
+    html[data-theme="light"] .about-copy p  { color: rgba(28,25,23,.62); }
+    html[data-theme="light"] .projects-head h2 { color: #1C1917; }
+    html[data-theme="light"] .accreditations h3 { color: #1C1917; }
+    html[data-theme="light"] .accred { background: rgba(0,0,0,.02); }
+    html[data-theme="light"] .contact-copy h2 { color: #1C1917; }
+    html[data-theme="light"] .hours td { color: rgba(28,25,23,.62); }
+    html[data-theme="light"] .hours td:last-child { color: #1C1917; }
+    html[data-theme="light"] .hours .closed { color: var(--muted); }
+    html[data-theme="light"] .cf-input { background: #FFFFFF; border-color: rgba(0,0,0,.12); }
+    html[data-theme="light"] .cf-input:focus { border-color: var(--gold); }
+    html[data-theme="light"] .map-strip iframe,
+    html[data-theme="light"] .map-wrap iframe { filter: grayscale(15%); }
+    html[data-theme="light"] .footer-legal { color: rgba(28,25,23,.4); }
+    html[data-theme="light"] .footer-reg   { color: rgba(28,25,23,.35); }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero-bg { animation: none; }
+      .reveal { opacity: 1 !important; transform: none !important; }
+      .hero-chip, .hero-title, .hero-sub, .hero-actions {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      * { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-delay: 0ms !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ═══ NAV ═══════════════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="container">
+      <div class="nav-inner">
+
+        <a href="#top" class="nav-logo">
+          <img
+            src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/03/logo_white01-1.png"
+            alt="Leck Construction Ltd"
+            onerror="this.style.display='none'; document.querySelector('.nav-logo-fallback').style.display='block'">
+          <span class="nav-logo-fallback" style="display:none">Leck Construction</span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button class="theme-toggle" aria-label="Toggle light mode">
+              <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+              <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+          </li>
+          <li><a href="tel:01229820394" class="nav-cta">01229 820394</a></li>
+        </ul>
+
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
+    <a href="#about"     class="mm-link">About</a>
+    <a href="#services"  class="mm-link">Services</a>
+    <a href="#projects"  class="mm-link">Projects</a>
+    <a href="#contact"   class="mm-link">Contact</a>
+    <a href="tel:01229820394" class="mm-tel">01229 820394</a>
+    <button class="theme-toggle" aria-label="Toggle light mode">
+      <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </div>
+
+
+  <!-- ═══ HERO ══════════════════════════════════════════════════ -->
+  <section class="hero" id="top">
+    <div class="hero-parallax" id="heroParallax">
+      <div class="hero-bg"></div>
+    </div>
+    <div class="hero-shade"></div>
+
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="hero-chip">
+          <div class="hero-chip-dot"></div>
+          <span>Established 1946 · South Cumbria</span>
+        </div>
+
+        <h1 class="hero-title">
+          Building South<br>Cumbria's <em>Finest</em>
+        </h1>
+
+        <p class="hero-sub">
+          From bespoke Lake District homes to Grade II listed heritage restorations — delivering landmark construction across Cumbria for over 80 years.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#services" class="btn-gold">Our Services</a>
+          <a href="#projects" class="btn-ghost">
+            View Projects
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="hero-scroll-cue" onclick="document.getElementById('stats').scrollIntoView({behavior:'smooth'})" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+
+  <!-- ═══ STATS ══════════════════════════════════════════════════ -->
+  <section class="stats" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat reveal">
+          <div class="stat-num" data-count="1946" data-from="1940">1946</div>
+          <div class="stat-label">Year Founded</div>
+        </div>
+        <div class="stat reveal d1">
+          <div class="stat-num" data-count="80" data-from="0">80<sup>+</sup></div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat reveal d2">
+          <div class="stat-num" data-count="5.0" data-from="0" data-decimals="1">5.0<sup>★</sup></div>
+          <div class="stat-label">Google Rating</div>
+        </div>
+        <div class="stat reveal d3">
+          <div class="stat-num" data-count="6" data-from="0">6</div>
+          <div class="stat-label">Specialist Sectors</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ ABOUT ══════════════════════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-img-wrap reveal">
+          <img
+            src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/01/team-img.jpg"
+            alt="The Leck Construction team"
+            loading="lazy">
+          <div class="about-year-plate" aria-hidden="true">
+            <span class="yr">1946</span>
+            <span class="est">Est.</span>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <div class="eyebrow reveal">Our Story</div>
+          <h2 class="reveal d1">Eight Decades of<br><em style="font-style:italic">Craftsmanship</em></h2>
+          <p class="reveal d2">
+            Founded in 1946 as John Leck & Son, Leck Construction Ltd is one of the most experienced and respected construction companies in South Lakeland. With our head office at Leck House, Barrow-in-Furness, and a regional presence stretching from the Lake District National Park to Manchester, we deliver across every scale of project.
+          </p>
+          <p class="reveal d3">
+            Our experienced management team and skilled local workforce span groundwork, bricklaying, joinery, civil engineering and heritage conservation. We offer a full design-and-build service — taking sole responsibility from initial concept through to final completion, for clients ranging from private homeowners to major corporate partners including GlaxoSmithKline and BAE Systems.
+          </p>
+          <div class="badges reveal d4">
+            <span class="badge">NHBC Grade A</span>
+            <span class="badge">ISO 9001</span>
+            <span class="badge">ISO 14001</span>
+            <span class="badge">CHAS Accredited</span>
+            <span class="badge">NFB Member</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ SERVICES ══════════════════════════════════════════════ -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="services-head reveal">
+        <div>
+          <div class="eyebrow eyebrow--dark">What We Build</div>
+          <h2>Six Specialist<br><em style="font-style:italic; color:#78716C">Sectors</em></h2>
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width:1200px; margin:0 auto; padding:0 28px;">
+      <div class="services-grid">
+
+        <a href="heritage-conservation.html" class="svc-card reveal">
+          <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/03/category-heritage.jpg" alt="Heritage & Conservation" loading="lazy">
+          <div class="svc-shade"></div>
+          <div class="svc-body">
+            <div class="svc-num">01</div>
+            <div class="svc-title">Heritage &amp; Conservation</div>
+            <div class="svc-desc">Currently restoring the 300+ year old Grade II listed Ship Inn on Piel Island — one of Britain's most extraordinary heritage sites.</div>
+            <div class="svc-more">Explore <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+        <a href="commercial-education-health.html" class="svc-card reveal d1">
+          <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/03/category-commercial.jpg" alt="Commercial, Education & Health" loading="lazy">
+          <div class="svc-shade"></div>
+          <div class="svc-body">
+            <div class="svc-num">02</div>
+            <div class="svc-title">Commercial, Education &amp; Health</div>
+            <div class="svc-desc">Iconic landmarks including Emlyn Hughes House and Barrow Magistrates Court — complex builds delivered with precision.</div>
+            <div class="svc-more">Explore <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+        <a href="industrial-civil-engineering.html" class="svc-card reveal d2">
+          <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/03/category-industrial.jpg" alt="Industrial & Civil Engineering" loading="lazy">
+          <div class="svc-shade"></div>
+          <div class="svc-body">
+            <div class="svc-num">03</div>
+            <div class="svc-title">Industrial &amp; Civil Engineering</div>
+            <div class="svc-desc">Heavy civil and industrial construction expertise deployed across Cumbria and beyond.</div>
+            <div class="svc-more">Explore <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+        <a href="partnerships.html" class="svc-card reveal d1">
+          <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/01/gallery3.jpg" alt="Partnerships" loading="lazy">
+          <div class="svc-shade"></div>
+          <div class="svc-body">
+            <div class="svc-num">04</div>
+            <div class="svc-title">Partnerships</div>
+            <div class="svc-desc">Measured term contracts with GlaxoSmithKline and BAE Systems, plus strong bonds with regional housing associations.</div>
+            <div class="svc-more">Explore <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+        <a href="private-social-housing.html" class="svc-card reveal d2">
+          <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/03/category-private.jpg" alt="Private & Social Housing" loading="lazy">
+          <div class="svc-shade"></div>
+          <div class="svc-body">
+            <div class="svc-num">05</div>
+            <div class="svc-title">Private &amp; Social Housing</div>
+            <div class="svc-desc">NHBC Grade A-rated housebuilder delivering bespoke homes across the Lake District — complete with swimming pools, wine cellars, and cinema rooms.</div>
+            <div class="svc-more">Explore <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+        <a href="leck-homes.html" class="svc-card reveal d3">
+          <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/03/category-leckhomes.jpg" alt="Leck Homes" loading="lazy">
+          <div class="svc-shade"></div>
+          <div class="svc-body">
+            <div class="svc-num">06</div>
+            <div class="svc-title">Leck Homes</div>
+            <div class="svc-desc">Our own housing development division — delivering quality residential schemes for the region.</div>
+            <div class="svc-more">Explore <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ PROJECTS ═══════════════════════════════════════════════ -->
+  <section class="projects" id="projects">
+    <div class="container">
+
+      <div class="projects-head">
+        <div class="eyebrow reveal">Featured Projects</div>
+        <h2 class="reveal d1">Work That <em style="font-style:italic">Speaks</em><br>for Itself</h2>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="proj-card reveal">
+          <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/03/category-heritage.jpg" alt="The Ship Inn, Piel Island" loading="lazy">
+          <div class="proj-shade"></div>
+          <div class="proj-body">
+            <div class="proj-tag">Heritage & Conservation</div>
+            <div class="proj-title">The Ship Inn, Piel Island</div>
+            <div class="proj-loc">Piel Island, Cumbria</div>
+            <div class="proj-detail">Ongoing restoration of the 300+ year old Grade II listed Ship Inn — an extraordinary project on an island accessible only by boat, requiring specialist heritage skills and logistics.</div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal d1">
+          <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/02/place.jpg" alt="Hellis Place, Hawkshead" loading="lazy">
+          <div class="proj-shade"></div>
+          <div class="proj-body">
+            <div class="proj-tag">Private Housing</div>
+            <div class="proj-title">Hellis Place</div>
+            <div class="proj-loc">Hawkshead, Lake District</div>
+            <div class="proj-detail">Sensitive residential development in the Lake District National Park, sympathetic to its historic surroundings.</div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal d2">
+          <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/02/waterside.jpg" alt="Waterside Development, Staveley" loading="lazy">
+          <div class="proj-shade"></div>
+          <div class="proj-body">
+            <div class="proj-tag">Private Housing</div>
+            <div class="proj-title">Waterside Development</div>
+            <div class="proj-loc">Staveley, Cumbria</div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal d1">
+          <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/02/build.jpg" alt="Meregarth, Windermere" loading="lazy">
+          <div class="proj-shade"></div>
+          <div class="proj-body">
+            <div class="proj-tag">Bespoke Residential</div>
+            <div class="proj-title">Meregarth</div>
+            <div class="proj-loc">Windermere, Lake District</div>
+            <div class="proj-detail">High-specification bespoke dwelling with pool, wine cellar and cinema room — a flagship example of Leck's residential capability.</div>
+          </div>
+        </div>
+
+        <div class="proj-card reveal d2">
+          <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/02/leck-square-images-bespoke3.jpg" alt="Bespoke Lake District Home" loading="lazy">
+          <div class="proj-shade"></div>
+          <div class="proj-body">
+            <div class="proj-tag">Bespoke Residential</div>
+            <div class="proj-title">Bespoke Lake District Home</div>
+            <div class="proj-loc">Lake District National Park</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ ACCREDITATIONS ════════════════════════════════════════ -->
+  <section class="accreditations">
+    <div class="container">
+      <h3 class="reveal">Accreditations &amp; Memberships</h3>
+      <div class="accred-row">
+        <div class="accred reveal">NHBC Grade A Rated</div>
+        <div class="accred reveal d1">National Federation of Builders</div>
+        <div class="accred reveal d2">CHAS Accredited</div>
+        <div class="accred reveal d3">ISO 9001 : 2015</div>
+        <div class="accred reveal d4">ISO 14001 : 2015</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══ CONTACT ════════════════════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-copy">
+          <div class="eyebrow reveal">Get In Touch</div>
+          <h2 class="reveal d1">Let's Build<br><em style="font-style:italic">Something</em><br>Together</h2>
+
+          <div class="contact-row reveal d2">
+            <div class="contact-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+            </div>
+            <div>
+              <div class="contact-detail-lbl">Telephone</div>
+              <div class="contact-detail-val"><a href="tel:01229820394">01229 820394</a></div>
+            </div>
+          </div>
+
+          <div class="contact-row reveal d3">
+            <div class="contact-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-detail-lbl">Email</div>
+              <div class="contact-detail-val"><a href="mailto:info@leckconstruction.co.uk">info@leckconstruction.co.uk</a></div>
+            </div>
+          </div>
+
+          <div class="contact-row reveal d4">
+            <div class="contact-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact-detail-lbl">Head Office</div>
+              <div class="contact-detail-val">Leck House, Ironworks Road<br>Barrow-in-Furness, LA14 2PQ</div>
+            </div>
+          </div>
+
+          <table class="hours reveal d4" aria-label="Opening hours">
+            <tbody>
+              <tr>
+                <td>Monday – Thursday</td>
+                <td>8:30 am – 5:00 pm</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>8:00 am – 3:30 pm</td>
+              </tr>
+              <tr>
+                <td>Saturday – Sunday</td>
+                <td class="closed">Closed</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="reveal d2">
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            id="contactForm"
+            novalidate>
+            <input type="hidden" name="form-name" value="contact">
+            <p class="bot-trap"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+            <div class="cf-row-2">
+              <div class="cf-field">
+                <label class="cf-label" for="cf-name">Full Name <span aria-hidden="true">*</span></label>
+                <input class="cf-input" type="text" id="cf-name" name="name" required autocomplete="name" placeholder="John Smith">
+              </div>
+              <div class="cf-field">
+                <label class="cf-label" for="cf-phone">Phone Number</label>
+                <input class="cf-input" type="tel" id="cf-phone" name="phone" autocomplete="tel" placeholder="01229 820394">
+              </div>
+            </div>
+
+            <div class="cf-field">
+              <label class="cf-label" for="cf-email">Email Address <span aria-hidden="true">*</span></label>
+              <input class="cf-input" type="email" id="cf-email" name="email" required autocomplete="email" placeholder="you@example.com">
+            </div>
+
+            <div class="cf-field">
+              <label class="cf-label" for="cf-message">Tell Us About Your Project <span aria-hidden="true">*</span></label>
+              <textarea class="cf-input cf-textarea" id="cf-message" name="message" required rows="5" placeholder="Briefly describe your project, location and timescale…"></textarea>
+            </div>
+
+            <button type="submit" class="cf-submit">
+              Send Enquiry <span class="cf-arrow">→</span>
+            </button>
+          </form>
+
+          <div class="cf-success" id="cfSuccess" hidden>
+            <div class="cf-success-inner">
+              <div class="cf-tick" aria-hidden="true">✓</div>
+              <h3>Message Sent</h3>
+              <p>Thank you — we'll be in touch shortly.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MOBILE CTA BAR ══════════════════════════════════════════ -->
+  <div class="mobile-cta" id="mobileCta">
+    <a href="tel:01229820394" class="mobile-cta-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg>
+      Call 01229 820394
+    </a>
+  </div>
+
+  <!-- ═══ MAP STRIP ════════════════════════════════════════════════ -->
+  <div class="map-strip" id="mapStrip">
+    <button class="map-placeholder" data-map-src="https://maps.google.com/maps?q=54.1109,-3.2274&z=15&output=embed" aria-label="Load map — Leck Construction Ltd, Barrow-in-Furness">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span class="map-placeholder-text">Click to load map</span>
+    </button>
+  </div>
+
+  <!-- ═══ FOOTER ═════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top">
+        <div>
+          <img
+            src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/01/footer_logo.png"
+            alt="Leck Construction Ltd"
+            class="footer-logo-img"
+            loading="lazy"
+            onerror="this.style.display='none'; document.querySelector('.footer-logo-fallback').style.display='block'">
+          <span class="footer-logo-fallback" style="display:none">Leck Construction</span>
+          <p class="footer-tagline">Building South Cumbria's finest homes, landmarks and heritage restorations since 1946.</p>
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#about">About Us</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <a href="tel:01229820394">01229 820394</a>
+          <a href="mailto:info@leckconstruction.co.uk">Email Us</a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-legal">© 2026 Leck Construction Ltd. All rights reserved.</p>
+        <p class="footer-reg">Company No. 00421094 · Leck House, Ironworks Road, Barrow-in-Furness LA14 2PQ</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <script>
+    // ── Scroll progress bar
+    const progressBar = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      progressBar.style.width = total > 0 ? `${(window.scrollY / total) * 100}%` : '0%';
+    }, { passive: true });
+
+    // ── Animated stat counters
+    document.querySelectorAll('.stat-num[data-count]').forEach(el => {
+      const io = new IntersectionObserver(([entry]) => {
+        if (!entry.isIntersecting) return;
+        io.disconnect();
+        const target   = parseFloat(el.dataset.count);
+        const from     = parseFloat(el.dataset.from || 0);
+        const decimals = parseInt(el.dataset.decimals || 0);
+        const suffix   = el.innerHTML.match(/<sup>(.*?)<\/sup>/)?.[1] || '';
+        const duration = 1400;
+        const start    = performance.now();
+        const tick = now => {
+          const p = Math.min((now - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          el.innerHTML = (from + (target - from) * eased).toFixed(decimals) +
+            (suffix ? `<sup>${suffix}</sup>` : '');
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      }, { threshold: 0.6 });
+      io.observe(el);
+    });
+
+    // ── Lazy map
+    document.querySelectorAll('.map-placeholder').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const src = btn.dataset.mapSrc;
+        const iframe = document.createElement('iframe');
+        iframe.src = src;
+        iframe.title = btn.getAttribute('aria-label') || 'Map';
+        iframe.allowFullscreen = true;
+        iframe.referrerPolicy = 'no-referrer-when-downgrade';
+        iframe.style.cssText = 'width:100%;height:100%;border:0;filter:grayscale(30%) invert(95%) hue-rotate(180deg) brightness(.94)';
+        btn.replaceWith(iframe);
+      }, { once: true });
+    });
+
+    // ── Theme toggle
+    document.querySelectorAll('.theme-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+        const next = isLight ? 'dark' : 'light';
+        if (next === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        } else {
+          document.documentElement.removeAttribute('data-theme');
+        }
+        localStorage.setItem('theme', next);
+      });
+    });
+
+    // ── Nav: scroll state
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 50);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // ── Hamburger / mobile menu
+    const btn   = document.getElementById('hamburger');
+    const menu  = document.getElementById('mobileMenu');
+    const links = menu.querySelectorAll('.mm-link, .mm-tel');
+
+    btn.addEventListener('click', () => {
+      const open = btn.classList.toggle('open');
+      menu.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    links.forEach(l => l.addEventListener('click', () => {
+      btn.classList.remove('open');
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }));
+
+    // ── Reveal on scroll
+    const revealEls = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+    revealEls.forEach(el => io.observe(el));
+
+    // ── Contact form — Netlify AJAX
+    const contactForm = document.getElementById('contactForm');
+    const cfSuccess   = document.getElementById('cfSuccess');
+    if (contactForm) {
+      contactForm.addEventListener('submit', e => {
+        e.preventDefault();
+        if (!contactForm.checkValidity()) { contactForm.reportValidity(); return; }
+        const btn = contactForm.querySelector('.cf-submit');
+        btn.disabled = true;
+        btn.innerHTML = 'Sending… <span class="cf-arrow">→</span>';
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(new FormData(contactForm)).toString()
+        })
+        .then(() => {
+          contactForm.hidden = true;
+          cfSuccess.hidden   = false;
+        })
+        .catch(() => {
+          btn.disabled = false;
+          btn.innerHTML = 'Send Enquiry <span class="cf-arrow">→</span>';
+          alert('Something went wrong — please email info@leckconstruction.co.uk directly.');
+        });
+      });
+    }
+
+    // ── Hero parallax (separate from Ken Burns so transforms don't clash)
+    const heroParallax = document.getElementById('heroParallax');
+    const heroSection  = document.querySelector('.hero');
+    const heroH = heroSection ? heroSection.offsetHeight : window.innerHeight;
+
+    const onParallax = () => {
+      const y = window.scrollY;
+      if (y <= heroH) {
+        heroParallax.style.transform = `translateY(${y * 0.32}px)`;
+      }
+    };
+    window.addEventListener('scroll', onParallax, { passive: true });
+  </script>
+
+</body>
+</html>
