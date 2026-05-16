@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers &amp; Vacancies | Leck Construction Ltd | South Cumbria</title>
+  <meta name="description" content="Join Leck Construction — one of South Cumbria's most established contractors. View current vacancies across site management, trades and surveying.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leckconstruction.co.uk/careers">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leckconstruction.co.uk/careers">
+  <meta property="og:title" content="Careers &amp; Vacancies | Leck Construction Ltd">
+  <meta property="og:description" content="Join Leck Construction — one of South Cumbria's most established contractors. View current vacancies.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2000&q=80" fetchpriority="high">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="sector.css?v=16">
+  <style>
+    /* ── Page-specific overrides ─────────────────────────────── */
+    .vac-intro{display:grid;grid-template-columns:1.3fr 1fr;gap:80px;align-items:start;padding:80px 0 56px}
+    .vac-intro h1{font-size:clamp(2rem,4vw,3.2rem);font-weight:800;letter-spacing:-.03em;color:var(--navy);line-height:1.1;margin-bottom:16px}
+    .vac-intro p{font-size:.95rem;line-height:1.85;color:var(--grey-500)}
+    .vac-cta-box{background:var(--navy);padding:36px;border-top:3px solid var(--blue)}
+    .vac-cta-box h3{font-family:var(--display);font-size:1.15rem;font-weight:800;color:var(--white);letter-spacing:-.02em;margin-bottom:10px}
+    .vac-cta-box p{font-size:.85rem;line-height:1.7;color:rgba(255,255,255,.55);margin-bottom:22px}
+    .vac-email-btn{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--white);color:var(--navy);padding:12px 24px;transition:background .2s,color .2s;text-decoration:none}
+    .vac-email-btn:hover{background:var(--blue);color:var(--white)}
+    .vac-list{display:flex;flex-direction:column;gap:1px;background:var(--grey-200)}
+    .vac-item{background:var(--white);padding:28px 32px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:32px;border-left:3px solid transparent;transition:border-color .25s,background .2s}
+    .vac-item:hover{background:var(--off-white);border-left-color:var(--blue)}
+    .vac-title{font-size:1rem;font-weight:700;color:var(--navy);letter-spacing:-.01em;margin-bottom:8px}
+    .vac-tags{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:8px}
+    .vac-tag{font-size:.56rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);background:rgba(27,95,173,.08);padding:4px 10px}
+    .vac-loc{font-size:.78rem;color:var(--grey-400)}
+    .vac-desc{font-size:.85rem;line-height:1.65;color:var(--grey-500);max-width:560px}
+    .vac-apply{display:inline-flex;align-items:center;gap:8px;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--navy);color:var(--white);padding:12px 22px;white-space:nowrap;transition:background .2s;flex-shrink:0;text-decoration:none}
+    .vac-apply:hover{background:var(--blue)}
+    .vac-photo-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;overflow:hidden;margin-top:72px}
+    .vac-photo-row img{width:100%;height:340px;object-fit:cover;display:block}
+    .vac-values{padding:80px 0;background:var(--grey-50);border-top:1px solid var(--grey-200)}
+    .vac-values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px}
+    .vac-val-card{background:var(--white);padding:32px;border-top:3px solid var(--blue)}
+    .vac-val-icon{width:36px;height:36px;color:var(--blue);margin-bottom:18px;display:flex;align-items:center;justify-content:center}
+    .vac-val-icon svg{width:100%;height:100%;stroke:currentColor;stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .vac-val-title{font-family:var(--display);font-size:1rem;font-weight:800;color:var(--navy);letter-spacing:-.02em;margin-bottom:10px}
+    .vac-val-desc{font-size:.85rem;line-height:1.7;color:var(--grey-500)}
+    @media(max-width:1024px){
+      .vac-intro{grid-template-columns:1fr;gap:48px;padding:64px 0 40px}
+      .vac-values-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:768px){
+      .vac-item{grid-template-columns:1fr;gap:16px}
+      .vac-apply{width:100%;justify-content:center}
+      .vac-photo-row{grid-template-columns:1fr}
+      .vac-photo-row img{height:220px}
+      .vac-values-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <div class="container"><div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/leck-logo.png" alt="Leck Construction Ltd" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="nav-logo-fallback" style="display:none">Leck Construction</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li class="nav-has-drop">
+        <a href="approach.html">Our Approach</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">Our Approach</div>
+          <div class="mega-links">
+            <a href="approach.html#vision">Vision &amp; Values</a>
+            <a href="approach.html#health-safety">Health &amp; Safety</a>
+            <a href="approach.html#environment">Environment &amp; Sustainability</a>
+            <a href="approach.html#accreditations">Accreditations</a>
+            <a href="approach.html#community">Community &amp; Social Value</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-has-drop">
+        <a href="sectors.html">Sectors</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">What We Do</div>
+          <div class="mega-links">
+            <a href="partnerships.html">Strategic Partnerships</a>
+            <a href="commercial-education-health.html">Commercial, Education &amp; Health</a>
+            <a href="industrial-civil-engineering.html">Industrial &amp; Civil Engineering</a>
+            <a href="leck-homes.html">Leck Homes</a>
+            <a href="private-social-housing.html">Private &amp; Social Housing</a>
+            <a href="heritage-conservation.html">Heritage &amp; Conservation</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="projects.html">Our Work</a></li>
+      <li><a href="news.html">News</a></li>
+      <li class="nav-has-drop">
+        <a href="vacancies.html">Careers</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">Careers</div>
+          <div class="mega-links">
+            <a href="vacancies.html">Current Vacancies</a>
+            <a href="mailto:info@leckconstruction.co">Send Your CV</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="leck-homes.html" class="nav-cta">Leck Homes ↗</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#about" class="mm-link">About</a>
+  <a href="sectors.html" class="mm-link">Sectors</a>
+  <a href="projects.html" class="mm-link">Our Work</a>
+  <a href="news.html" class="mm-link">News</a>
+  <a href="vacancies.html" class="mm-link active">Careers</a>
+  <a href="index.html#contact" class="mm-link">Contact</a>
+  <a href="tel:01229820394" class="mm-tel">01229 820394</a>
+</div>
+
+<!-- HERO -->
+<section class="sec-hero">
+  <div class="sh-bg" style="background-image:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=2000&q=80')"></div>
+  <div class="sh-shade"></div>
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>/</span><span>Careers</span>
+    </nav>
+    <div class="sh-chip"><span>Work With Us</span></div>
+    <h1 class="sh-title">Building Careers<br><em>in South Cumbria.</em></h1>
+    <p class="sh-sub">Leck Construction has been part of South Cumbria's built environment for over 70 years. We invest in our people — from apprentices starting out to experienced professionals looking for a long-term home.</p>
+  </div>
+</section>
+
+<!-- INTRO + SPECULATIVE CTA -->
+<section style="background:var(--white);border-bottom:1px solid var(--grey-200)">
+  <div class="container">
+    <div class="vac-intro">
+      <div class="reveal">
+        <div class="eyebrow">Current Openings</div>
+        <h1>Current Vacancies</h1>
+        <p>We're always on the lookout for skilled, motivated people to join the team. From site management and quantity surveying to specialist trades and apprenticeships — if you're good at what you do and want to work for a company that takes quality seriously, we'd like to hear from you.</p>
+      </div>
+      <div class="vac-cta-box reveal d1">
+        <h3>Don't see the right role?</h3>
+        <p>We welcome speculative applications from experienced construction professionals. Send us your CV and a brief introduction and we'll be in touch if a suitable position arises.</p>
+        <a href="mailto:info@leckconstruction.co" class="vac-email-btn">Send Your CV →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VACANCIES LIST -->
+<section style="background:var(--white);padding-bottom:80px">
+  <div class="container">
+    <div class="vac-list reveal">
+
+      <div class="vac-item">
+        <div>
+          <div class="vac-title">Site Manager</div>
+          <div class="vac-tags">
+            <span class="vac-tag">Full-time</span>
+            <span class="vac-tag">Permanent</span>
+            <span class="vac-loc"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:-1px;margin-right:4px"><path d="M12 22s-7-7.5-7-13a7 7 0 0 1 14 0c0 5.5-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Barrow-in-Furness, Cumbria</span>
+          </div>
+          <p class="vac-desc">We are seeking an experienced Site Manager to oversee day-to-day operations across commercial and residential schemes. SMSTS and First Aid certificates required. Experience with NHBC requirements desirable.</p>
+        </div>
+        <a href="mailto:info@leckconstruction.co?subject=Application: Site Manager" class="vac-apply">Apply Now →</a>
+      </div>
+
+      <div class="vac-item">
+        <div>
+          <div class="vac-title">Quantity Surveyor</div>
+          <div class="vac-tags">
+            <span class="vac-tag">Full-time</span>
+            <span class="vac-tag">Permanent</span>
+            <span class="vac-loc"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:-1px;margin-right:4px"><path d="M12 22s-7-7.5-7-13a7 7 0 0 1 14 0c0 5.5-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Barrow-in-Furness, Cumbria</span>
+          </div>
+          <p class="vac-desc">Join our commercial team managing costs and procurement across a varied portfolio of housing, commercial and industrial contracts. Degree-qualified with 3+ years' experience in a main contractor environment preferred.</p>
+        </div>
+        <a href="mailto:info@leckconstruction.co?subject=Application: Quantity Surveyor" class="vac-apply">Apply Now →</a>
+      </div>
+
+      <div class="vac-item">
+        <div>
+          <div class="vac-title">Skilled Bricklayer</div>
+          <div class="vac-tags">
+            <span class="vac-tag">Full-time</span>
+            <span class="vac-tag">Permanent</span>
+            <span class="vac-loc"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:-1px;margin-right:4px"><path d="M12 22s-7-7.5-7-13a7 7 0 0 1 14 0c0 5.5-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Various sites across South Cumbria</span>
+          </div>
+          <p class="vac-desc">Experienced bricklayers required for residential and commercial projects across South Cumbria. Heritage and conservation masonry experience a significant advantage. CSCS card required.</p>
+        </div>
+        <a href="mailto:info@leckconstruction.co?subject=Application: Skilled Bricklayer" class="vac-apply">Apply Now →</a>
+      </div>
+
+      <div class="vac-item">
+        <div>
+          <div class="vac-title">Apprentice — Construction (Multiple Trades)</div>
+          <div class="vac-tags">
+            <span class="vac-tag">Apprenticeship</span>
+            <span class="vac-tag">Full-time</span>
+            <span class="vac-loc"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:inline-block;vertical-align:-1px;margin-right:4px"><path d="M12 22s-7-7.5-7-13a7 7 0 0 1 14 0c0 5.5-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Barrow-in-Furness &amp; surrounding area</span>
+          </div>
+          <p class="vac-desc">Leck Construction is committed to training the next generation of construction professionals. We offer apprenticeships across bricklaying, joinery, site management and surveying in partnership with Furness College.</p>
+        </div>
+        <a href="mailto:info@leckconstruction.co?subject=Apprenticeship Enquiry" class="vac-apply">Enquire →</a>
+      </div>
+
+    </div>
+
+    <!-- Photo strip -->
+    <div class="vac-photo-row reveal">
+      <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=800&q=80" alt="Bricklayer at work" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Construction workers on site" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80" alt="Construction equipment" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- WHY LECK -->
+<section class="vac-values">
+  <div class="container">
+    <div class="reveal">
+      <div class="eyebrow eyebrow--dark">Why Leck</div>
+      <h2>A Company Worth Working For</h2>
+    </div>
+    <div class="vac-values-grid">
+      <div class="vac-val-card reveal d1">
+        <div class="vac-val-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6M9 11h.01M15 11h.01"/></svg>
+        </div>
+        <div class="vac-val-title">Varied, Quality Work</div>
+        <p class="vac-val-desc">From heritage conservation and bespoke private homes to major civil engineering and blue-chip industrial contracts — no two projects are the same.</p>
+      </div>
+      <div class="vac-val-card reveal d2">
+        <div class="vac-val-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 22s-7-7.5-7-13a7 7 0 0 1 14 0c0 5.5-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <div class="vac-val-title">Local &amp; Long-Term</div>
+        <p class="vac-val-desc">Based in Barrow-in-Furness, we've operated across South Cumbria and the Lake District for over 70 years. We hire locally and invest in long-term careers, not short contracts.</p>
+      </div>
+      <div class="vac-val-card reveal d3">
+        <div class="vac-val-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/><path d="M22 10v6"/></svg>
+        </div>
+        <div class="vac-val-title">Training &amp; Development</div>
+        <p class="vac-val-desc">We run apprenticeship programmes in partnership with Furness College and support ongoing professional development at all levels — from site operative to senior management.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-card">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/01/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="footer-logo-fallback" style="display:none">Leck Construction</span>
+        <p class="footer-tagline">Commercial construction specialists serving South Cumbria and the Lake District since 1946.</p>
+        <div class="footer-contact">
+          <p>Leck House, Ironworks Road<br>Barrow-in-Furness, LA14 2PQ</p>
+          <a href="tel:01229820394">01229 820394</a>
+          <a href="mailto:info@leckconstruction.co">info@leckconstruction.co</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <div class="footer-col-title">Sectors</div>
+          <a href="partnerships.html">Strategic Partnerships</a>
+          <a href="commercial-education-health.html">Commercial &amp; Health</a>
+          <a href="industrial-civil-engineering.html">Industrial &amp; Civil</a>
+          <a href="leck-homes.html">Leck Homes</a>
+          <a href="private-social-housing.html">Private &amp; Social Housing</a>
+          <a href="heritage-conservation.html">Heritage &amp; Conservation</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Our Approach</div>
+          <a href="approach.html#vision">Vision &amp; Values</a>
+          <a href="approach.html#health-safety">Health &amp; Safety</a>
+          <a href="approach.html#environment">Environment</a>
+          <a href="approach.html#accreditations">Accreditations</a>
+          <a href="approach.html#community">Community</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Company</div>
+          <a href="index.html#about">About Us</a>
+          <a href="projects.html">Our Work</a>
+          <a href="news.html">News &amp; Updates</a>
+          <a href="vacancies.html">Careers</a>
+          <a href="index.html#contact">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-legal">© 2026 Leck Construction Ltd. All rights reserved.</p>
+      <p class="footer-reg">Company No. 00421094 · Leck House, Ironworks Road, Barrow-in-Furness LA14 2PQ</p>
+    </div>
+  </div>
+  </div>
+</footer>
+
+<script src="sector.js"></script>
+<script>
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -36px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

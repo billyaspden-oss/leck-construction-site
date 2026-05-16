@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insights | Leck Construction Ltd | South Cumbria</title>
+  <meta name="description" content="Industry articles, technical guides and project deep-dives from Leck Construction — covering sustainability, heritage techniques, planning and construction in South Cumbria.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leckconstruction.co.uk/insights">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leckconstruction.co.uk/insights">
+  <meta property="og:title" content="Insights | Leck Construction Ltd">
+  <meta property="og:description" content="Industry articles, technical guides and project deep-dives from Leck Construction.">
+  <meta property="og:image" content="images/projects/waterside-staveley-03.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="sector.css?v=16">
+  <style>
+    /* ── Insights index ───────────────────────────────────── */
+    .ins-intro{padding:64px 0 32px;background:var(--white)}
+    .ins-intro h1{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;letter-spacing:-.03em;color:var(--navy);line-height:1.1;margin-bottom:14px}
+    .ins-intro p{font-size:.95rem;line-height:1.85;color:var(--grey-500);max-width:620px}
+
+    /* Category pills */
+    .ins-cats{padding:24px 0;border-top:1px solid var(--grey-200);border-bottom:1px solid var(--grey-200);background:var(--white)}
+    .ins-pills{display:flex;flex-wrap:wrap;gap:8px}
+    .ins-pill{font-size:.7rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:9px 16px;border:1px solid var(--grey-200);background:var(--white);color:var(--text-2);border-radius:999px;cursor:pointer;transition:all .2s var(--ease-out);font-family:inherit;white-space:nowrap}
+    .ins-pill:hover{border-color:var(--navy);color:var(--navy)}
+    .ins-pill.active{background:var(--navy);border-color:var(--navy);color:var(--white)}
+
+    /* Featured article — full width */
+    .ins-featured-section{padding:48px 0 24px;background:var(--white)}
+    .ins-featured{display:grid;grid-template-columns:1.15fr 1fr;gap:0;align-items:stretch;background:var(--off-white);border-radius:12px;overflow:hidden}
+    .ins-featured-img{overflow:hidden;min-height:420px;position:relative}
+    .ins-featured-img a{display:block;width:100%;height:100%;position:absolute;inset:0}
+    .ins-featured-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s var(--ease-out);display:block}
+    .ins-featured:hover .ins-featured-img img{transform:scale(1.04)}
+    .ins-featured-body{padding:48px;min-width:0;display:flex;flex-direction:column;justify-content:center}
+    .ins-featured-label{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+    .ins-featured-label::before{content:'';display:block;width:18px;height:2px;background:var(--blue)}
+    .ins-featured h2{font-family:var(--display);font-size:clamp(1.4rem,2.4vw,2rem);font-weight:800;color:var(--navy);line-height:1.2;letter-spacing:-.02em;margin-bottom:16px}
+    .ins-featured h2 a{color:inherit;text-decoration:none}
+    .ins-featured h2 a:hover{color:var(--blue)}
+    .ins-featured p{font-size:.95rem;line-height:1.8;color:var(--grey-500);margin-bottom:22px}
+    .ins-meta{display:flex;gap:16px;font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);margin-bottom:22px}
+    .ins-meta span:not(:last-child)::after{content:'·';margin-left:16px;color:var(--grey-300)}
+    .ins-cat{display:inline-block;font-size:.56rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:rgba(27,95,173,.08);color:var(--blue);padding:4px 10px;margin-bottom:12px}
+    .ins-link{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);border-bottom:2px solid var(--blue);padding-bottom:2px;transition:color .2s,gap .2s;text-decoration:none}
+    .ins-card:hover .ins-link,.ins-featured:hover .ins-link{color:var(--blue);gap:10px}
+
+    /* Grid */
+    .ins-grid-section{padding:24px 0 96px;background:var(--white)}
+    .ins-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+    .ins-card{display:flex;flex-direction:column;text-decoration:none;color:inherit}
+    .ins-img{overflow:hidden;border-radius:8px;aspect-ratio:16/9;margin-bottom:20px}
+    .ins-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.22,.68,0,1.2)}
+    .ins-card:hover .ins-img img{transform:scale(1.05)}
+    .ins-card h3{font-family:var(--display);font-size:1.15rem;font-weight:800;color:var(--navy);line-height:1.3;letter-spacing:-.02em;margin-bottom:12px}
+    .ins-card:hover h3{color:var(--blue)}
+    .ins-card p{font-size:.88rem;line-height:1.75;color:var(--grey-500);flex:1;margin-bottom:18px}
+
+    @media(max-width:1024px){
+      .ins-grid{grid-template-columns:repeat(2,1fr)}
+      .ins-featured{grid-template-columns:1fr;gap:0}
+      .ins-featured-body{padding:36px}
+    }
+    @media(max-width:640px){
+      .ins-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <div class="container"><div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/leck-logo.png" alt="Leck Construction Ltd" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="nav-logo-fallback" style="display:none">Leck Construction</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li class="nav-has-drop">
+        <a href="approach.html">Our Approach</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">Our Approach</div>
+          <div class="mega-links">
+            <a href="approach.html#vision">Vision &amp; Values</a>
+            <a href="approach.html#health-safety">Health &amp; Safety</a>
+            <a href="approach.html#environment">Environment &amp; Sustainability</a>
+            <a href="approach.html#accreditations">Accreditations</a>
+            <a href="approach.html#community">Community &amp; Social Value</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-has-drop">
+        <a href="sectors.html">Sectors</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">What We Do</div>
+          <div class="mega-links">
+            <a href="partnerships.html">Strategic Partnerships</a>
+            <a href="commercial-education-health.html">Commercial, Education &amp; Health</a>
+            <a href="industrial-civil-engineering.html">Industrial &amp; Civil Engineering</a>
+            <a href="leck-homes.html">Leck Homes</a>
+            <a href="private-social-housing.html">Private &amp; Social Housing</a>
+            <a href="heritage-conservation.html">Heritage &amp; Conservation</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="projects.html">Our Work</a></li>
+      <li class="nav-has-drop">
+        <a href="insights.html" class="active">Insights</a>
+        <div class="nav-drop">
+          <a href="insights.html">All Articles</a>
+          <a href="news.html">Company News</a>
+        </div>
+      </li>
+      <li class="nav-has-drop">
+        <a href="vacancies.html">Careers</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">Careers</div>
+          <div class="mega-links">
+            <a href="vacancies.html">Current Vacancies</a>
+            <a href="mailto:info@leckconstruction.co">Send Your CV</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="leck-homes.html" class="nav-cta">Leck Homes ↗</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#about" class="mm-link">About</a>
+  <a href="sectors.html" class="mm-link">Sectors</a>
+  <a href="projects.html" class="mm-link">Our Work</a>
+  <a href="insights.html" class="mm-link active">Insights</a>
+  <a href="news.html" class="mm-link">News</a>
+  <a href="vacancies.html" class="mm-link">Careers</a>
+  <a href="index.html#contact" class="mm-link">Contact</a>
+  <a href="tel:01229820394" class="mm-tel">01229 820394</a>
+</div>
+
+<!-- HERO -->
+<section class="sec-hero">
+  <div class="sh-bg" style="background-image:url('images/projects/waterside-staveley-03.jpg')"></div>
+  <div class="sh-shade"></div>
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>/</span><span>Insights</span>
+    </nav>
+    <div class="sh-chip"><span>Industry Articles &amp; Technical Guides</span></div>
+    <h1 class="sh-title">Insights<br>from <em>Our Team.</em></h1>
+    <p class="sh-sub">Long-form articles, technical guides and project deep-dives covering sustainability, heritage techniques, planning and what eight decades of building in South Cumbria has taught us.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="ins-intro">
+  <div class="container reveal">
+    <div class="eyebrow">Knowledge &amp; Expertise</div>
+    <h1>Articles &amp; Guides</h1>
+    <p>Construction is a craft built on accumulated knowledge. The articles here share what our team has learned across heritage restoration, industrial partnerships, sustainable construction and building in some of England's most sensitive landscapes.</p>
+  </div>
+</section>
+
+<!-- CATEGORY FILTERS -->
+<section class="ins-cats">
+  <div class="container">
+    <div class="ins-pills" role="group" aria-label="Filter by category">
+      <button class="ins-pill active" data-cat="all">All Articles</button>
+      <button class="ins-pill" data-cat="sustainability">Sustainability</button>
+      <button class="ins-pill" data-cat="heritage">Heritage &amp; Conservation</button>
+      <button class="ins-pill" data-cat="community">Community &amp; History</button>
+      <button class="ins-pill" data-cat="industrial">Industrial &amp; Civil</button>
+      <button class="ins-pill" data-cat="planning">Planning</button>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED ARTICLE -->
+<section class="ins-featured-section">
+  <div class="container">
+    <article class="ins-featured reveal" data-cat="sustainability">
+      <div class="ins-featured-img">
+        <a href="iso-14001-in-construction.html" aria-label="Read article">
+          <img src="images/projects/industrial-piling-02.jpg" alt="ISO 14001 environmental management" loading="lazy">
+        </a>
+      </div>
+      <div class="ins-featured-body">
+        <div class="ins-featured-label">Featured Article</div>
+        <span class="ins-cat">Sustainability</span>
+        <h2><a href="iso-14001-in-construction.html">Why ISO 14001:2015 Matters in Construction — and What It Means for Our Clients</a></h2>
+        <div class="ins-meta">
+          <span>February 2026</span>
+          <span>9 min read</span>
+        </div>
+        <p>Earlier this year we successfully renewed our ISO 14001:2015 environmental management certification. For a construction contractor, that's more than a tickbox — here's what it actually changes on a Leck site, and why it matters for the projects we deliver.</p>
+        <a href="iso-14001-in-construction.html" class="ins-link">Read Article →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ARTICLE GRID -->
+<section class="ins-grid-section">
+  <div class="container">
+    <div class="ins-grid" id="insGrid">
+
+      <a href="lime-mortar-vs-cement.html" class="ins-card" data-cat="heritage">
+        <div class="ins-img">
+          <img src="images/projects/lantern-house-01.jpg" alt="Lime mortar heritage masonry" loading="lazy">
+        </div>
+        <span class="ins-cat">Heritage &amp; Conservation</span>
+        <h3>Lime Mortar vs Cement: Why Heritage Buildings Need a Different Approach</h3>
+        <div class="ins-meta">
+          <span>January 2026</span>
+          <span>8 min read</span>
+        </div>
+        <p>Cement mortar in a building designed for lime causes long-term damage that often takes years to become visible. Why mortar choice matters in heritage restoration.</p>
+        <span class="ins-link">Read Article →</span>
+      </a>
+
+      <a href="eight-decades-building-south-cumbria.html" class="ins-card" data-cat="community">
+        <div class="ins-img">
+          <img src="images/projects/waterside-staveley-03.jpg" alt="Leck Construction history" loading="lazy">
+        </div>
+        <span class="ins-cat">Community &amp; History</span>
+        <h3>Eight Decades of Building South Cumbria: What's Changed, What Hasn't</h3>
+        <div class="ins-meta">
+          <span>December 2025</span>
+          <span>6 min read</span>
+        </div>
+        <p>Eighty years of construction in one community is unusual in this industry. The materials, methods and tools have changed completely. The things that matter haven't.</p>
+        <span class="ins-link">Read Article →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec-cta">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2>Have a Question for Our Team?</h2>
+      <p>If you'd like to discuss a topic covered here in relation to your own project, we'd be glad to talk.</p>
+      <a href="index.html#contact" class="btn-primary">Get In Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-card">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/01/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="footer-logo-fallback" style="display:none">Leck Construction</span>
+        <p class="footer-tagline">Commercial construction specialists serving South Cumbria and the Lake District since 1946.</p>
+        <div class="footer-contact">
+          <p>Leck House, Ironworks Road<br>Barrow-in-Furness, LA14 2PQ</p>
+          <a href="tel:01229820394">01229 820394</a>
+          <a href="mailto:info@leckconstruction.co">info@leckconstruction.co</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <div class="footer-col-title">Sectors</div>
+          <a href="partnerships.html">Strategic Partnerships</a>
+          <a href="commercial-education-health.html">Commercial &amp; Health</a>
+          <a href="industrial-civil-engineering.html">Industrial &amp; Civil</a>
+          <a href="leck-homes.html">Leck Homes</a>
+          <a href="private-social-housing.html">Private &amp; Social Housing</a>
+          <a href="heritage-conservation.html">Heritage &amp; Conservation</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Our Approach</div>
+          <a href="approach.html#vision">Vision &amp; Values</a>
+          <a href="approach.html#health-safety">Health &amp; Safety</a>
+          <a href="approach.html#environment">Environment</a>
+          <a href="approach.html#accreditations">Accreditations</a>
+          <a href="approach.html#community">Community</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Company</div>
+          <a href="index.html#about">About Us</a>
+          <a href="projects.html">Our Work</a>
+          <a href="insights.html">Insights</a>
+          <a href="news.html">News &amp; Updates</a>
+          <a href="vacancies.html">Careers</a>
+          <a href="index.html#contact">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-legal">© 2026 Leck Construction Ltd. All rights reserved.</p>
+      <p class="footer-reg">Company No. 00421094 · Leck House, Ironworks Road, Barrow-in-Furness LA14 2PQ</p>
+    </div>
+  </div>
+  </div>
+</footer>
+
+<script src="sector.js"></script>
+<script>
+  // Category filter — only target article items (not the pill buttons themselves!)
+  const pills = document.querySelectorAll('.ins-pill');
+  const items = document.querySelectorAll('.ins-featured[data-cat], .ins-card[data-cat]');
+  pills.forEach(p => p.addEventListener('click', () => {
+    pills.forEach(x => x.classList.remove('active'));
+    p.classList.add('active');
+    const cat = p.dataset.cat;
+    items.forEach(it => {
+      it.style.display = (cat === 'all' || it.dataset.cat === cat) ? '' : 'none';
+    });
+  }));
+</script>
+</body>
+</html>

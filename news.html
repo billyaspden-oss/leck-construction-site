@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News &amp; Updates | Leck Construction Ltd | South Cumbria</title>
+  <meta name="description" content="Latest news, project updates and company announcements from Leck Construction Ltd — South Cumbria's leading construction contractor since 1946.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leckconstruction.co.uk/news">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leckconstruction.co.uk/news">
+  <meta property="og:title" content="News &amp; Updates | Leck Construction Ltd">
+  <meta property="og:description" content="Latest news, project updates and company announcements from Leck Construction Ltd.">
+  <meta property="og:image" content="images/projects/waterside-staveley-03.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="images/projects/waterside-staveley-03.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="sector.css?v=16">
+  <style>
+    /* ── News page styles ───────────────────────────────────── */
+    .news-intro{padding:72px 0 56px;background:var(--white);border-bottom:1px solid var(--grey-200)}
+    .news-intro h1{font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.03em;color:var(--navy);line-height:1.1;margin-bottom:14px}
+    .news-intro p{font-size:.95rem;line-height:1.85;color:var(--grey-500);max-width:580px}
+    .news-section{padding:80px 0;background:var(--white)}
+    .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+    .news-card{display:flex;flex-direction:column}
+    .news-img{overflow:hidden;border-radius:8px;aspect-ratio:16/9;margin-bottom:20px}
+    .news-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.22,.68,0,1.2)}
+    .news-card:hover .news-img img{transform:scale(1.05)}
+    .news-date{font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;display:flex;align-items:center;gap:10px}
+    .news-date::before{content:'';display:block;width:18px;height:2px;background:var(--blue);flex-shrink:0}
+    .news-cat{display:inline-block;font-size:.56rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:rgba(27,95,173,.08);color:var(--blue);padding:4px 10px;margin-bottom:12px}
+    .news-title{font-family:var(--display);font-size:1.1rem;font-weight:800;color:var(--navy);line-height:1.3;letter-spacing:-.02em;margin-bottom:10px}
+    .news-excerpt{font-size:.88rem;line-height:1.75;color:var(--grey-500);flex:1;margin-bottom:18px}
+    .news-link{display:inline-flex;align-items:center;gap:6px;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);border-bottom:2px solid var(--blue);padding-bottom:2px;transition:color .2s,gap .2s;text-decoration:none}
+    .news-card:hover .news-link{color:var(--blue);gap:10px}
+    .news-divider{border:none;border-top:1px solid var(--grey-200);margin:64px 0}
+    .news-section-label{font-size:.68rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--grey-400);margin-bottom:32px}
+    @media(max-width:1024px){.news-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:640px){.news-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <div class="container"><div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/leck-logo.png" alt="Leck Construction Ltd" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="nav-logo-fallback" style="display:none">Leck Construction</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li class="nav-has-drop">
+        <a href="approach.html">Our Approach</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">Our Approach</div>
+          <div class="mega-links">
+            <a href="approach.html#vision">Vision &amp; Values</a>
+            <a href="approach.html#health-safety">Health &amp; Safety</a>
+            <a href="approach.html#environment">Environment &amp; Sustainability</a>
+            <a href="approach.html#accreditations">Accreditations</a>
+            <a href="approach.html#community">Community &amp; Social Value</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-has-drop">
+        <a href="sectors.html">Sectors</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">What We Do</div>
+          <div class="mega-links">
+            <a href="partnerships.html">Strategic Partnerships</a>
+            <a href="commercial-education-health.html">Commercial, Education &amp; Health</a>
+            <a href="industrial-civil-engineering.html">Industrial &amp; Civil Engineering</a>
+            <a href="leck-homes.html">Leck Homes</a>
+            <a href="private-social-housing.html">Private &amp; Social Housing</a>
+            <a href="heritage-conservation.html">Heritage &amp; Conservation</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="projects.html">Our Work</a></li>
+      <li><a href="news.html">News</a></li>
+      <li class="nav-has-drop">
+        <a href="vacancies.html">Careers</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">Careers</div>
+          <div class="mega-links">
+            <a href="vacancies.html">Current Vacancies</a>
+            <a href="mailto:info@leckconstruction.co">Send Your CV</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="leck-homes.html" class="nav-cta">Leck Homes ↗</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#about" class="mm-link">About</a>
+  <a href="sectors.html" class="mm-link">Sectors</a>
+  <a href="projects.html" class="mm-link">Our Work</a>
+  <a href="news.html" class="mm-link active">News</a>
+  <a href="vacancies.html" class="mm-link">Careers</a>
+  <a href="index.html#contact" class="mm-link">Contact</a>
+  <a href="tel:01229820394" class="mm-tel">01229 820394</a>
+</div>
+
+<!-- HERO -->
+<section class="sec-hero">
+  <div class="sh-bg" style="background-image:url('images/projects/waterside-staveley-03.jpg')"></div>
+  <div class="sh-shade"></div>
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>/</span><span>News &amp; Updates</span>
+    </nav>
+    <div class="sh-chip"><span>Latest from Leck</span></div>
+    <h1 class="sh-title">News &amp;<br><em>Updates.</em></h1>
+    <p class="sh-sub">Project completions, contract awards, company milestones and industry news from Leck Construction — one of South Cumbria's most established contractors.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="news-intro">
+  <div class="container reveal">
+    <div class="eyebrow">Latest Updates</div>
+    <h1>What's Been Happening</h1>
+    <p>Keep up to date with our latest project completions, contract wins, accreditation renewals and company news. We'll be adding new articles regularly as work progresses across our six sectors.</p>
+  </div>
+</section>
+
+<!-- NEWS GRID -->
+<section class="news-section">
+  <div class="container">
+
+    <div class="news-section-label">2026</div>
+    <div class="news-grid">
+
+      <article class="news-card reveal">
+        <div class="news-img">
+          <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/03/category-heritage.jpg" alt="Ship Inn restoration, Piel Island" loading="lazy">
+        </div>
+        <span class="news-cat">Heritage &amp; Conservation</span>
+        <div class="news-date">April 2026</div>
+        <h2 class="news-title">Ship Inn Restoration Complete on Piel Island</h2>
+        <p class="news-excerpt">Leck Construction has successfully completed the restoration of the Grade II listed Ship Inn on Piel Island — one of Cumbria's most distinctive heritage landmarks. Work included structural masonry repairs, lime pointing and full internal refurbishment.</p>
+      </article>
+
+      <article class="news-card reveal d1">
+        <div class="news-img">
+          <img src="images/projects/emlyn-hughes-01.jpg" alt="NHS healthcare facility, Ulverston" loading="lazy">
+        </div>
+        <span class="news-cat">Commercial &amp; Health</span>
+        <div class="news-date">March 2026</div>
+        <h2 class="news-title">New NHS Healthcare Contract Awarded in Ulverston</h2>
+        <p class="news-excerpt">We are proud to announce the award of a new contract to deliver a primary care facility in Ulverston for NHS Cumbria. The scheme will provide expanded GP services to over 12,000 patients across the Furness Peninsula.</p>
+      </article>
+
+      <article class="news-card reveal d2">
+        <div class="news-img">
+          <img src="images/projects/industrial-piling-02.jpg" alt="ISO 14001 environmental certification" loading="lazy">
+        </div>
+        <span class="news-cat">Company News</span>
+        <div class="news-date">February 2026</div>
+        <h2 class="news-title">ISO 14001:2015 Environmental Certification Successfully Renewed</h2>
+        <p class="news-excerpt">Following an independent audit by NQA, Leck Construction has renewed its ISO 14001:2015 Environmental Management certification — reinforcing our commitment to reducing environmental impact across all operations and project sites.</p>
+      </article>
+
+      <article class="news-card reveal">
+        <div class="news-img">
+          <img src="images/projects/emlyn-hughes-02.jpg" alt="Commercial project, Barrow" loading="lazy">
+        </div>
+        <span class="news-cat">Commercial</span>
+        <div class="news-date">January 2026</div>
+        <h2 class="news-title">Wings Nightclub Refurbishment Completed on Programme</h2>
+        <p class="news-excerpt">Our commercial team completed a full internal refurbishment of the Wings venue in Barrow-in-Furness, delivering the project on time and within budget ahead of the client's planned reopening date.</p>
+      </article>
+
+    </div>
+
+    <hr class="news-divider">
+
+    <div class="news-section-label">2025</div>
+    <div class="news-grid">
+
+      <article class="news-card reveal">
+        <div class="news-img">
+          <img src="images/projects/portal-frame-build.jpg" alt="Lillyhall industrial site" loading="lazy">
+        </div>
+        <span class="news-cat">Industrial &amp; Civil</span>
+        <div class="news-date">November 2025</div>
+        <h2 class="news-title">Major Industrial Contract Secured at Lillyhall Business Park</h2>
+        <p class="news-excerpt">Leck Construction has been appointed as principal contractor for a new portal frame industrial unit at Lillyhall Business Park in West Cumbria, adding to our growing portfolio of industrial and civil engineering projects across the region.</p>
+      </article>
+
+      <article class="news-card reveal d1">
+        <div class="news-img">
+          <img src="images/projects/waterside-staveley-03.jpg" alt="Private housing, South Cumbria" loading="lazy">
+        </div>
+        <span class="news-cat">Private &amp; Social Housing</span>
+        <div class="news-date">September 2025</div>
+        <h2 class="news-title">Affordable Housing Scheme Handed Over to Cumbria County Council</h2>
+        <p class="news-excerpt">We are pleased to have handed over a 14-unit affordable housing scheme in Barrow-in-Furness to Cumbria County Council, delivering high-quality homes for local families as part of our ongoing social housing programme.</p>
+      </article>
+
+      <article class="news-card reveal d2">
+        <div class="news-img">
+          <img src="images/projects/industrial-piling-01.jpg" alt="BAE Systems partnership" loading="lazy">
+        </div>
+        <span class="news-cat">Strategic Partnerships</span>
+        <div class="news-date">June 2025</div>
+        <h2 class="news-title">BAE Systems Measured Term Contract Renewed for Further Three Years</h2>
+        <p class="news-excerpt">We are delighted to announce that our long-standing measured term contract with BAE Systems has been renewed for a further three-year term — a testament to the quality of our work and the strength of a relationship built over nearly two decades.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-card">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/01/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="footer-logo-fallback" style="display:none">Leck Construction</span>
+        <p class="footer-tagline">Commercial construction specialists serving South Cumbria and the Lake District since 1946.</p>
+        <div class="footer-contact">
+          <p>Leck House, Ironworks Road<br>Barrow-in-Furness, LA14 2PQ</p>
+          <a href="tel:01229820394">01229 820394</a>
+          <a href="mailto:info@leckconstruction.co">info@leckconstruction.co</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <div class="footer-col-title">Sectors</div>
+          <a href="partnerships.html">Strategic Partnerships</a>
+          <a href="commercial-education-health.html">Commercial &amp; Health</a>
+          <a href="industrial-civil-engineering.html">Industrial &amp; Civil</a>
+          <a href="leck-homes.html">Leck Homes</a>
+          <a href="private-social-housing.html">Private &amp; Social Housing</a>
+          <a href="heritage-conservation.html">Heritage &amp; Conservation</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Our Approach</div>
+          <a href="approach.html#vision">Vision &amp; Values</a>
+          <a href="approach.html#health-safety">Health &amp; Safety</a>
+          <a href="approach.html#environment">Environment</a>
+          <a href="approach.html#accreditations">Accreditations</a>
+          <a href="approach.html#community">Community</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Company</div>
+          <a href="index.html#about">About Us</a>
+          <a href="projects.html">Our Work</a>
+          <a href="news.html">News &amp; Updates</a>
+          <a href="vacancies.html">Careers</a>
+          <a href="index.html#contact">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-legal">© 2026 Leck Construction Ltd. All rights reserved.</p>
+      <p class="footer-reg">Company No. 00421094 · Leck House, Ironworks Road, Barrow-in-Furness LA14 2PQ</p>
+    </div>
+  </div>
+  </div>
+</footer>
+
+<script src="sector.js"></script>
+<script>
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -36px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avon Wood, Walney Island — Coming Soon | Leck Homes</title>
+  <meta name="description" content="Avon Wood — a new development of 12 quality family homes coming to Walney Island, Barrow-in-Furness. 3, 4 and 5-bedroom houses from £285,000. Register your interest now.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leckconstruction.co.uk/avon-wood">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leckconstruction.co.uk/avon-wood">
+  <meta property="og:title" content="Avon Wood, Walney Island — Coming Soon | Leck Homes">
+  <meta property="og:description" content="12 quality family homes coming to Walney Island. Houses from £285,000. Register interest now.">
+  <meta property="og:image" content="images/projects/leck-homes-development.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="images/projects/leck-homes-development.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="sector.css?v=16">
+  <style>
+    /* Leck Homes shared styles */
+    body.lh{background:#FAF8F4}
+    body.lh .nav{top:40px}
+    body.lh .nav-cta{background:var(--navy) !important}
+    .lh-mark{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+    .lh-mark-main{font-family:var(--display);font-size:1.25rem;font-weight:800;letter-spacing:-.01em;color:var(--navy)}
+    .lh-mark-sub{font-size:.52rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--text-3);margin-top:3px}
+
+    /* Nav search (replaces phone CTA on Leck Homes pages) */
+    .lh-search{position:relative;display:flex;align-items:center;list-style:none}
+    .lh-search svg{position:absolute;left:14px;width:14px;height:14px;color:var(--text-3);pointer-events:none}
+    .lh-search input{padding:10px 18px 10px 38px;font-size:.78rem;font-family:inherit;border:1px solid var(--grey-200);border-radius:999px;outline:none;background:#fff;color:var(--navy);width:220px;transition:border-color .2s,width .2s,box-shadow .2s}
+    .lh-search input:focus{border-color:var(--navy);width:260px;box-shadow:0 0 0 3px rgba(27,42,74,.06)}
+    .lh-search input::placeholder{color:var(--text-3);font-weight:500}
+
+    .lh-backbar{background:var(--navy-3);color:#fff;font-size:.78rem;font-weight:600;letter-spacing:.08em;position:fixed;top:0;left:0;right:0;height:40px;display:flex;align-items:center;z-index:102;border-bottom:1px solid rgba(255,255,255,.12)}
+    .lh-backbar .container{display:flex;justify-content:space-between;align-items:center;gap:16px;width:100%}
+    .lh-backbar-link{color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:10px;padding:7px 14px;border-radius:4px;transition:background .18s,gap .18s;font-weight:700;letter-spacing:.04em;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18)}
+    .lh-backbar-link:hover{background:rgba(255,255,255,.18);gap:14px;border-color:rgba(255,255,255,.32)}
+    .lh-backbar-link svg{width:14px;height:14px;flex-shrink:0;transition:transform .18s}
+    .lh-backbar-link:hover svg{transform:translateX(-2px)}
+    .lh-backbar-tag{color:rgba(255,255,255,.65);font-weight:500;font-size:.7rem;letter-spacing:.06em}
+    .lh-backbar-tag strong{color:#fff;font-weight:700}
+
+    /* Avon Wood hero */
+    .aw-hero{position:relative;min-height:64vh;display:flex;align-items:flex-end;overflow:hidden;padding-bottom:64px;padding-top:160px;background:var(--navy-3)}
+    .aw-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center}
+    .aw-hero-shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,.5) 60%,rgba(0,0,0,.2) 100%)}
+    .aw-hero .container{position:relative;z-index:2;width:100%;color:#fff}
+    .aw-breadcrumb{display:flex;align-items:center;gap:10px;font-size:.66rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:24px}
+    .aw-breadcrumb a{color:rgba(255,255,255,.85);text-decoration:none}
+    .aw-breadcrumb a:hover{color:#fff}
+    .aw-status-badge{display:inline-flex;align-items:center;gap:8px;font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:#7CB342;padding:8px 16px;border-radius:4px;margin-bottom:22px}
+    .aw-status-badge::before{content:'';width:8px;height:8px;background:#fff;border-radius:50%;animation:awPulse 2s ease-in-out infinite}
+    @keyframes awPulse{0%,100%{opacity:1}50%{opacity:.4}}
+    .aw-hero h1{font-family:var(--display);font-size:clamp(2.6rem,5.5vw,4.8rem);font-weight:800;letter-spacing:-.025em;line-height:1.02;margin-bottom:16px;max-width:780px}
+    .aw-hero h1 em{font-style:normal;color:#E8DCC2}
+    .aw-hero-loc{display:flex;align-items:center;gap:10px;font-size:1.05rem;font-weight:500;color:rgba(255,255,255,.85);margin-bottom:8px}
+    .aw-hero-loc svg{width:18px;height:18px}
+
+    /* Key facts strip */
+    .aw-facts{background:#fff;border-bottom:1px solid #E8E2D6;padding:28px 0}
+    .aw-facts-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+    .aw-fact{padding:8px 28px;border-right:1px solid #E8E2D6;display:flex;flex-direction:column;gap:6px}
+    .aw-fact:last-child{border-right:none}
+    .aw-fact-lbl{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--text-3)}
+    .aw-fact-val{font-family:var(--display);font-size:1.3rem;font-weight:800;color:var(--navy);letter-spacing:-.015em;line-height:1.1}
+
+    /* Section headings */
+    .aw-section{padding:88px 0;background:#FAF8F4}
+    .aw-section--cream{background:#F4EFE7}
+    .aw-section--white{background:#fff}
+    .aw-section--dark{background:var(--navy-3);color:#fff}
+    .aw-head{margin-bottom:48px;max-width:680px}
+    .aw-head--center{text-align:center;margin-left:auto;margin-right:auto}
+    .aw-eyebrow{font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);display:inline-flex;align-items:center;gap:10px;margin-bottom:14px}
+    .aw-eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--blue)}
+    .aw-head--center .aw-eyebrow::before{content:'';display:block;width:24px;height:1px;background:var(--blue)}
+    .aw-head--center .aw-eyebrow{justify-content:center}
+    .aw-head--center .aw-eyebrow::after{content:'';display:block;width:24px;height:1px;background:var(--blue)}
+    .aw-section--dark .aw-eyebrow{color:#E8DCC2}
+    .aw-section--dark .aw-eyebrow::before,.aw-section--dark .aw-eyebrow::after{background:#E8DCC2}
+    .aw-head h2{font-family:var(--display);font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;color:var(--navy);letter-spacing:-.025em;line-height:1.15;margin-bottom:14px}
+    .aw-head h2 em{font-style:normal;color:var(--blue)}
+    .aw-section--dark .aw-head h2{color:#fff}
+    .aw-head p{font-size:.95rem;line-height:1.8;color:var(--text-2);margin-bottom:14px}
+    .aw-section--dark .aw-head p{color:rgba(255,255,255,.75)}
+
+    /* Site plan section — interactive map + side panel */
+    .aw-plan{display:grid;grid-template-columns:1.6fr 1fr;gap:32px;align-items:start}
+    .aw-plan-map{background:#fff;border:1px solid #E8E2D6;border-radius:12px;padding:24px;position:relative}
+    .aw-plan-map svg{width:100%;height:auto;display:block;cursor:default}
+    .aw-plan-legend{display:flex;flex-wrap:wrap;gap:18px;padding-top:18px;margin-top:18px;border-top:1px solid #E8E2D6;font-size:.74rem;color:var(--text-2)}
+    .aw-legend-item{display:flex;align-items:center;gap:8px}
+    .aw-legend-swatch{width:14px;height:14px;border:1px solid rgba(0,0,0,.1);border-radius:2px}
+
+    /* Plot SVG styling */
+    .plot-shape{cursor:pointer;transition:fill .2s,stroke .2s,filter .2s}
+    .plot-shape:hover{stroke:var(--navy) !important;stroke-width:3 !important;filter:brightness(1.05)}
+    .plot-shape.active{stroke:var(--navy) !important;stroke-width:3.5 !important;filter:brightness(1.08)}
+    .plot-num{pointer-events:none;font-family:var(--display);font-weight:800;fill:#fff;text-shadow:0 1px 2px rgba(0,0,0,.4)}
+
+    /* Side panel — plot details */
+    .aw-plot-detail{background:#fff;border:1px solid #E8E2D6;border-radius:12px;padding:32px;position:sticky;top:120px}
+    .aw-detail-tag{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--text-3);margin-bottom:6px}
+    .aw-detail-num{font-family:var(--display);font-size:2.4rem;font-weight:800;color:var(--navy);letter-spacing:-.025em;line-height:1;margin-bottom:14px}
+    .aw-detail-type{font-family:var(--display);font-size:1.35rem;font-weight:800;color:var(--navy);letter-spacing:-.015em;margin-bottom:14px}
+    .aw-detail-status{display:inline-flex;align-items:center;gap:8px;font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#5d8d3a;background:rgba(124,179,66,.12);padding:6px 12px;border-radius:4px;margin-bottom:24px}
+    .aw-detail-status::before{content:'';width:6px;height:6px;background:#7CB342;border-radius:50%}
+    .aw-detail-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid #F4EFE7;font-size:.85rem}
+    .aw-detail-row:last-of-type{border-bottom:none}
+    .aw-detail-key{color:var(--text-3);letter-spacing:.04em}
+    .aw-detail-val{color:var(--navy);font-weight:700}
+    .aw-detail-price{display:flex;justify-content:space-between;align-items:baseline;padding:18px 0;margin-top:6px;border-top:1px solid #E8E2D6}
+    .aw-detail-price-lbl{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--text-3)}
+    .aw-detail-price-val{font-family:var(--display);font-size:1.8rem;font-weight:800;color:var(--navy);letter-spacing:-.02em}
+    .aw-detail-cta{display:block;text-align:center;background:var(--navy);color:#fff;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px 24px;text-decoration:none;margin-top:18px;transition:background .2s}
+    .aw-detail-cta:hover{background:var(--blue)}
+    .aw-detail-hint{font-size:.72rem;color:var(--text-3);text-align:center;padding:32px 24px;font-style:italic;line-height:1.6}
+
+    /* House types grid */
+    .aw-types-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+    .aw-type-card{background:#fff;border:1px solid #E8E2D6;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s var(--ease-out),box-shadow .3s var(--ease-out)}
+    .aw-type-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(15,30,53,.08)}
+    .aw-type-img{position:relative;aspect-ratio:16/10;overflow:hidden;background:#E8E2D6}
+    .aw-type-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s var(--ease-out)}
+    .aw-type-card:hover .aw-type-img img{transform:scale(1.04)}
+    .aw-type-img-tag{position:absolute;top:14px;left:14px;font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;background:rgba(15,30,53,.75);color:#fff;padding:6px 12px;border-radius:4px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+    .aw-type-body{padding:26px 28px 28px;display:flex;flex-direction:column;flex:1}
+    .aw-type-name{font-family:var(--display);font-size:1.4rem;font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1.15;margin-bottom:4px}
+    .aw-type-sub{font-size:.78rem;color:var(--text-3);margin-bottom:16px}
+    .aw-type-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:16px 0;border-top:1px solid #F4EFE7;border-bottom:1px solid #F4EFE7;margin-bottom:18px}
+    .aw-type-spec{display:flex;flex-direction:column;gap:4px}
+    .aw-type-spec-val{font-family:var(--display);font-size:1.05rem;font-weight:800;color:var(--navy);letter-spacing:-.01em;line-height:1}
+    .aw-type-spec-lbl{font-size:.58rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3)}
+    .aw-type-desc{font-size:.85rem;line-height:1.7;color:var(--text-2);margin-bottom:18px;flex:1}
+    .aw-type-foot{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid #F4EFE7;gap:14px}
+    .aw-type-price{font-family:var(--display);font-size:1.3rem;font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1}
+    .aw-type-price-lbl{font-size:.58rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--text-3);margin-bottom:2px}
+    .aw-type-status{font-size:.6rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#5d8d3a;padding:6px 10px;background:rgba(124,179,66,.12);border-radius:4px;white-space:nowrap}
+
+    /* Specification list */
+    .aw-spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+    .aw-spec-col h3{font-family:var(--display);font-size:1.1rem;font-weight:800;color:var(--navy);letter-spacing:-.015em;margin-bottom:18px;padding-bottom:12px;border-bottom:2px solid var(--blue);display:inline-block}
+    .aw-spec-list{list-style:none;padding:0;margin:0}
+    .aw-spec-list li{font-size:.86rem;line-height:1.7;color:var(--text-2);padding:8px 0 8px 22px;position:relative;border-bottom:1px solid #F4EFE7}
+    .aw-spec-list li::before{content:'';position:absolute;left:0;top:18px;width:10px;height:1.5px;background:var(--blue)}
+    .aw-spec-list li:last-child{border-bottom:none}
+
+    /* Location section */
+    .aw-loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+    .aw-loc-body p{font-size:.95rem;line-height:1.8;color:var(--text-2);margin-bottom:16px}
+    .aw-loc-poi{margin-top:24px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .aw-poi{padding:14px 16px;background:#fff;border:1px solid #E8E2D6;border-radius:6px;display:flex;flex-direction:column;gap:2px}
+    .aw-poi-name{font-size:.82rem;font-weight:700;color:var(--navy)}
+    .aw-poi-dist{font-size:.7rem;color:var(--text-3);letter-spacing:.04em}
+    .aw-map-embed{aspect-ratio:1;background:#E8E2D6;border-radius:12px;overflow:hidden;position:relative}
+    .aw-map-embed iframe{width:100%;height:100%;border:0;display:block}
+
+    /* Register interest */
+    .aw-register-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+    .aw-register-form{background:#fff;border-radius:12px;padding:36px}
+    .aw-register-form label{display:block;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:6px}
+    .aw-register-form input,.aw-register-form select,.aw-register-form textarea{width:100%;padding:12px 14px;font-size:.9rem;font-family:inherit;border:1px solid #E8E2D6;border-radius:6px;outline:none;background:#fff;color:var(--navy);margin-bottom:18px;transition:border-color .2s}
+    .aw-register-form input:focus,.aw-register-form select:focus,.aw-register-form textarea:focus{border-color:var(--navy)}
+    .aw-register-form textarea{resize:vertical;min-height:90px}
+    .aw-register-form button{width:100%;background:var(--navy);color:#fff;border:none;font-family:inherit;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:15px;cursor:pointer;transition:background .2s}
+    .aw-register-form button:hover{background:var(--blue)}
+
+    @media(max-width:1024px){
+      .aw-plan{grid-template-columns:1fr}
+      .aw-plot-detail{position:static}
+      .aw-types-grid{grid-template-columns:1fr}
+      .aw-spec-grid{grid-template-columns:1fr 1fr;gap:32px}
+      .aw-loc-grid,.aw-register-grid{grid-template-columns:1fr;gap:32px}
+      .aw-facts-grid{grid-template-columns:1fr 1fr}
+      .aw-fact{border-right:none;border-bottom:1px solid #E8E2D6;padding:14px 20px}
+      .aw-fact:nth-child(2n){border-right:none}
+    }
+    @media(max-width:640px){
+      .aw-spec-grid{grid-template-columns:1fr}
+      .aw-facts-grid{grid-template-columns:1fr}
+      .aw-backbar .container{flex-direction:column;align-items:flex-start;gap:4px}
+      .aw-backbar-tag{display:none}
+    }
+  </style>
+</head>
+<body class="lh">
+
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- Back to main site bar -->
+<div class="lh-backbar">
+  <div class="container">
+    <a href="leck-homes.html" class="lh-backbar-link" aria-label="Return to Leck Homes">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to Leck Homes
+    </a>
+    <span class="lh-backbar-tag">Avon Wood is a <strong>Leck Homes</strong> development</span>
+  </div>
+</div>
+
+<!-- LECK HOMES NAV -->
+<nav class="nav" id="nav">
+  <div class="container"><div class="nav-inner">
+    <a href="leck-homes.html" class="lh-mark">
+      <span class="lh-mark-main">LECK HOMES</span>
+      <span class="lh-mark-sub">New Homes · South Cumbria</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="leck-homes.html#developments">Developments</a></li>
+      <li><a href="avon-wood.html" class="active">Avon Wood</a></li>
+      <li><a href="#site-plan">Site Plan</a></li>
+      <li><a href="#house-types">House Types</a></li>
+      <li><a href="#register">Register Interest</a></li>
+      <li class="lh-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
+        <input type="search" placeholder="Search developments..." aria-label="Search Leck Homes">
+      </li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="leck-homes.html#developments" class="mm-link">Developments</a>
+  <a href="avon-wood.html" class="mm-link active">Avon Wood</a>
+  <a href="#site-plan" class="mm-link">Site Plan</a>
+  <a href="#house-types" class="mm-link">House Types</a>
+  <a href="#register" class="mm-link">Register Interest</a>
+  <a href="leck-homes.html" class="mm-link">← Back to Leck Homes</a>
+  <a href="tel:01229820394" class="mm-tel">01229 820394</a>
+</div>
+
+<!-- HERO -->
+<section class="aw-hero">
+  <div class="aw-hero-bg" style="background-image:url('images/projects/leck-homes-development.jpg')"></div>
+  <div class="aw-hero-shade"></div>
+  <div class="container">
+    <nav class="aw-breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>/</span><a href="leck-homes.html" class="nav-drop-sub">Leck Homes</a><span>/</span><span>Avon Wood</span>
+    </nav>
+    <div class="aw-status-badge">Coming Soon · Phase 1 · 2027</div>
+    <h1>Avon Wood,<br>Walney <em>Island.</em></h1>
+    <div class="aw-hero-loc">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-7-7.5-7-13a7 7 0 0 1 14 0c0 5.5-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+      Walney Island, Barrow-in-Furness, Cumbria
+    </div>
+  </div>
+</section>
+
+<!-- KEY FACTS STRIP -->
+<section class="aw-facts">
+  <div class="container">
+    <div class="aw-facts-grid">
+      <div class="aw-fact">
+        <span class="aw-fact-lbl">Plots</span>
+        <span class="aw-fact-val">12</span>
+      </div>
+      <div class="aw-fact">
+        <span class="aw-fact-lbl">Bedroom Range</span>
+        <span class="aw-fact-val">3 – 5 bed</span>
+      </div>
+      <div class="aw-fact">
+        <span class="aw-fact-lbl">Prices From</span>
+        <span class="aw-fact-val">£285,000</span>
+      </div>
+      <div class="aw-fact">
+        <span class="aw-fact-lbl">Expected Start</span>
+        <span class="aw-fact-val">Spring 2027</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<section class="aw-section">
+  <div class="container">
+    <div class="aw-head aw-head--center reveal">
+      <div class="aw-eyebrow">A New Development</div>
+      <h2>Twelve <em>family homes</em>, designed for Walney.</h2>
+      <p>Walking distance to Walney's nature reserves, the open channel and the school. Family homes designed for the way South Cumbrian families actually live — with generous gardens, integral garages, dedicated home-office spaces and full electric-vehicle charging as standard.</p>
+      <p>Planning approval was granted by Westmorland and Furness Council in 2026 after a two-year consultation. Construction starts spring 2027, with first plot completions expected late 2027.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SITE PLAN -->
+<section class="aw-section aw-section--cream" id="site-plan">
+  <div class="container">
+    <div class="aw-head aw-head--center reveal">
+      <div class="aw-eyebrow">Interactive Site Plan</div>
+      <h2>Choose your <em>plot</em>.</h2>
+      <p>Click any plot on the map below to view the house type, specification and indicative pricing. All plots are currently coming soon — register interest in a specific plot and we'll contact you as soon as it's released.</p>
+    </div>
+
+    <div class="aw-plan">
+
+      <!-- MAP -->
+      <div class="aw-plan-map">
+        <svg viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg" aria-label="Avon Wood site plan">
+          <!-- Site outline -->
+          <rect x="10" y="10" width="780" height="500" fill="#EFE9D9" rx="6"/>
+
+          <!-- Grass strips (top and bottom) -->
+          <rect x="10" y="10" width="780" height="110" fill="#D8E2C6"/>
+          <rect x="10" y="400" width="780" height="110" fill="#D8E2C6"/>
+
+          <!-- Trees decoration top -->
+          <circle cx="60" cy="50" r="14" fill="#7CB342" opacity=".5"/>
+          <circle cx="160" cy="35" r="11" fill="#7CB342" opacity=".4"/>
+          <circle cx="730" cy="60" r="16" fill="#7CB342" opacity=".5"/>
+          <circle cx="630" cy="40" r="10" fill="#7CB342" opacity=".4"/>
+
+          <!-- Trees decoration bottom -->
+          <circle cx="80" cy="470" r="13" fill="#7CB342" opacity=".5"/>
+          <circle cx="200" cy="485" r="11" fill="#7CB342" opacity=".4"/>
+          <circle cx="700" cy="465" r="15" fill="#7CB342" opacity=".5"/>
+
+          <!-- Road (horizontal through middle) -->
+          <rect x="10" y="225" width="780" height="80" fill="#C7C2B5"/>
+          <!-- Road centre line -->
+          <line x1="20" y1="265" x2="120" y2="265" stroke="#fff" stroke-width="3" stroke-dasharray="0"/>
+          <line x1="170" y1="265" x2="270" y2="265" stroke="#fff" stroke-width="3"/>
+          <line x1="320" y1="265" x2="420" y2="265" stroke="#fff" stroke-width="3"/>
+          <line x1="470" y1="265" x2="570" y2="265" stroke="#fff" stroke-width="3"/>
+          <line x1="620" y1="265" x2="720" y2="265" stroke="#fff" stroke-width="3"/>
+          <!-- Road edges -->
+          <line x1="10" y1="225" x2="790" y2="225" stroke="#A19D90" stroke-width="2"/>
+          <line x1="10" y1="305" x2="790" y2="305" stroke="#A19D90" stroke-width="2"/>
+
+          <!-- Plot driveways (subtle) -->
+          <rect x="100" y="190" width="20" height="35" fill="#C7C2B5"/>
+          <rect x="215" y="190" width="20" height="35" fill="#C7C2B5"/>
+          <rect x="335" y="190" width="20" height="35" fill="#C7C2B5"/>
+          <rect x="455" y="190" width="20" height="35" fill="#C7C2B5"/>
+          <rect x="585" y="190" width="20" height="35" fill="#C7C2B5"/>
+          <rect x="715" y="190" width="20" height="35" fill="#C7C2B5"/>
+
+          <rect x="100" y="305" width="20" height="35" fill="#C7C2B5"/>
+          <rect x="225" y="305" width="20" height="35" fill="#C7C2B5"/>
+          <rect x="350" y="305" width="20" height="35" fill="#C7C2B5"/>
+          <rect x="470" y="305" width="20" height="35" fill="#C7C2B5"/>
+          <rect x="595" y="305" width="20" height="35" fill="#C7C2B5"/>
+          <rect x="715" y="305" width="20" height="35" fill="#C7C2B5"/>
+
+          <!-- TOP ROW: plots 1-6 -->
+          <g class="plots">
+
+            <g class="plot-grp" data-plot="1" data-type="birch">
+              <rect class="plot-shape" x="50" y="130" width="100" height="60" fill="#9DB3CC" stroke="#fff" stroke-width="2" rx="3"/>
+              <text class="plot-num" x="100" y="167" text-anchor="middle" font-size="22">1</text>
+            </g>
+
+            <g class="plot-grp" data-plot="2" data-type="birch">
+              <rect class="plot-shape" x="170" y="130" width="100" height="60" fill="#9DB3CC" stroke="#fff" stroke-width="2" rx="3"/>
+              <text class="plot-num" x="220" y="167" text-anchor="middle" font-size="22">2</text>
+            </g>
+
+            <g class="plot-grp" data-plot="3" data-type="birch">
+              <rect class="plot-shape" x="290" y="130" width="100" height="60" fill="#9DB3CC" stroke="#fff" stroke-width="2" rx="3"/>
+              <text class="plot-num" x="340" y="167" text-anchor="middle" font-size="22">3</text>
+            </g>
+
+            <g class="plot-grp" data-plot="4" data-type="birch">
+              <rect class="plot-shape" x="410" y="130" width="100" height="60" fill="#9DB3CC" stroke="#fff" stroke-width="2" rx="3"/>
+              <text class="plot-num" x="460" y="167" text-anchor="middle" font-size="22">4</text>
+            </g>
+
+            <g class="plot-grp" data-plot="5" data-type="oak">
+              <rect class="plot-shape" x="540" y="130" width="100" height="60" fill="#C5A87A" stroke="#fff" stroke-width="2" rx="3"/>
+              <text class="plot-num" x="590" y="167" text-anchor="middle" font-size="22">5</text>
+            </g>
+
+            <g class="plot-grp" data-plot="6" data-type="oak">
+              <rect class="plot-shape" x="670" y="130" width="100" height="60" fill="#C5A87A" stroke="#fff" stroke-width="2" rx="3"/>
+              <text class="plot-num" x="720" y="167" text-anchor="middle" font-size="22">6</text>
+            </g>
+
+            <!-- BOTTOM ROW: plots 7-12 -->
+            <g class="plot-grp" data-plot="7" data-type="oak">
+              <rect class="plot-shape" x="50" y="340" width="100" height="60" fill="#C5A87A" stroke="#fff" stroke-width="2" rx="3"/>
+              <text class="plot-num" x="100" y="377" text-anchor="middle" font-size="22">7</text>
+            </g>
+
+            <g class="plot-grp" data-plot="8" data-type="oak">
+              <rect class="plot-shape" x="175" y="340" width="100" height="60" fill="#C5A87A" stroke="#fff" stroke-width="2" rx="3"/>
+              <text class="plot-num" x="225" y="377" text-anchor="middle" font-size="22">8</text>
+            </g>
+
+            <g class="plot-grp" data-plot="9" data-type="cedar">
+              <rect class="plot-shape" x="300" y="340" width="100" height="60" fill="#B87A5C" stroke="#fff" stroke-width="2" rx="3"/>
+              <text class="plot-num" x="350" y="377" text-anchor="middle" font-size="22">9</text>
+            </g>
+
+            <g class="plot-grp" data-plot="10" data-type="cedar">
+              <rect class="plot-shape" x="420" y="340" width="100" height="60" fill="#B87A5C" stroke="#fff" stroke-width="2" rx="3"/>
+              <text class="plot-num" x="470" y="377" text-anchor="middle" font-size="22">10</text>
+            </g>
+
+            <g class="plot-grp" data-plot="11" data-type="larch">
+              <rect class="plot-shape" x="545" y="335" width="110" height="70" fill="#6B8E5A" stroke="#fff" stroke-width="2" rx="3"/>
+              <text class="plot-num" x="600" y="377" text-anchor="middle" font-size="22">11</text>
+            </g>
+
+            <g class="plot-grp" data-plot="12" data-type="larch">
+              <rect class="plot-shape" x="675" y="335" width="110" height="70" fill="#6B8E5A" stroke="#fff" stroke-width="2" rx="3"/>
+              <text class="plot-num" x="730" y="377" text-anchor="middle" font-size="22">12</text>
+            </g>
+
+          </g>
+
+          <!-- N Compass -->
+          <g transform="translate(745,55)">
+            <circle cx="0" cy="0" r="20" fill="rgba(255,255,255,.85)" stroke="#A19D90" stroke-width="1"/>
+            <text x="0" y="-2" text-anchor="middle" font-size="10" font-weight="700" fill="#1B2A4A">N</text>
+            <polygon points="0,-14 -5,7 0,3 5,7" fill="#1B2A4A"/>
+          </g>
+
+          <!-- Road label -->
+          <text x="400" y="278" text-anchor="middle" font-size="11" font-weight="600" fill="#fff" letter-spacing="0.16em">AVON WOOD LANE</text>
+
+        </svg>
+
+        <!-- Legend -->
+        <div class="aw-plan-legend">
+          <div class="aw-legend-item"><span class="aw-legend-swatch" style="background:#9DB3CC"></span>The Birch · 3-bed</div>
+          <div class="aw-legend-item"><span class="aw-legend-swatch" style="background:#C5A87A"></span>The Oak · 4-bed</div>
+          <div class="aw-legend-item"><span class="aw-legend-swatch" style="background:#B87A5C"></span>The Cedar · 4-bed + study</div>
+          <div class="aw-legend-item"><span class="aw-legend-swatch" style="background:#6B8E5A"></span>The Larch · 5-bed exec</div>
+        </div>
+      </div>
+
+      <!-- DETAIL PANEL -->
+      <aside class="aw-plot-detail" id="plotDetail">
+        <div class="aw-detail-hint">
+          <strong style="color:var(--navy);display:block;font-size:.95rem;font-style:normal;margin-bottom:8px">Select a plot</strong>
+          Click any plot on the map to view house type, indicative pricing and current availability.
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOUSE TYPES -->
+<section class="aw-section aw-section--white" id="house-types">
+  <div class="container">
+    <div class="aw-head aw-head--center reveal">
+      <div class="aw-eyebrow">Four House Types</div>
+      <h2>Designed to <em>fit</em> South Cumbrian life.</h2>
+      <p>Each house type has been designed in collaboration with our long-standing architectural partner, with an emphasis on natural light, integrated outdoor space and energy efficiency. Indicative pricing — final pricing released at plot launch.</p>
+    </div>
+
+    <div class="aw-types-grid">
+
+      <article class="aw-type-card reveal">
+        <div class="aw-type-img">
+          <img src="images/projects/leck-homes-development.jpg" alt="The Birch — 3-bed semi-detached, indicative image of a recent Leck Homes street scene" loading="lazy">
+          <span class="aw-type-img-tag">3-bed semi-detached</span>
+        </div>
+        <div class="aw-type-body">
+          <h3 class="aw-type-name">The Birch</h3>
+          <div class="aw-type-sub">Plots 1, 2, 3 &amp; 4 · Phase 1</div>
+          <div class="aw-type-specs">
+            <div class="aw-type-spec"><span class="aw-type-spec-val">3</span><span class="aw-type-spec-lbl">Bedrooms</span></div>
+            <div class="aw-type-spec"><span class="aw-type-spec-val">2</span><span class="aw-type-spec-lbl">Bathrooms</span></div>
+            <div class="aw-type-spec"><span class="aw-type-spec-val">950</span><span class="aw-type-spec-lbl">sq ft</span></div>
+          </div>
+          <p class="aw-type-desc">A two-storey semi-detached family home with a south-facing rear garden, open-plan kitchen/dining and a dedicated home-office space upstairs. Integrated single garage.</p>
+          <div class="aw-type-foot">
+            <div>
+              <div class="aw-type-price-lbl">From</div>
+              <div class="aw-type-price">£285,000</div>
+            </div>
+            <span class="aw-type-status">Coming Soon</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="aw-type-card reveal d1">
+        <div class="aw-type-img">
+          <img src="images/projects/hollin-bank.jpg" alt="The Oak — 4-bed detached, indicative image from a recent Leck Hollin Bank development" loading="lazy">
+          <span class="aw-type-img-tag">4-bed detached</span>
+        </div>
+        <div class="aw-type-body">
+          <h3 class="aw-type-name">The Oak</h3>
+          <div class="aw-type-sub">Plots 5, 6, 7 &amp; 8 · Phase 1</div>
+          <div class="aw-type-specs">
+            <div class="aw-type-spec"><span class="aw-type-spec-val">4</span><span class="aw-type-spec-lbl">Bedrooms</span></div>
+            <div class="aw-type-spec"><span class="aw-type-spec-val">2</span><span class="aw-type-spec-lbl">Bathrooms</span></div>
+            <div class="aw-type-spec"><span class="aw-type-spec-val">1,420</span><span class="aw-type-spec-lbl">sq ft</span></div>
+          </div>
+          <p class="aw-type-desc">A detached four-bedroom family home with main-bedroom ensuite, integral garage and full-height bi-fold doors to the rear. Driveway parking for two cars.</p>
+          <div class="aw-type-foot">
+            <div>
+              <div class="aw-type-price-lbl">From</div>
+              <div class="aw-type-price">£375,000</div>
+            </div>
+            <span class="aw-type-status">Coming Soon</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="aw-type-card reveal d2">
+        <div class="aw-type-img">
+          <img src="images/projects/bespoke-home-02.jpg" alt="The Cedar — 4-bed detached with study, indicative image of a recent bespoke Leck home" loading="lazy">
+          <span class="aw-type-img-tag">4-bed detached + study</span>
+        </div>
+        <div class="aw-type-body">
+          <h3 class="aw-type-name">The Cedar</h3>
+          <div class="aw-type-sub">Plots 9 &amp; 10 · Phase 1</div>
+          <div class="aw-type-specs">
+            <div class="aw-type-spec"><span class="aw-type-spec-val">4</span><span class="aw-type-spec-lbl">Bedrooms</span></div>
+            <div class="aw-type-spec"><span class="aw-type-spec-val">3</span><span class="aw-type-spec-lbl">Bathrooms</span></div>
+            <div class="aw-type-spec"><span class="aw-type-spec-val">1,580</span><span class="aw-type-spec-lbl">sq ft</span></div>
+          </div>
+          <p class="aw-type-desc">A larger detached four-bedroom home with a separate ground-floor study, dual-aspect lounge and main-bedroom ensuite with dressing room. Integral double garage.</p>
+          <div class="aw-type-foot">
+            <div>
+              <div class="aw-type-price-lbl">From</div>
+              <div class="aw-type-price">£415,000</div>
+            </div>
+            <span class="aw-type-status">Coming Soon</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="aw-type-card reveal d3">
+        <div class="aw-type-img">
+          <img src="images/projects/waterside-staveley-02.jpg" alt="The Larch — 5-bed executive, indicative image from Leck's recent Waterside development" loading="lazy">
+          <span class="aw-type-img-tag">5-bed executive</span>
+        </div>
+        <div class="aw-type-body">
+          <h3 class="aw-type-name">The Larch</h3>
+          <div class="aw-type-sub">Plots 11 &amp; 12 · Phase 1</div>
+          <div class="aw-type-specs">
+            <div class="aw-type-spec"><span class="aw-type-spec-val">5</span><span class="aw-type-spec-lbl">Bedrooms</span></div>
+            <div class="aw-type-spec"><span class="aw-type-spec-val">3</span><span class="aw-type-spec-lbl">Bathrooms</span></div>
+            <div class="aw-type-spec"><span class="aw-type-spec-val">1,920</span><span class="aw-type-spec-lbl">sq ft</span></div>
+          </div>
+          <p class="aw-type-desc">The flagship five-bedroom executive home. Open-plan family/kitchen/dining at the rear, formal lounge, separate study, principal suite with dressing room and ensuite, plus integral double garage.</p>
+          <div class="aw-type-foot">
+            <div>
+              <div class="aw-type-price-lbl">From</div>
+              <div class="aw-type-price">£495,000</div>
+            </div>
+            <span class="aw-type-status">Coming Soon</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- SPECIFICATION -->
+<section class="aw-section">
+  <div class="container">
+    <div class="aw-head aw-head--center reveal">
+      <div class="aw-eyebrow">Specification</div>
+      <h2>Specified to <em>last</em>.</h2>
+      <p>Every Avon Wood home is built to the same standards Leck applies to its commercial work. Final specification confirmed at reservation — what's listed here is the indicative standard for Phase 1.</p>
+    </div>
+
+    <div class="aw-spec-grid">
+
+      <div class="aw-spec-col reveal">
+        <h3>Kitchens &amp; Bathrooms</h3>
+        <ul class="aw-spec-list">
+          <li>Bespoke fitted kitchens with stone or quartz worktops</li>
+          <li>Integrated AEG or Siemens appliances</li>
+          <li>Soft-close drawers and doors throughout</li>
+          <li>Porcelain tiled flooring to kitchens and bathrooms</li>
+          <li>Walk-in shower with rainfall head to main ensuites</li>
+          <li>Heated towel rails in all bathrooms</li>
+        </ul>
+      </div>
+
+      <div class="aw-spec-col reveal d1">
+        <h3>Energy &amp; Sustainability</h3>
+        <ul class="aw-spec-list">
+          <li>Air source heat pump heating as standard</li>
+          <li>Solar PV array with battery storage option</li>
+          <li>EV charge point installed to every plot</li>
+          <li>Triple glazing throughout</li>
+          <li>Enhanced wall and roof insulation beyond Building Regs</li>
+          <li>Smart thermostat zones for each floor</li>
+        </ul>
+      </div>
+
+      <div class="aw-spec-col reveal d2">
+        <h3>Finishes &amp; Detail</h3>
+        <ul class="aw-spec-list">
+          <li>Engineered oak flooring to ground floor</li>
+          <li>Wool blend carpets throughout upper floors</li>
+          <li>Hardwood internal doors with chrome ironmongery</li>
+          <li>Anthracite aluminium windows externally</li>
+          <li>Landscaped front gardens with stone paving</li>
+          <li>Returfed rear gardens with hardwood fencing</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="aw-section aw-section--cream">
+  <div class="container">
+    <div class="aw-head reveal">
+      <div class="aw-eyebrow">Location</div>
+      <h2>Walney Island, <em>South Cumbria</em>.</h2>
+      <p>A coastal community on the western edge of Barrow-in-Furness, connected to the mainland by the Jubilee Bridge. Walney is home to two nationally significant nature reserves, a thriving primary school and easy access to the Lake District beyond.</p>
+    </div>
+
+    <div class="aw-loc-grid">
+      <div class="aw-loc-body reveal">
+        <p>Avon Wood sits on the south side of Walney, a five-minute walk from the channel and ten minutes from South Walney Nature Reserve. The village school is on the same road, the BAE Systems Barrow shipyard is fifteen minutes by car across the bridge, and the M6 is forty minutes away via the A590.</p>
+        <p>For weekends, the Lake District National Park boundary is forty minutes by car — Coniston, Hawkshead and Windermere are all under an hour.</p>
+
+        <div class="aw-loc-poi">
+          <div class="aw-poi">
+            <span class="aw-poi-name">Walney Primary School</span>
+            <span class="aw-poi-dist">0.3 miles</span>
+          </div>
+          <div class="aw-poi">
+            <span class="aw-poi-name">South Walney Nature Reserve</span>
+            <span class="aw-poi-dist">1.2 miles</span>
+          </div>
+          <div class="aw-poi">
+            <span class="aw-poi-name">Barrow town centre</span>
+            <span class="aw-poi-dist">2.4 miles</span>
+          </div>
+          <div class="aw-poi">
+            <span class="aw-poi-name">BAE Systems Barrow</span>
+            <span class="aw-poi-dist">3.1 miles</span>
+          </div>
+          <div class="aw-poi">
+            <span class="aw-poi-name">Barrow railway station</span>
+            <span class="aw-poi-dist">2.8 miles</span>
+          </div>
+          <div class="aw-poi">
+            <span class="aw-poi-name">Lake District boundary</span>
+            <span class="aw-poi-dist">17 miles</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="aw-map-embed reveal d1">
+        <iframe
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-3.270%2C54.080%2C-3.205%2C54.110&amp;layer=mapnik&amp;marker=54.0930%2C-3.2380"
+          allowfullscreen
+          loading="lazy"
+          title="Avon Wood location map — Walney Island"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGISTER INTEREST -->
+<section class="aw-section aw-section--dark" id="register">
+  <div class="container">
+    <div class="aw-register-grid">
+
+      <div class="reveal">
+        <div class="aw-eyebrow">Register Interest</div>
+        <h2 style="color:#fff;font-family:var(--display);font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;letter-spacing:-.025em;line-height:1.15;margin-bottom:14px">Be the <em style="font-style:normal;color:#E8DCC2">first</em> to know.</h2>
+        <p style="color:rgba(255,255,255,.78);font-size:.95rem;line-height:1.8;margin-bottom:16px">Avon Wood plots will be released in phases from spring 2027. Register now and we'll contact you before any public release with:</p>
+        <ul style="list-style:none;padding:0;margin:0">
+          <li style="color:rgba(255,255,255,.85);font-size:.9rem;line-height:1.75;padding:8px 0 8px 22px;position:relative">
+            <span style="position:absolute;left:0;top:18px;width:10px;height:1.5px;background:#7CB342"></span>
+            Early plot reservation access (before public release)
+          </li>
+          <li style="color:rgba(255,255,255,.85);font-size:.9rem;line-height:1.75;padding:8px 0 8px 22px;position:relative">
+            <span style="position:absolute;left:0;top:18px;width:10px;height:1.5px;background:#7CB342"></span>
+            Finalised house type specifications &amp; pricing
+          </li>
+          <li style="color:rgba(255,255,255,.85);font-size:.9rem;line-height:1.75;padding:8px 0 8px 22px;position:relative">
+            <span style="position:absolute;left:0;top:18px;width:10px;height:1.5px;background:#7CB342"></span>
+            Construction milestones and progress updates
+          </li>
+        </ul>
+      </div>
+
+      <form class="aw-register-form reveal d1" id="registerForm" onsubmit="event.preventDefault();this.querySelector('button').textContent='Thank you — we’ll be in touch';this.querySelector('button').style.background='#5d8d3a';">
+        <label for="reg-name">Name</label>
+        <input type="text" id="reg-name" name="name" required>
+
+        <label for="reg-email">Email</label>
+        <input type="email" id="reg-email" name="email" required>
+
+        <label for="reg-phone">Phone (optional)</label>
+        <input type="tel" id="reg-phone" name="phone">
+
+        <label for="reg-interest">Plot or house type of interest</label>
+        <select id="reg-interest" name="interest">
+          <option value="any">Any — happy to hear about all releases</option>
+          <option value="birch">The Birch — 3-bed semi (from £285,000)</option>
+          <option value="oak">The Oak — 4-bed detached (from £375,000)</option>
+          <option value="cedar">The Cedar — 4-bed + study (from £415,000)</option>
+          <option value="larch">The Larch — 5-bed executive (from £495,000)</option>
+        </select>
+
+        <label for="reg-msg">Anything else (optional)</label>
+        <textarea id="reg-msg" name="message" placeholder="e.g. preferred completion date, accessibility needs, questions about specification..."></textarea>
+
+        <button type="submit">Register Interest</button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-card">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/01/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="footer-logo-fallback" style="display:none">Leck Construction</span>
+        <p class="footer-tagline">Leck Homes is the residential arm of Leck Construction Ltd — South Cumbria's commercial construction specialists since 1946.</p>
+        <div class="footer-contact">
+          <p>Leck House, Ironworks Road<br>Barrow-in-Furness, LA14 2PQ</p>
+          <a href="tel:01229820394">01229 820394</a>
+          <a href="mailto:info@leckconstruction.co">info@leckconstruction.co</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <div class="footer-col-title">Leck Homes</div>
+          <a href="leck-homes.html">Developments</a>
+          <a href="avon-wood.html">Avon Wood</a>
+          <a href="leck-homes.html#why">About Leck Homes</a>
+          <a href="#register">Register Interest</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Leck Construction</div>
+          <a href="index.html">Main Site</a>
+          <a href="sectors.html">Sectors</a>
+          <a href="projects.html">Our Work</a>
+          <a href="approach.html">Our Approach</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Company</div>
+          <a href="index.html#about">About Us</a>
+          <a href="news.html">News &amp; Updates</a>
+          <a href="vacancies.html">Careers</a>
+          <a href="index.html#contact">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-legal">© 2026 Leck Construction Ltd. All rights reserved.</p>
+      <p class="footer-reg">Company No. 00421094 · Leck House, Ironworks Road, Barrow-in-Furness LA14 2PQ</p>
+    </div>
+  </div>
+  </div>
+</footer>
+
+<script src="sector.js"></script>
+<script>
+  // ─── Interactive plot map ───
+  const plotData = {
+    1:  { type:'birch',  name:'The Birch',  beds:3, baths:2, sqft:'950',   price:'£285,000', phase:'Phase 1' },
+    2:  { type:'birch',  name:'The Birch',  beds:3, baths:2, sqft:'950',   price:'£285,000', phase:'Phase 1' },
+    3:  { type:'birch',  name:'The Birch',  beds:3, baths:2, sqft:'950',   price:'£285,000', phase:'Phase 1' },
+    4:  { type:'birch',  name:'The Birch',  beds:3, baths:2, sqft:'950',   price:'£285,000', phase:'Phase 1' },
+    5:  { type:'oak',    name:'The Oak',    beds:4, baths:2, sqft:'1,420', price:'£375,000', phase:'Phase 1' },
+    6:  { type:'oak',    name:'The Oak',    beds:4, baths:2, sqft:'1,420', price:'£375,000', phase:'Phase 1' },
+    7:  { type:'oak',    name:'The Oak',    beds:4, baths:2, sqft:'1,420', price:'£375,000', phase:'Phase 1' },
+    8:  { type:'oak',    name:'The Oak',    beds:4, baths:2, sqft:'1,420', price:'£375,000', phase:'Phase 1' },
+    9:  { type:'cedar',  name:'The Cedar',  beds:4, baths:3, sqft:'1,580', price:'£415,000', phase:'Phase 1' },
+    10: { type:'cedar',  name:'The Cedar',  beds:4, baths:3, sqft:'1,580', price:'£415,000', phase:'Phase 1' },
+    11: { type:'larch',  name:'The Larch',  beds:5, baths:3, sqft:'1,920', price:'£495,000', phase:'Phase 1' },
+    12: { type:'larch',  name:'The Larch',  beds:5, baths:3, sqft:'1,920', price:'£495,000', phase:'Phase 1' },
+  };
+
+  const detailEl = document.getElementById('plotDetail');
+  const plotGroups = document.querySelectorAll('.plot-grp');
+
+  function renderDetail(plotNum) {
+    const d = plotData[plotNum];
+    if (!d) return;
+    const subject = encodeURIComponent(`Plot ${plotNum} interest — Avon Wood`);
+    detailEl.innerHTML = `
+      <div class="aw-detail-tag">Avon Wood · ${d.phase}</div>
+      <div class="aw-detail-num">Plot ${plotNum}</div>
+      <div class="aw-detail-type">${d.name}</div>
+      <div class="aw-detail-status">Coming Soon · 2027</div>
+      <div class="aw-detail-row"><span class="aw-detail-key">Bedrooms</span><span class="aw-detail-val">${d.beds}</span></div>
+      <div class="aw-detail-row"><span class="aw-detail-key">Bathrooms</span><span class="aw-detail-val">${d.baths}</span></div>
+      <div class="aw-detail-row"><span class="aw-detail-key">Floor area</span><span class="aw-detail-val">${d.sqft} sq ft</span></div>
+      <div class="aw-detail-row"><span class="aw-detail-key">Garage</span><span class="aw-detail-val">${d.beds >= 4 ? 'Integral' : 'Single'}</span></div>
+      <div class="aw-detail-price">
+        <span class="aw-detail-price-lbl">Indicative<br>price from</span>
+        <span class="aw-detail-price-val">${d.price}</span>
+      </div>
+      <a href="mailto:info@leckconstruction.co?subject=${subject}" class="aw-detail-cta">Register interest in Plot ${plotNum} →</a>
+    `;
+  }
+
+  plotGroups.forEach(g => {
+    g.addEventListener('click', () => {
+      plotGroups.forEach(x => x.querySelector('.plot-shape').classList.remove('active'));
+      g.querySelector('.plot-shape').classList.add('active');
+      renderDetail(g.dataset.plot);
+    });
+    // keyboard accessibility
+    g.setAttribute('tabindex', '0');
+    g.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); g.click(); }
+    });
+  });
+</script>
+</body>
+</html>

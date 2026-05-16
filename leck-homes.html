@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leck Homes — New Homes in South Cumbria | Leck Construction Ltd</title>
+  <meta name="description" content="Leck Homes — the residential arm of Leck Construction. Quality new homes across South Cumbria. Current development: Avon Wood, Walney Island. Coming soon.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leckconstruction.co.uk/leck-homes">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leckconstruction.co.uk/leck-homes">
+  <meta property="og:title" content="Leck Homes — New Homes in South Cumbria">
+  <meta property="og:description" content="The residential arm of Leck Construction. New homes coming soon at Avon Wood, Walney Island.">
+  <meta property="og:image" content="images/projects/leck-homes-development.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="images/projects/leck-homes-development.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="sector.css?v=16">
+  <style>
+    /* ────────────────────────────────────────────────────────────
+       LECK HOMES — distinct visual identity within the main site
+       ──────────────────────────────────────────────────────────── */
+
+    /* Warmer palette + page background */
+    body.lh{background:#FAF8F4}
+
+    /* Leck Homes nav stays full white (matches main site) but pushed down to make room for back-bar */
+    body.lh .nav{top:40px}
+    body.lh .nav-cta{background:var(--navy) !important}
+
+    /* Leck Homes wordmark in nav */
+    .lh-mark{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+    .lh-mark-main{font-family:var(--display);font-size:1.25rem;font-weight:800;letter-spacing:-.01em;color:var(--navy)}
+    .lh-mark-sub{font-size:.52rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--text-3);margin-top:3px}
+
+    /* Nav search (replaces phone CTA on Leck Homes pages) */
+    .lh-search{position:relative;display:flex;align-items:center;list-style:none}
+    .lh-search svg{position:absolute;left:14px;width:14px;height:14px;color:var(--text-3);pointer-events:none}
+    .lh-search input{padding:10px 18px 10px 38px;font-size:.78rem;font-family:inherit;border:1px solid var(--grey-200);border-radius:999px;outline:none;background:#fff;color:var(--navy);width:220px;transition:border-color .2s,width .2s,box-shadow .2s}
+    .lh-search input:focus{border-color:var(--navy);width:260px;box-shadow:0 0 0 3px rgba(27,42,74,.06)}
+    .lh-search input::placeholder{color:var(--text-3);font-weight:500}
+
+    /* Back to main site bar — fixed at top, prominent so visitors can clearly navigate back */
+    .lh-backbar{background:var(--navy-3);color:#fff;font-size:.78rem;font-weight:600;letter-spacing:.08em;position:fixed;top:0;left:0;right:0;height:40px;display:flex;align-items:center;z-index:102;border-bottom:1px solid rgba(255,255,255,.12)}
+    .lh-backbar .container{display:flex;justify-content:space-between;align-items:center;gap:16px;width:100%}
+    .lh-backbar-link{color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:10px;padding:7px 14px;border-radius:4px;transition:background .18s,gap .18s;font-weight:700;letter-spacing:.04em;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18)}
+    .lh-backbar-link:hover{background:rgba(255,255,255,.18);gap:14px;border-color:rgba(255,255,255,.32)}
+    .lh-backbar-link svg{width:14px;height:14px;flex-shrink:0;transition:transform .18s}
+    .lh-backbar-link:hover svg{transform:translateX(-2px)}
+    .lh-backbar-tag{color:rgba(255,255,255,.65);font-weight:500;font-size:.7rem;letter-spacing:.06em}
+    .lh-backbar-tag strong{color:#fff;font-weight:700}
+
+    /* Hero */
+    .lh-hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;overflow:hidden;padding-bottom:80px;background:var(--navy-3)}
+    .lh-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;will-change:transform;animation:lhZoom 20s ease-out infinite alternate}
+    @keyframes lhZoom{from{transform:scale(1)}to{transform:scale(1.06)}}
+    .lh-hero-shade{position:absolute;inset:0;background:linear-gradient(105deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.45) 50%,rgba(0,0,0,.15) 100%)}
+    .lh-hero .container{position:relative;z-index:2;width:100%;color:#fff}
+    .lh-hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#fff;padding:7px 14px;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18);border-radius:4px;margin-bottom:22px}
+    .lh-hero-eyebrow::before{content:'';width:8px;height:8px;background:#7CB342;border-radius:50%;animation:lhPulse 2s ease-in-out infinite}
+    @keyframes lhPulse{0%,100%{opacity:1}50%{opacity:.4}}
+    .lh-hero h1{font-family:var(--display);font-size:clamp(2.4rem,5vw,4.4rem);font-weight:800;letter-spacing:-.025em;line-height:1.04;margin-bottom:20px;max-width:760px}
+    .lh-hero h1 em{font-style:normal;color:#E8DCC2}
+    .lh-hero-sub{font-size:1.05rem;line-height:1.7;color:rgba(255,255,255,.85);max-width:580px;margin-bottom:32px}
+    .lh-hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+    .lh-btn-primary{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--navy);font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:15px 28px;text-decoration:none;transition:background .2s,color .2s}
+    .lh-btn-primary:hover{background:var(--blue);color:#fff}
+    .lh-btn-outline{display:inline-flex;align-items:center;gap:10px;background:transparent;color:#fff;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px 28px;text-decoration:none;border:1px solid rgba(255,255,255,.4);transition:background .2s,border-color .2s}
+    .lh-btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff}
+
+    /* Intro section */
+    .lh-intro{padding:96px 0;background:#FAF8F4;text-align:center}
+    .lh-intro-inner{max-width:720px;margin:0 auto}
+    .lh-eyebrow{font-size:.62rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--blue);display:inline-flex;align-items:center;gap:10px;margin-bottom:18px}
+    .lh-eyebrow::before,.lh-eyebrow::after{content:'';display:block;width:24px;height:1px;background:var(--blue)}
+    .lh-intro h2{font-family:var(--display);font-size:clamp(1.8rem,3.2vw,2.6rem);font-weight:800;letter-spacing:-.025em;color:var(--navy);line-height:1.15;margin-bottom:20px}
+    .lh-intro h2 em{font-style:normal;color:var(--blue)}
+    .lh-intro p{font-size:1rem;line-height:1.8;color:var(--text-2);margin-bottom:14px}
+
+    /* Developments section */
+    .lh-developments{padding:0 0 96px;background:#FAF8F4}
+    .lh-head{text-align:center;max-width:640px;margin:0 auto 56px}
+    .lh-head h2{font-family:var(--display);font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;color:var(--navy);letter-spacing:-.025em;line-height:1.15;margin-bottom:14px}
+    .lh-head h2 em{font-style:normal;color:var(--blue)}
+    .lh-head p{font-size:.95rem;line-height:1.75;color:var(--text-3)}
+
+    .lh-dev-card{display:grid;grid-template-columns:1.15fr 1fr;gap:0;background:#fff;border:1px solid #E8E2D6;border-radius:14px;overflow:hidden;box-shadow:0 10px 40px rgba(15,30,53,.06);position:relative}
+    .lh-dev-img{position:relative;min-height:520px;overflow:hidden}
+    .lh-dev-img a{display:block;position:absolute;inset:0}
+    .lh-dev-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .9s var(--ease-out)}
+    .lh-dev-card:hover .lh-dev-img img{transform:scale(1.04)}
+    .lh-dev-body{padding:48px 52px 44px;display:flex;flex-direction:column;justify-content:center}
+    .lh-status{display:inline-flex;align-items:center;gap:8px;font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#5d8d3a;background:rgba(124,179,66,.12);padding:6px 12px;border-radius:4px;margin-bottom:20px;align-self:flex-start}
+    .lh-status::before{content:'';width:6px;height:6px;background:#7CB342;border-radius:50%}
+    .lh-dev-title{font-family:var(--display);font-size:clamp(1.6rem,2.6vw,2.2rem);font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1.15;margin-bottom:6px}
+    .lh-dev-loc{font-size:.85rem;font-weight:500;color:var(--text-3);margin-bottom:24px;display:flex;align-items:center;gap:6px}
+    .lh-dev-loc svg{width:12px;height:12px;flex-shrink:0}
+    .lh-dev-desc{font-size:.95rem;line-height:1.7;color:var(--text-2);margin-bottom:28px}
+    .lh-dev-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:24px 0;border-top:1px solid #E8E2D6;border-bottom:1px solid #E8E2D6;margin-bottom:28px}
+    .lh-stat-val{font-family:var(--display);font-size:1.5rem;font-weight:800;color:var(--navy);letter-spacing:-.02em;line-height:1}
+    .lh-stat-lbl{font-size:.62rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3);margin-top:6px}
+    .lh-dev-cta{display:inline-flex;align-items:center;gap:10px;background:var(--navy);color:#fff;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px 26px;text-decoration:none;align-self:flex-start;transition:background .2s,gap .2s;position:relative;z-index:2}
+    .lh-dev-cta:hover{background:var(--blue);gap:14px}
+
+    /* Why Leck Homes */
+    .lh-why{padding:96px 0;background:#F4EFE7}
+    .lh-why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:48px;max-width:1100px;margin:0 auto}
+    .lh-why-card{text-align:left}
+    .lh-why-icon{width:42px;height:42px;color:var(--blue);margin-bottom:18px;display:flex;align-items:center;justify-content:center}
+    .lh-why-icon svg{width:100%;height:100%;stroke:currentColor;stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .lh-why-card h3{font-family:var(--display);font-size:1rem;font-weight:800;color:var(--navy);letter-spacing:-.01em;line-height:1.3;margin-bottom:10px}
+    .lh-why-card p{font-size:.85rem;line-height:1.7;color:var(--text-2)}
+
+    /* Past developments */
+    .lh-past{padding:96px 0;background:#FAF8F4}
+    .lh-past-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+    .lh-past-card{background:#fff;border:1px solid #E8E2D6;overflow:hidden;display:flex;flex-direction:column}
+    .lh-past-img{aspect-ratio:4/3;overflow:hidden}
+    .lh-past-img img{width:100%;height:100%;object-fit:cover}
+    .lh-past-body{padding:22px 26px 24px}
+    .lh-past-tag{font-size:.56rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#5d8d3a;margin-bottom:6px}
+    .lh-past-title{font-family:var(--display);font-size:1.1rem;font-weight:800;color:var(--navy);letter-spacing:-.015em;line-height:1.25;margin-bottom:4px}
+    .lh-past-loc{font-size:.78rem;color:var(--text-3)}
+
+    /* Register interest CTA */
+    .lh-register{padding:96px 0;background:var(--navy-3);color:#fff;text-align:center}
+    .lh-register h2{font-family:var(--display);font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;letter-spacing:-.025em;line-height:1.15;margin-bottom:16px;max-width:640px;margin-left:auto;margin-right:auto;color:#fff}
+    .lh-register h2 em{font-style:normal;color:#E8DCC2}
+    .lh-register p{font-size:.95rem;line-height:1.7;color:rgba(255,255,255,.7);max-width:560px;margin:0 auto 32px}
+    .lh-register .lh-btn-primary{background:#fff;color:var(--navy)}
+    .lh-register .lh-btn-primary:hover{background:var(--blue);color:#fff}
+
+    @media(max-width:1024px){
+      .lh-dev-card{grid-template-columns:1fr}
+      .lh-dev-img{min-height:380px}
+      .lh-dev-body{padding:36px}
+      .lh-why-grid{grid-template-columns:repeat(2,1fr);gap:32px}
+      .lh-past-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:640px){
+      .lh-hero{min-height:auto;padding:140px 0 60px}
+      .lh-why-grid{grid-template-columns:1fr}
+      .lh-past-grid{grid-template-columns:1fr}
+      .lh-dev-stats{grid-template-columns:1fr 1fr;gap:14px}
+      .lh-dev-body{padding:28px 24px 32px}
+      .lh-backbar .container{flex-direction:column;align-items:flex-start;gap:4px}
+      .lh-backbar-tag{display:none}
+    }
+  </style>
+</head>
+<body class="lh">
+
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- Back to main site bar -->
+<div class="lh-backbar">
+  <div class="container">
+    <a href="index.html" class="lh-backbar-link" aria-label="Return to Leck Construction main site">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to Leck Construction
+    </a>
+    <span class="lh-backbar-tag">You're on <strong>Leck Homes</strong> · the residential arm of Leck Construction Ltd</span>
+  </div>
+</div>
+
+<!-- LECK HOMES NAV -->
+<nav class="nav" id="nav">
+  <div class="container"><div class="nav-inner">
+    <a href="leck-homes.html" class="lh-mark">
+      <span class="lh-mark-main">LECK HOMES</span>
+      <span class="lh-mark-sub">New Homes · South Cumbria</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#developments">Developments</a></li>
+      <li><a href="avon-wood.html">Avon Wood</a></li>
+      <li><a href="#why">About Leck Homes</a></li>
+      <li><a href="#past">Past Schemes</a></li>
+      <li><a href="#register">Register Interest</a></li>
+      <li class="lh-search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
+        <input type="search" placeholder="Search developments..." aria-label="Search Leck Homes">
+      </li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#developments" class="mm-link">Developments</a>
+  <a href="avon-wood.html" class="mm-link">Avon Wood</a>
+  <a href="#why" class="mm-link">About Leck Homes</a>
+  <a href="#past" class="mm-link">Past Schemes</a>
+  <a href="#register" class="mm-link">Register Interest</a>
+  <a href="index.html" class="mm-link">← Back to Leck Construction</a>
+  <a href="tel:01229820394" class="mm-tel">01229 820394</a>
+</div>
+
+<!-- HERO -->
+<section class="lh-hero">
+  <div class="lh-hero-bg" style="background-image:url('images/projects/leck-homes-development.jpg')"></div>
+  <div class="lh-hero-shade"></div>
+  <div class="container">
+    <div class="lh-hero-eyebrow">Now Taking Interest</div>
+    <h1>Quality new homes<br>across <em>South Cumbria.</em></h1>
+    <p class="lh-hero-sub">Built by a family-owned contractor that has been delivering homes in this region for nearly 80 years. NHBC Grade A registered, locally crafted, designed for the way people in Cumbria actually live.</p>
+    <div class="lh-hero-actions">
+      <a href="avon-wood.html" class="lh-btn-primary">View Avon Wood →</a>
+      <a href="#register" class="lh-btn-outline">Register Interest</a>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="lh-intro">
+  <div class="container">
+    <div class="lh-intro-inner reveal">
+      <div class="lh-eyebrow">About Leck Homes</div>
+      <h2>The <em>residential arm</em> of Leck Construction.</h2>
+      <p>Since 1946 we've been building across South Cumbria — schools, hospitals, civic landmarks, industrial facilities and thousands of homes. Leck Homes is our own residential development brand. Every house we build under the Leck Homes name is constructed by the same team, to the same standards, as the work we do for our largest commercial clients.</p>
+      <p>What that means for you: an NHBC Grade A registered housebuilder, materials and labour sourced locally where possible, and a contractor that's been here for nearly 80 years — and intends to be here for the next 80.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CURRENT DEVELOPMENT -->
+<section class="lh-developments" id="developments">
+  <div class="container">
+    <div class="lh-head reveal">
+      <h2>Current <em>Development</em></h2>
+      <p>One development now taking expressions of interest — Avon Wood, Walney Island. Planning granted 2026, build commencing 2027.</p>
+    </div>
+
+    <article class="lh-dev-card reveal">
+      <div class="lh-dev-img">
+        <a href="avon-wood.html" aria-label="View Avon Wood development">
+          <img src="images/projects/leck-homes-development.jpg" alt="Avon Wood development — illustrative" loading="lazy">
+        </a>
+      </div>
+      <div class="lh-dev-body">
+        <span class="lh-status">Coming Soon · 2027</span>
+        <h3 class="lh-dev-title">Avon Wood</h3>
+        <div class="lh-dev-loc">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-7-7.5-7-13a7 7 0 0 1 14 0c0 5.5-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          Walney Island, Barrow-in-Furness, Cumbria
+        </div>
+        <p class="lh-dev-desc">A new development of 12 family homes on Walney Island — a mix of 3, 4 and 5-bedroom houses ranging from family semis to executive detached. Sea-influenced architecture, generous gardens, and walking distance to Walney's nature reserves and the channel.</p>
+        <div class="lh-dev-stats">
+          <div>
+            <div class="lh-stat-val">12</div>
+            <div class="lh-stat-lbl">Plots Total</div>
+          </div>
+          <div>
+            <div class="lh-stat-val">3–5</div>
+            <div class="lh-stat-lbl">Bedroom Homes</div>
+          </div>
+          <div>
+            <div class="lh-stat-val">2027</div>
+            <div class="lh-stat-lbl">Expected Start</div>
+          </div>
+        </div>
+        <a href="avon-wood.html" class="lh-dev-cta">Explore Avon Wood →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- WHY LECK HOMES -->
+<section class="lh-why" id="why">
+  <div class="container">
+    <div class="lh-head reveal">
+      <div class="lh-eyebrow">Why Leck Homes</div>
+      <h2>Built by a <em>contractor</em>, not a developer.</h2>
+      <p>The same standards we apply to GSK, BAE Systems and NHS Cumbria sites — applied to the homes we build under our own name.</p>
+    </div>
+    <div class="lh-why-grid">
+      <div class="lh-why-card reveal">
+        <div class="lh-why-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6M9 11h.01M15 11h.01"/></svg>
+        </div>
+        <h3>NHBC Grade A</h3>
+        <p>The highest rating available for a small-to-medium housebuilder. Independently assessed.</p>
+      </div>
+      <div class="lh-why-card reveal d1">
+        <div class="lh-why-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 22s-7-7.5-7-13a7 7 0 0 1 14 0c0 5.5-7 13-7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <h3>Built Locally</h3>
+        <p>Every Leck home is built by the same Cumbrian team. Local labour, local supply chain, local accountability.</p>
+      </div>
+      <div class="lh-why-card reveal d2">
+        <div class="lh-why-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <h3>80 Years Building</h3>
+        <p>Founded 1946, still independently family-owned. The same standards across four generations.</p>
+      </div>
+      <div class="lh-why-card reveal d3">
+        <div class="lh-why-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>Full Warranty</h3>
+        <p>Every Leck home comes with full 2-year defects cover from us, plus 10-year NHBC warranty as standard.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAST DEVELOPMENTS -->
+<section class="lh-past" id="past">
+  <div class="container">
+    <div class="lh-head reveal">
+      <div class="lh-eyebrow">Past Schemes</div>
+      <h2>A track record of <em>delivered</em> homes.</h2>
+      <p>Recent and historic Leck Homes developments across South Cumbria.</p>
+    </div>
+    <div class="lh-past-grid">
+
+      <div class="lh-past-card reveal">
+        <div class="lh-past-img">
+          <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/02/leck-square-images-thefield3.jpg" alt="The Field, Ulverston" loading="lazy">
+        </div>
+        <div class="lh-past-body">
+          <div class="lh-past-tag">Executive Homes</div>
+          <div class="lh-past-title">The Field</div>
+          <div class="lh-past-loc">Ulverston, Cumbria</div>
+        </div>
+      </div>
+
+      <div class="lh-past-card reveal d1">
+        <div class="lh-past-img">
+          <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/02/leck-square-images-chetwynde3.jpg" alt="Chetwynde Park, Barrow" loading="lazy">
+        </div>
+        <div class="lh-past-body">
+          <div class="lh-past-tag">Family Homes</div>
+          <div class="lh-past-title">Chetwynde Park</div>
+          <div class="lh-past-loc">Barrow-in-Furness</div>
+        </div>
+      </div>
+
+      <div class="lh-past-card reveal d2">
+        <div class="lh-past-img">
+          <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/02/leck-square-images-scales1.jpg" alt="Ash Tree Close, Scales" loading="lazy">
+        </div>
+        <div class="lh-past-body">
+          <div class="lh-past-tag">Rural Development</div>
+          <div class="lh-past-title">Ash Tree Close</div>
+          <div class="lh-past-loc">Scales, near Ulverston</div>
+        </div>
+      </div>
+
+      <div class="lh-past-card reveal">
+        <div class="lh-past-img">
+          <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/02/arlington.jpg" alt="Arlington Court, Barrow" loading="lazy">
+        </div>
+        <div class="lh-past-body">
+          <div class="lh-past-tag">Residential Development</div>
+          <div class="lh-past-title">Arlington Court</div>
+          <div class="lh-past-loc">Barrow-in-Furness</div>
+        </div>
+      </div>
+
+      <div class="lh-past-card reveal d1">
+        <div class="lh-past-img">
+          <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/02/leck-square-images-plover3.jpg" alt="Plover Gardens, Walney Island" loading="lazy">
+        </div>
+        <div class="lh-past-body">
+          <div class="lh-past-tag">Affordable Housing</div>
+          <div class="lh-past-title">Plover Gardens</div>
+          <div class="lh-past-loc">Walney Island, Barrow</div>
+        </div>
+      </div>
+
+      <div class="lh-past-card reveal d2">
+        <div class="lh-past-img">
+          <img src="images/projects/bespoke-home-03.jpg" alt="Solway Drive, Walney Island" loading="lazy">
+        </div>
+        <div class="lh-past-body">
+          <div class="lh-past-tag">New Development</div>
+          <div class="lh-past-title">Solway Drive</div>
+          <div class="lh-past-loc">Walney Island, Barrow</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- REGISTER INTEREST -->
+<section class="lh-register" id="register">
+  <div class="container">
+    <h2>Be the <em>first</em> to know.</h2>
+    <p>Avon Wood plots will be released in phases from 2027. Register your interest now to receive early access to plot reservations, house type details and pricing as soon as it's available.</p>
+    <a href="mailto:info@leckconstruction.co?subject=Register%20interest%20-%20Avon%20Wood" class="lh-btn-primary">Register Your Interest →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-card">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/01/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="footer-logo-fallback" style="display:none">Leck Construction</span>
+        <p class="footer-tagline">Leck Homes is the residential arm of Leck Construction Ltd — South Cumbria's commercial construction specialists since 1946.</p>
+        <div class="footer-contact">
+          <p>Leck House, Ironworks Road<br>Barrow-in-Furness, LA14 2PQ</p>
+          <a href="tel:01229820394">01229 820394</a>
+          <a href="mailto:info@leckconstruction.co">info@leckconstruction.co</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <div class="footer-col-title">Leck Homes</div>
+          <a href="leck-homes.html">Developments</a>
+          <a href="avon-wood.html">Avon Wood</a>
+          <a href="#why">About Leck Homes</a>
+          <a href="#register">Register Interest</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Leck Construction</div>
+          <a href="index.html">Main Site</a>
+          <a href="sectors.html">Sectors</a>
+          <a href="projects.html">Our Work</a>
+          <a href="approach.html">Our Approach</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Company</div>
+          <a href="index.html#about">About Us</a>
+          <a href="news.html">News &amp; Updates</a>
+          <a href="vacancies.html">Careers</a>
+          <a href="index.html#contact">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-legal">© 2026 Leck Construction Ltd. All rights reserved.</p>
+      <p class="footer-reg">Company No. 00421094 · Leck House, Ironworks Road, Barrow-in-Furness LA14 2PQ</p>
+    </div>
+  </div>
+  </div>
+</footer>
+
+<script src="sector.js"></script>
+</body>
+</html>

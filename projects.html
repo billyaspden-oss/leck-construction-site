@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Work | Leck Construction Ltd | South Cumbria</title>
+  <meta name="description" content="Browse projects delivered by Leck Construction across South Cumbria — filter by sector and location to find work in commercial, industrial, residential, partnerships and heritage construction.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leckconstruction.co.uk/projects">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leckconstruction.co.uk/projects">
+  <meta property="og:title" content="Our Work | Leck Construction Ltd">
+  <meta property="og:description" content="Eight decades of construction projects across South Cumbria — filter by sector and location.">
+  <meta property="og:image" content="images/projects/waterside-staveley-03.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="images/projects/waterside-staveley-03.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="sector.css?v=16">
+  <style>
+    /* ── Projects page styles — left-sidebar filter layout ────────── */
+    .pj-intro{padding:64px 0 24px;background:var(--white)}
+    .pj-intro h1{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;letter-spacing:-.03em;color:var(--navy);line-height:1.1;margin-bottom:14px}
+    .pj-intro p{font-size:.95rem;line-height:1.85;color:var(--grey-500);max-width:680px}
+
+    .pj-section{padding:24px 0 96px;background:var(--white)}
+    .pj-layout{display:grid;grid-template-columns:240px 1fr;gap:40px;align-items:start}
+
+    /* Sidebar */
+    .pj-sidebar{position:sticky;top:110px;display:flex;flex-direction:column;gap:28px}
+    .pj-sidebar-group{display:flex;flex-direction:column;gap:8px}
+    .pj-sidebar-label{font-size:.62rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--text-3);margin-bottom:4px;padding-bottom:8px;border-bottom:1px solid var(--grey-200)}
+    .pj-pills{display:flex;flex-direction:column;gap:2px}
+    .pj-pill{font-size:.74rem;font-weight:500;letter-spacing:.04em;padding:10px 14px;border:none;background:transparent;color:var(--text-2);cursor:pointer;text-align:left;transition:all .18s var(--ease-out);font-family:inherit;border-left:2px solid var(--grey-200);position:relative}
+    .pj-pill:hover{color:var(--navy);border-left-color:var(--text-3);background:var(--off-white)}
+    .pj-pill.active{color:var(--navy);font-weight:700;border-left-color:var(--blue);background:rgba(27,95,173,.05)}
+
+    .pj-search{position:relative}
+    .pj-search input{width:100%;padding:10px 14px 10px 36px;font-size:.82rem;font-family:inherit;border:1px solid var(--grey-200);border-radius:6px;outline:none;background:var(--white);color:var(--navy);transition:border-color .2s}
+    .pj-search input:focus{border-color:var(--navy)}
+    .pj-search input::placeholder{color:var(--text-3)}
+    .pj-search-icon{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:14px;height:14px;color:var(--text-3);pointer-events:none}
+
+    .pj-select{position:relative}
+    .pj-select select{appearance:none;-webkit-appearance:none;width:100%;padding:10px 36px 10px 14px;font-size:.78rem;font-weight:500;font-family:inherit;border:1px solid var(--grey-200);border-radius:6px;background:var(--white);color:var(--navy);cursor:pointer;outline:none;transition:border-color .2s}
+    .pj-select select:focus,.pj-select select:hover{border-color:var(--navy)}
+    .pj-select::after{content:'';position:absolute;right:14px;top:50%;width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;border-top:5px solid var(--navy);transform:translateY(-50%);pointer-events:none}
+
+    .pj-count{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--text-3);padding-top:10px;border-top:1px solid var(--grey-200);margin-top:4px}
+    .pj-count strong{color:var(--navy);font-size:.95rem}
+
+    .pj-reset{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--text-3);background:none;border:none;cursor:pointer;font-family:inherit;text-decoration:underline;text-underline-offset:3px;padding:6px 0;transition:color .15s;text-align:left}
+    .pj-reset:hover{color:var(--blue)}
+
+    /* Project grid */
+    .pj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--grey-200);border:1px solid var(--grey-200)}
+    .pj-card{background:var(--white);display:flex;flex-direction:column;transition:transform .3s var(--ease-out),box-shadow .3s var(--ease-out);text-decoration:none;color:inherit;cursor:pointer;animation:pj-fade .5s var(--ease-out) both}
+    .pj-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(27,42,74,.1);position:relative;z-index:2}
+    .pj-img{position:relative;overflow:hidden;aspect-ratio:4/3}
+    .pj-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease-out)}
+    .pj-card:hover .pj-img img{transform:scale(1.05)}
+    .pj-body{padding:20px 22px;flex:1;border-top:3px solid transparent;transition:border-color .25s}
+    .pj-card:hover .pj-body{border-top-color:var(--blue)}
+    .pj-tag{font-size:.56rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:6px}
+    .pj-title{font-size:1rem;font-weight:700;color:var(--navy);line-height:1.25;margin-bottom:3px}
+    .pj-loc{font-size:.75rem;font-weight:400;color:var(--text-3);margin-bottom:8px;display:flex;align-items:center;gap:5px}
+    .pj-loc::before{content:'';display:inline-block;width:10px;height:10px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23999'%3E%3Cpath d='M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z'/%3E%3C/svg%3E") center/contain no-repeat;flex-shrink:0}
+    .pj-desc{font-size:.82rem;font-weight:400;line-height:1.65;color:var(--text-2)}
+
+    @keyframes pj-fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+    /* Empty state */
+    .pj-empty{display:none;padding:80px 0;text-align:center}
+    .pj-empty.show{display:block}
+    .pj-empty h3{font-size:1.4rem;color:var(--navy);margin-bottom:10px;font-weight:700}
+    .pj-empty p{color:var(--text-3);margin-bottom:20px;font-size:.9rem}
+    .pj-empty button{font-size:.7rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:12px 24px;background:var(--navy);color:var(--white);border:none;cursor:pointer;font-family:inherit;border-radius:6px;transition:background .2s}
+    .pj-empty button:hover{background:var(--blue)}
+
+    @media(max-width:1024px){
+      .pj-layout{grid-template-columns:1fr;gap:24px}
+      .pj-sidebar{position:static;flex-direction:row;flex-wrap:wrap;gap:16px;padding-bottom:8px;border-bottom:1px solid var(--grey-200)}
+      .pj-sidebar-group{flex:1;min-width:200px}
+      .pj-pills{flex-direction:row;flex-wrap:wrap}
+      .pj-pill{border-left:1px solid var(--grey-200);border-radius:0;padding:8px 14px}
+      .pj-pill.active{background:var(--navy);color:var(--white);border-color:var(--navy)}
+      .pj-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:640px){
+      .pj-grid{grid-template-columns:1fr}
+      .pj-sidebar-group{min-width:100%}
+    }
+  </style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <div class="container"><div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/leck-logo.png" alt="Leck Construction Ltd" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <span class="nav-logo-fallback" style="display:none">Leck Construction</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li class="nav-has-drop">
+        <a href="approach.html">Our Approach</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">Our Approach</div>
+          <div class="mega-links">
+            <a href="approach.html#vision">Vision &amp; Values</a>
+            <a href="approach.html#health-safety">Health &amp; Safety</a>
+            <a href="approach.html#environment">Environment &amp; Sustainability</a>
+            <a href="approach.html#accreditations">Accreditations</a>
+            <a href="approach.html#community">Community &amp; Social Value</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-has-drop">
+        <a href="sectors.html">Sectors</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">What We Do</div>
+          <div class="mega-links">
+            <a href="partnerships.html">Strategic Partnerships</a>
+            <a href="commercial-education-health.html">Commercial, Education &amp; Health</a>
+            <a href="industrial-civil-engineering.html">Industrial &amp; Civil Engineering</a>
+            <a href="leck-homes.html">Leck Homes</a>
+            <a href="private-social-housing.html">Private &amp; Social Housing</a>
+            <a href="heritage-conservation.html">Heritage &amp; Conservation</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="projects.html" class="active">Our Work</a></li>
+      <li><a href="news.html">News</a></li>
+      <li class="nav-has-drop">
+        <a href="vacancies.html">Careers</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">Careers</div>
+          <div class="mega-links">
+            <a href="vacancies.html">Current Vacancies</a>
+            <a href="mailto:info@leckconstruction.co">Send Your CV</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="leck-homes.html" class="nav-cta">Leck Homes ↗</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#about" class="mm-link">About</a>
+  <a href="sectors.html" class="mm-link">Sectors</a>
+  <a href="projects.html" class="mm-link active">Our Work</a>
+  <a href="news.html" class="mm-link">News</a>
+  <a href="vacancies.html" class="mm-link">Careers</a>
+  <a href="index.html#contact" class="mm-link">Contact</a>
+  <a href="tel:01229820394" class="mm-tel">01229 820394</a>
+</div>
+
+<!-- HERO -->
+<section class="sec-hero">
+  <div class="sh-bg" style="background-image:url('images/projects/waterside-staveley-03.jpg')"></div>
+  <div class="sh-shade"></div>
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>/</span><span>Our Work</span>
+    </nav>
+    <div class="sh-chip"><span>Selected Projects</span></div>
+    <h1 class="sh-title">Eight Decades<br>of <em>Delivery.</em></h1>
+    <p class="sh-sub">Filter our portfolio by sector or location to explore commercial, industrial, residential, partnership and heritage projects delivered across South Cumbria, the Lake District and the North West.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="pj-intro">
+  <div class="container reveal">
+    <div class="eyebrow">Our Portfolio</div>
+    <h1>Browse Our Projects</h1>
+    <p>From Lake District heritage restorations to nuclear-licensed defence sites, our work spans every corner of South Cumbria. Use the filters below to narrow by sector or location.</p>
+  </div>
+</section>
+
+<!-- FILTERS + GRID — left sidebar layout -->
+<section class="pj-section">
+  <div class="container">
+    <div class="pj-layout">
+
+      <aside class="pj-sidebar" aria-label="Project filters">
+
+        <div class="pj-sidebar-group">
+          <div class="pj-sidebar-label">Search</div>
+          <div class="pj-search">
+            <svg class="pj-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
+            <input type="search" id="searchInput" placeholder="Search projects..." aria-label="Search projects">
+          </div>
+        </div>
+
+        <div class="pj-sidebar-group">
+          <div class="pj-sidebar-label">Sector</div>
+          <div class="pj-pills" role="group" aria-label="Filter by sector">
+            <button class="pj-pill active" data-sector="all">All Sectors</button>
+            <button class="pj-pill" data-sector="partnerships">Partnerships</button>
+            <button class="pj-pill" data-sector="commercial">Commercial &amp; Health</button>
+            <button class="pj-pill" data-sector="industrial">Industrial &amp; Civil</button>
+            <button class="pj-pill" data-sector="leck-homes">Leck Homes</button>
+            <button class="pj-pill" data-sector="private">Private &amp; Social Housing</button>
+            <button class="pj-pill" data-sector="heritage">Heritage</button>
+          </div>
+        </div>
+
+        <div class="pj-sidebar-group">
+          <div class="pj-sidebar-label">Location</div>
+          <div class="pj-select">
+            <select id="locationFilter" aria-label="Filter by location">
+              <option value="all">All Locations</option>
+              <option value="barrow">Barrow &amp; Walney</option>
+              <option value="lakes">Lake District</option>
+              <option value="ulverston">Ulverston</option>
+              <option value="kendal">Kendal &amp; South Lakes</option>
+              <option value="west-cumbria">West Cumbria</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="pj-count" id="pjCount">Showing <strong id="pjCountNum">0</strong> projects</div>
+        <button class="pj-reset" id="pjResetSide" type="button">Reset filters</button>
+
+      </aside>
+
+      <div class="pj-content">
+        <div class="pj-grid" id="pjGrid">
+
+      <!-- PARTNERSHIPS -->
+      <a class="pj-card" href="partnerships.html" data-sector="partnerships" data-location="ulverston" data-keywords="glaxosmithkline gsk pharmaceutical chemicals partnership ulverston">
+        <div class="pj-img"><img src="images/projects/industrial-piling-01.jpg" alt="GlaxoSmithKline, Ulverston" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Pharmaceutical — Since 1997</div>
+          <div class="pj-title">GlaxoSmithKline</div>
+          <div class="pj-loc">Ulverston, Cumbria</div>
+          <p class="pj-desc">Official Civil Engineering and Building Partner since 1997 — continual presence at one of the world's leading pharmaceutical manufacturing campuses.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="partnerships.html" data-sector="partnerships" data-location="barrow" data-keywords="bae systems defence shipyard nuclear barrow partnership">
+        <div class="pj-img"><img src="images/projects/industrial-piling-02.jpg" alt="BAE Systems, Barrow" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Defence — Since 2006</div>
+          <div class="pj-title">BAE Systems</div>
+          <div class="pj-loc">Barrow-in-Furness, Cumbria</div>
+          <p class="pj-desc">Measured Term construction partner since 2006 — multi-million pound projects across one of Britain's most strategically important defence sites.</p>
+        </div>
+      </a>
+
+      <!-- COMMERCIAL, EDUCATION & HEALTH -->
+      <a class="pj-card" href="commercial-education-health.html" data-sector="commercial" data-location="barrow" data-keywords="emlyn hughes house civic public sector barrow">
+        <div class="pj-img"><img src="images/projects/emlyn-hughes-01.jpg" alt="Emlyn Hughes House, Barrow" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Civic Building</div>
+          <div class="pj-title">Emlyn Hughes House</div>
+          <div class="pj-loc">Barrow-in-Furness</div>
+          <p class="pj-desc">One of the region's most recognisable civic buildings — a flagship public-sector project and a landmark in the Barrow townscape.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="commercial-education-health.html" data-sector="commercial" data-location="kendal" data-keywords="wings sport hall education sports kendal wassett">
+        <div class="pj-img"><img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/03/leck-square-wings1.jpg" alt="Wings Sport Hall, Kendal" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Sports &amp; Education</div>
+          <div class="pj-title">Wings Sport Hall</div>
+          <div class="pj-loc">Wassett, Nr Kendal, Cumbria</div>
+          <p class="pj-desc">Full-specification sports hall providing high-quality facilities for education and community sport in the Kendal area.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="commercial-education-health.html" data-sector="commercial" data-location="lakes" data-keywords="luxury apartments clubhouse hospitality leisure bowness windermere">
+        <div class="pj-img"><img src="images/projects/boathouse-bowness.jpg" alt="Luxury Apartments & Clubhouse, Bowness" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Hospitality &amp; Leisure</div>
+          <div class="pj-title">Luxury Apartments &amp; Clubhouse</div>
+          <div class="pj-loc">Bowness-on-Windermere</div>
+          <p class="pj-desc">High-specification luxury apartment development with clubhouse, café and restaurant — a prestige project in one of the Lake District's most visited locations.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="commercial-education-health.html" data-sector="commercial" data-location="lakes" data-keywords="grisedale arts centre lawson park coniston culture">
+        <div class="pj-img"><img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/03/lawson.jpg" alt="Grisedale Arts Centre, Coniston" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Arts &amp; Culture</div>
+          <div class="pj-title">Grisedale Arts Centre</div>
+          <div class="pj-loc">Lawson Park, Coniston</div>
+          <p class="pj-desc">A distinctive creative facility set in a remarkable landscape above Coniston Water.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="commercial-education-health.html" data-sector="commercial" data-location="barrow" data-keywords="furness general hospital breast screening healthcare nhs">
+        <div class="pj-img"><img src="images/projects/breast-screening-01.jpg" alt="Furness General Hospital Breast Screening Unit" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Healthcare</div>
+          <div class="pj-title">Breast Screening Unit</div>
+          <div class="pj-loc">Furness General Hospital, Barrow</div>
+          <p class="pj-desc">Specialist healthcare construction — a sensitive, patient-focused project delivered in a live clinical environment.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="commercial-education-health.html" data-sector="commercial" data-location="barrow" data-keywords="abbey meadow nursing home care residential health barrow">
+        <div class="pj-img"><img src="images/projects/abbey-meadow-nursing.jpg" alt="Abbey Meadow Nursing Home, Barrow" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Care &amp; Health</div>
+          <div class="pj-title">Abbey Meadow Nursing Home</div>
+          <div class="pj-loc">Barrow-in-Furness</div>
+          <p class="pj-desc">Purpose-built nursing home providing high-quality residential care facilities — a compassionate and carefully considered construction project.</p>
+        </div>
+      </a>
+
+      <!-- INDUSTRIAL & CIVIL ENGINEERING -->
+      <a class="pj-card" href="industrial-civil-engineering.html" data-sector="industrial" data-location="barrow" data-keywords="costa coffee drive thru commercial barrow">
+        <div class="pj-img"><img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/02/costa.jpg" alt="Costa Coffee Drive Thru, Barrow" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Commercial Build</div>
+          <div class="pj-title">Costa Coffee Drive Thru</div>
+          <div class="pj-loc">Barrow-in-Furness</div>
+          <p class="pj-desc">Full design and build of a new drive-through Costa Coffee facility — delivered on programme and to a high commercial specification.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="industrial-civil-engineering.html" data-sector="industrial" data-location="barrow" data-keywords="kimberly-clark water main pump house industrial civil barrow">
+        <div class="pj-img"><img src="images/projects/kimberly-clark-02.jpg" alt="Kimberly-Clark Water Main & Pump House, Barrow" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Industrial Civil</div>
+          <div class="pj-title">Kimberly-Clark Water Main &amp; Pump House</div>
+          <div class="pj-loc">Barrow-in-Furness</div>
+          <p class="pj-desc">Specialist civil engineering contract — major water main installation and a new pump house serving the site.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="industrial-civil-engineering.html" data-sector="industrial" data-location="barrow" data-keywords="barrow dock museum civil engineering industrial heritage">
+        <div class="pj-img"><img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/02/leck-square-images-dockmuseum3.jpg" alt="Barrow Dock Museum" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Civil Engineering</div>
+          <div class="pj-title">Barrow Dock Museum</div>
+          <div class="pj-loc">Barrow-in-Furness</div>
+          <p class="pj-desc">Civil and structural works combining industrial heritage with modern visitor infrastructure.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="industrial-civil-engineering.html" data-sector="industrial" data-location="barrow" data-keywords="north west total industrial barrow">
+        <div class="pj-img"><img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/02/leck-square-images-nwtotal1.jpg" alt="North West Total, Barrow" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Industrial Build</div>
+          <div class="pj-title">North West Total</div>
+          <div class="pj-loc">Barrow-in-Furness</div>
+          <p class="pj-desc">Industrial construction contract delivering new facilities to specification and programme for North West Total.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="industrial-civil-engineering.html" data-sector="industrial" data-location="west-cumbria" data-keywords="lillyhall workshop offices west cumbria commercial">
+        <div class="pj-img"><img src="images/projects/lillyhall-workshop.jpg" alt="Lillyhall Workshop & Offices, West Cumbria" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Workshop &amp; Offices</div>
+          <div class="pj-title">Lillyhall Workshop &amp; Offices</div>
+          <div class="pj-loc">West Cumbria</div>
+          <p class="pj-desc">New-build workshop and office facility — a practical, high-quality commercial construction project delivered on time and budget.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="industrial-civil-engineering.html" data-sector="industrial" data-location="ulverston" data-keywords="manjushri sculpture centre specialist industrial ulverston">
+        <div class="pj-img"><img src="images/projects/industrial-piling-02.jpg" alt="Manjushri Sculpture Centre, Ulverston" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Specialist Build</div>
+          <div class="pj-title">Manjushri Sculpture Centre</div>
+          <div class="pj-loc">Ulverston, Cumbria</div>
+          <p class="pj-desc">Specialist construction works at the internationally recognised Manjushri Centre — careful planning and precise execution in a sensitive setting.</p>
+        </div>
+      </a>
+
+      <!-- LECK HOMES -->
+      <a class="pj-card" href="leck-homes.html" data-sector="leck-homes" data-location="barrow" data-keywords="solway drive walney island development homes barrow">
+        <div class="pj-img"><img src="images/projects/leck-homes-development.jpg" alt="Solway Drive, Walney Island" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">New Development</div>
+          <div class="pj-title">Solway Drive</div>
+          <div class="pj-loc">Walney Island, Barrow</div>
+          <p class="pj-desc">A new residential development delivering quality family homes in a sought-after coastal location.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="leck-homes.html" data-sector="leck-homes" data-location="ulverston" data-keywords="the field ulverston executive homes residential">
+        <div class="pj-img"><img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/02/leck-square-images-thefield3.jpg" alt="The Field, Ulverston" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Executive Homes</div>
+          <div class="pj-title">The Field</div>
+          <div class="pj-loc">Ulverston, Cumbria</div>
+          <p class="pj-desc">Executive residential development offering high-quality homes with generous plots and attractive surroundings.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="leck-homes.html" data-sector="leck-homes" data-location="barrow" data-keywords="chetwynde park family homes residential barrow">
+        <div class="pj-img"><img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/02/leck-square-images-chetwynde3.jpg" alt="Chetwynde Park, Barrow" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Family Homes</div>
+          <div class="pj-title">Chetwynde Park</div>
+          <div class="pj-loc">Barrow-in-Furness</div>
+          <p class="pj-desc">A well-regarded residential development offering a range of family home types within a landscaped setting.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="leck-homes.html" data-sector="leck-homes" data-location="ulverston" data-keywords="ash tree close scales rural ulverston countryside development">
+        <div class="pj-img"><img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/02/leck-square-images-scales1.jpg" alt="Ash Tree Close, Scales" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Rural Development</div>
+          <div class="pj-title">Ash Tree Close</div>
+          <div class="pj-loc">Scales, Near Ulverston</div>
+          <p class="pj-desc">Sensitively designed rural development combining quality new homes with the character of the surrounding countryside.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="leck-homes.html" data-sector="leck-homes" data-location="barrow" data-keywords="arlington court barrow residential development homes">
+        <div class="pj-img"><img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/02/arlington.jpg" alt="Arlington Court, Barrow" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Residential Development</div>
+          <div class="pj-title">Arlington Court</div>
+          <div class="pj-loc">Barrow-in-Furness</div>
+          <p class="pj-desc">Quality residential development in the heart of Barrow, meeting local demand for well-built family homes.</p>
+        </div>
+      </a>
+
+      <!-- PRIVATE & SOCIAL HOUSING -->
+      <a class="pj-card" href="private-social-housing.html" data-sector="private" data-location="lakes" data-keywords="hellis place hawkshead lake district private housing">
+        <div class="pj-img"><img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/02/place.jpg" alt="Hellis Place, Hawkshead" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Private Housing</div>
+          <div class="pj-title">Hellis Place</div>
+          <div class="pj-loc">Hawkshead, Lake District</div>
+          <p class="pj-desc">Sensitive residential development within the Lake District National Park, designed to complement its historic village setting.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="private-social-housing.html" data-sector="private" data-location="lakes" data-keywords="waterside development staveley kentmere lake district private">
+        <div class="pj-img"><img src="images/projects/waterside-staveley-02.jpg" alt="Waterside Development, Staveley" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Private Housing</div>
+          <div class="pj-title">Waterside Development</div>
+          <div class="pj-loc">Staveley, Cumbria</div>
+          <p class="pj-desc">A riverside residential scheme in the heart of the Kentmere valley, built to complement the surrounding landscape.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="private-social-housing.html" data-sector="private" data-location="lakes" data-keywords="meregarth windermere bespoke residential pool wine cellar cinema">
+        <div class="pj-img"><img src="images/projects/bespoke-home-01.jpg" alt="Meregarth, Windermere" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Bespoke Residential</div>
+          <div class="pj-title">Meregarth</div>
+          <div class="pj-loc">Windermere, Lake District</div>
+          <p class="pj-desc">High-specification bespoke home with pool, wine cellar and cinema room — a flagship example of Leck's private residential capability.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="private-social-housing.html" data-sector="private" data-location="lakes" data-keywords="bespoke lake district home national park private residence">
+        <div class="pj-img"><img src="images/projects/lanthwaite-dusk-01.jpg" alt="Bespoke Lake District Home" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Bespoke Residential</div>
+          <div class="pj-title">Bespoke Lake District Home</div>
+          <div class="pj-loc">Lake District National Park</div>
+          <p class="pj-desc">Award-quality private residence designed and built to be entirely sympathetic to its National Park setting.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="private-social-housing.html" data-sector="private" data-location="ulverston" data-keywords="hollin bank ulverston residential development family homes">
+        <div class="pj-img"><img src="images/projects/hollin-bank.jpg" alt="Hollin Bank, Ulverston" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Residential Development</div>
+          <div class="pj-title">Hollin Bank</div>
+          <div class="pj-loc">Ulverston, Cumbria</div>
+          <p class="pj-desc">Quality residential development delivering a range of family home types to meet local demand in Ulverston.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="private-social-housing.html" data-sector="private" data-location="barrow" data-keywords="plover gardens walney island affordable social housing barrow">
+        <div class="pj-img"><img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/02/leck-square-images-plover3.jpg" alt="Plover Gardens, Walney Island" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Social Housing</div>
+          <div class="pj-title">Plover Gardens</div>
+          <div class="pj-loc">Walney Island, Barrow</div>
+          <p class="pj-desc">Affordable and social housing scheme delivering quality homes and real community benefit for Walney Island residents.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="private-social-housing.html" data-sector="private" data-location="lakes" data-keywords="lanthwaite house bespoke lake district indoor pool hot tubs glass private residence luxury">
+        <div class="pj-img"><img src="images/projects/lanthwaite-hottubs.jpg" alt="Lanthwaite House — bespoke Lake District home with hot tubs and full-height glazing" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Bespoke Residential</div>
+          <div class="pj-title">Lanthwaite House</div>
+          <div class="pj-loc">Lake District National Park</div>
+          <p class="pj-desc">Bespoke private residence featuring an indoor swimming pool, terrace hot tubs and full-height glass entertaining spaces — a flagship example of our high-specification residential work.</p>
+        </div>
+      </a>
+
+      <!-- HERITAGE & CONSERVATION -->
+      <a class="pj-card" href="heritage-conservation.html" data-sector="heritage" data-location="barrow" data-keywords="ship inn piel island grade ii listed heritage restoration cumbria">
+        <div class="pj-img"><img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/03/category-heritage.jpg" alt="The Ship Inn, Piel Island" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Listed Building — Ongoing</div>
+          <div class="pj-title">The Ship Inn, Piel Island</div>
+          <div class="pj-loc">Piel Island, Cumbria</div>
+          <p class="pj-desc">Ongoing restoration of the 300+ year old Grade II listed Ship Inn — accessible only by boat, demanding specialist heritage skills and meticulous logistics.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="heritage-conservation.html" data-sector="heritage" data-location="barrow" data-keywords="barrow park victorian restoration grade ii listed bandstand cenotaph">
+        <div class="pj-img"><img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/02/leck-square-images-barrowpark1.jpg" alt="Barrow Park Restoration" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Victorian Park Restoration</div>
+          <div class="pj-title">Barrow Park</div>
+          <div class="pj-loc">Barrow-in-Furness</div>
+          <p class="pj-desc">Comprehensive restoration of Barrow's Grade II listed Victorian park — including the lake, footpaths, cenotaph and full reinstatement of the historic bandstand.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="heritage-conservation.html" data-sector="heritage" data-location="barrow" data-keywords="st james church bell tower ecclesiastical restoration masonry barrow">
+        <div class="pj-img"><img src="images/projects/st-james-church-01.jpg" alt="St James Church Bell Tower, Barrow" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Ecclesiastical Restoration</div>
+          <div class="pj-title">St James Church Bell Tower</div>
+          <div class="pj-loc">Barrow-in-Furness</div>
+          <p class="pj-desc">Specialist restoration of the bell tower and bells — delicate structural and masonry work carried out to conservation standards.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="heritage-conservation.html" data-sector="heritage" data-location="barrow" data-keywords="victoria hall historic civic heritage refurbishment barrow community">
+        <div class="pj-img"><img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/02/barrow.jpg" alt="Victoria Hall, Barrow" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Historic Hall</div>
+          <div class="pj-title">Victoria Hall</div>
+          <div class="pj-loc">Barrow-in-Furness</div>
+          <p class="pj-desc">Careful refurbishment of the historic Victoria Hall — preserving an important piece of Barrow's civic heritage while adapting the building for continued community use.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="heritage-conservation.html" data-sector="heritage" data-location="ulverston" data-keywords="manjushri kadampa meditation centre high level restoration ulverston">
+        <div class="pj-img"><img src="images/projects/conishead-aerial.jpg" alt="Manjushri, Ulverston" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">High-Level Restoration</div>
+          <div class="pj-title">Manjushri Centre</div>
+          <div class="pj-loc">Ulverston, Cumbria</div>
+          <p class="pj-desc">Specialist high-level refurbishment works at the internationally recognised Manjushri Kadampa Meditation Centre — technical precision and cultural sensitivity.</p>
+        </div>
+      </a>
+      <a class="pj-card" href="heritage-conservation.html" data-sector="heritage" data-location="ulverston" data-keywords="lantern house ulverston historic restoration market town">
+        <div class="pj-img"><img src="images/projects/lantern-house-02.jpg" alt="Lantern House, Ulverston" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Historic Restoration</div>
+          <div class="pj-title">Lantern House</div>
+          <div class="pj-loc">Ulverston, Cumbria</div>
+          <p class="pj-desc">Restoration works at Lantern House — sympathetic repair and conservation of a historic building in the heart of this Cumbrian market town.</p>
+        </div>
+      </a>
+
+        </div>
+
+        <div class="pj-empty" id="pjEmpty">
+          <h3>No projects match your filters</h3>
+          <p>Try widening your selection — or reset to view all projects.</p>
+          <button id="pjReset">Reset Filters</button>
+        </div>
+
+      </div><!-- /.pj-content -->
+    </div><!-- /.pj-layout -->
+  </div><!-- /.container -->
+</section>
+
+<!-- CTA -->
+<section class="sec-cta">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2>Ready to Discuss Your Project?</h2>
+      <p>Whether it's a heritage restoration, a new commercial build or a residential development — we'd be glad to talk.</p>
+      <a href="index.html#contact" class="btn-primary">Get In Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-card">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="https://www.leckconstruction.co.uk/wp-content/uploads/2018/01/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="footer-logo-fallback" style="display:none">Leck Construction</span>
+        <p class="footer-tagline">Commercial construction specialists serving South Cumbria and the Lake District since 1946.</p>
+        <div class="footer-contact">
+          <p>Leck House, Ironworks Road<br>Barrow-in-Furness, LA14 2PQ</p>
+          <a href="tel:01229820394">01229 820394</a>
+          <a href="mailto:info@leckconstruction.co">info@leckconstruction.co</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <div class="footer-col-title">Sectors</div>
+          <a href="partnerships.html">Strategic Partnerships</a>
+          <a href="commercial-education-health.html">Commercial &amp; Health</a>
+          <a href="industrial-civil-engineering.html">Industrial &amp; Civil</a>
+          <a href="leck-homes.html">Leck Homes</a>
+          <a href="private-social-housing.html">Private &amp; Social Housing</a>
+          <a href="heritage-conservation.html">Heritage &amp; Conservation</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Our Approach</div>
+          <a href="approach.html#vision">Vision &amp; Values</a>
+          <a href="approach.html#health-safety">Health &amp; Safety</a>
+          <a href="approach.html#environment">Environment</a>
+          <a href="approach.html#accreditations">Accreditations</a>
+          <a href="approach.html#community">Community</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Company</div>
+          <a href="index.html#about">About Us</a>
+          <a href="projects.html">Our Work</a>
+          <a href="news.html">News &amp; Updates</a>
+          <a href="vacancies.html">Careers</a>
+          <a href="index.html#contact">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-legal">© 2026 Leck Construction Ltd. All rights reserved.</p>
+      <p class="footer-reg">Company No. 00421094 · Leck House, Ironworks Road, Barrow-in-Furness LA14 2PQ</p>
+    </div>
+  </div>
+  </div>
+</footer>
+
+<script src="sector.js"></script>
+<script>
+  // ── Filter logic ─────────────────────────────────────────────
+  const grid     = document.getElementById('pjGrid');
+  const cards    = Array.from(grid.querySelectorAll('.pj-card'));
+  const total    = cards.length;
+  const pills    = Array.from(document.querySelectorAll('.pj-pill'));
+  const locSel   = document.getElementById('locationFilter');
+  const search   = document.getElementById('searchInput');
+  const countNum = document.getElementById('pjCountNum');
+  const countWrap= document.getElementById('pjCount');
+  const empty    = document.getElementById('pjEmpty');
+  const resetBtn = document.getElementById('pjReset');
+
+  let activeSector = 'all';
+
+  function applyFilters() {
+    const loc = locSel.value;
+    const q   = search.value.trim().toLowerCase();
+    let visible = 0;
+
+    cards.forEach(card => {
+      const sectorMatch = activeSector === 'all' || card.dataset.sector === activeSector;
+      const locMatch    = loc === 'all' || card.dataset.location === loc;
+      const qMatch      = !q || (
+        card.dataset.keywords.toLowerCase().includes(q) ||
+        card.querySelector('.pj-title').textContent.toLowerCase().includes(q) ||
+        card.querySelector('.pj-loc').textContent.toLowerCase().includes(q) ||
+        card.querySelector('.pj-desc').textContent.toLowerCase().includes(q)
+      );
+      const show = sectorMatch && locMatch && qMatch;
+      card.style.display = show ? '' : 'none';
+      if (show) visible++;
+    });
+
+    countNum.textContent = visible;
+    countWrap.innerHTML = visible === total
+      ? `Showing <strong>${total}</strong> projects`
+      : `Showing <strong>${visible}</strong> of ${total} projects`;
+    empty.classList.toggle('show', visible === 0);
+    grid.style.display = visible === 0 ? 'none' : '';
+  }
+
+  // Sector pill clicks
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      pills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      activeSector = pill.dataset.sector;
+      applyFilters();
+    });
+  });
+
+  // Location dropdown
+  locSel.addEventListener('change', applyFilters);
+
+  // Live search (debounced)
+  let st;
+  search.addEventListener('input', () => {
+    clearTimeout(st);
+    st = setTimeout(applyFilters, 120);
+  });
+
+  // Reset (both the empty-state button and the sidebar button)
+  const doReset = () => {
+    activeSector = 'all';
+    pills.forEach(p => p.classList.toggle('active', p.dataset.sector === 'all'));
+    locSel.value = 'all';
+    search.value = '';
+    applyFilters();
+  };
+  resetBtn.addEventListener('click', doReset);
+  const resetSide = document.getElementById('pjResetSide');
+  if (resetSide) resetSide.addEventListener('click', doReset);
+
+  // Read URL params on load (e.g. projects.html?sector=heritage)
+  const params = new URLSearchParams(window.location.search);
+  const urlSector = params.get('sector');
+  const urlLoc    = params.get('location');
+  if (urlSector) {
+    const target = pills.find(p => p.dataset.sector === urlSector);
+    if (target) {
+      pills.forEach(p => p.classList.remove('active'));
+      target.classList.add('active');
+      activeSector = urlSector;
+    }
+  }
+  if (urlLoc && Array.from(locSel.options).some(o => o.value === urlLoc)) {
+    locSel.value = urlLoc;
+  }
+  // Always run on load so the counter reflects actual card count
+  applyFilters();
+</script>
+</body>
+</html>
