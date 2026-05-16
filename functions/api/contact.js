@@ -24,6 +24,15 @@ export async function onRequestPost(context) {
     }
 
     const TO = env.CONTACT_EMAIL || "info@leckconstruction.co";
+    const RESEND_KEY = env.RESEND_API_KEY;
+
+    if (!RESEND_KEY) {
+      console.error("RESEND_API_KEY not set");
+      return new Response(
+        JSON.stringify({ success: false, message: "Email not configured." }),
+        { status: 500, headers }
+      );
+    }
 
     const emailBody = [
       `New enquiry from the Leck Construction website.`,
@@ -36,26 +45,27 @@ export async function onRequestPost(context) {
       message,
     ].join("\n");
 
-    const send = new Request("https://api.mailchannels.net/tx/v1/send", {
+    const res = await fetch("https://api.resend.com/emails", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Authorization": `Bearer ${RESEND_KEY}`,
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
-        personalizations: [{ to: [{ email: TO }] }],
-        from: { email: "website@leckconstruction.co", name: "Leck Construction Website" },
-        reply_to: { email, name },
+        from: "Leck Construction Website <website@leckconstruction.co>",
+        to: [TO],
+        reply_to: email,
         subject: `New Enquiry — ${name}`,
-        content: [{ type: "text/plain", value: emailBody }],
+        text: emailBody,
       }),
     });
 
-    const res = await fetch(send);
-
-    if (res.status === 202 || res.status === 200) {
+    if (res.ok) {
       return new Response(JSON.stringify({ success: true }), { headers });
     }
 
     const err = await res.text();
-    console.error("MailChannels error:", res.status, err);
+    console.error("Resend error:", res.status, err);
     return new Response(
       JSON.stringify({ success: false, message: "Failed to send." }),
       { status: 502, headers }
