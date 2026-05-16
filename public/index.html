@@ -1050,7 +1050,7 @@
       sb.disabled = true; sb.innerHTML = 'Sending… <span class="cf-arrow">→</span>';
       try {
         const data = Object.fromEntries(new FormData(contactForm));
-        const res  = await fetch('/api/contact', {
+        const res  = await fetch('https://leck-contact.billy-aspden.workers.dev', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)
