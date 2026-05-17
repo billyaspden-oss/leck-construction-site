@@ -1,6 +1,6 @@
 // ── Mark "Sectors" nav link active on all sector pages
 document.querySelectorAll(
-  '.nav-links a[href="index.html#services"], .mobile-menu a[href="index.html#services"]'
+  '.nav-links a[href="sectors.html"], .mobile-menu a[href="sectors.html"]'
 ).forEach(el => el.classList.add('active'));
 
 // ── Hamburger / mobile menu
