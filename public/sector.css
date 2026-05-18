@@ -98,7 +98,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
 .sh-num{font-size:.62rem;font-weight:700;letter-spacing:.18em;color:var(--white);border:1px solid rgba(255,255,255,.3);padding:4px 12px;background:rgba(255,255,255,.1)}
 .sh-chip>span:last-child{font-size:.62rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.5)}
 .sh-title{font-size:clamp(2.4rem,5.5vw,4.6rem);font-weight:800;line-height:1.05;letter-spacing:-.025em;color:var(--white);margin-bottom:16px}
-.sh-title em{font-style:normal;color:rgba(255,255,255,.75)}
+.sh-title em{font-style:normal;color:var(--white)}
 .sh-sub{font-size:clamp(.88rem,1.6vw,.98rem);font-weight:400;line-height:1.75;color:rgba(255,255,255,.7);max-width:520px}
 
 /* ─── Overview ───────────────────────────────────────────────────── */
