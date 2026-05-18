@@ -32,6 +32,7 @@
     }
     @keyframes pageFadeIn{from{opacity:0}to{opacity:1}}
     html{scroll-behavior:smooth}
+    @view-transition{navigation:auto}
     body{font-family:var(--sans);background:var(--white);color:var(--grey-900);overflow-x:hidden;-webkit-font-smoothing:antialiased;animation:pageFadeIn .35s ease-out both}
     h1,h2,h3,h4{font-family:var(--display);font-weight:800;letter-spacing:-.03em}
     img{display:block;max-width:100%}
@@ -387,6 +388,9 @@
       *{transition-duration:.01ms !important;animation-duration:.01ms !important}
     }
   </style>
+<script type="speculationrules">
+{"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}
+</script>
 </head>
 <body>
 

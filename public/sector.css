@@ -13,6 +13,7 @@
   --ease:cubic-bezier(.4,0,.2,1);--ease-out:cubic-bezier(0,0,.2,1);
 }
 html{scroll-behavior:smooth}
+@view-transition{navigation:auto}
 body{font-family:var(--sans);background:var(--white);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;animation:pageFadeIn .38s ease-out both}
 h1,h2,h3,h4{font-family:var(--display);font-weight:800;letter-spacing:-.03em}
 @keyframes pageFadeIn{from{opacity:0}to{opacity:1}}
