@@ -23,7 +23,7 @@ export async function onRequestPost(context) {
       );
     }
 
-    const TO = env.CONTACT_EMAIL || "info@leckconstruction.co";
+    const TO = env.CONTACT_EMAIL || "info@leckconstruction.co.uk";
     const RESEND_KEY = env.RESEND_API_KEY;
 
     if (!RESEND_KEY) {
@@ -52,7 +52,7 @@ export async function onRequestPost(context) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Leck Construction Website <website@leckconstruction.co>",
+        from: "Leck Construction Website <website@leckconstruction.co.uk>",
         to: [TO],
         reply_to: email,
         subject: `New Enquiry — ${name}`,
