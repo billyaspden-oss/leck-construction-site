@@ -37,7 +37,7 @@ button{cursor:pointer;font-family:var(--sans)}
 a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:2px}
 
 /* ─── Nav ────────────────────────────────────────────────────────── */
-.nav{position:fixed;inset:0 0 auto;z-index:100;padding:20px 0;background:#FFFFFF;box-shadow:0 1px 0 rgba(0,0,0,.06);border-top:3px solid var(--blue)}
+.nav{position:fixed;inset:0 0 auto;z-index:100;padding:28px 0;background:#FFFFFF;box-shadow:0 1px 0 rgba(0,0,0,.06);border-top:3px solid var(--blue)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
 .nav-logo img{height:52px;width:auto;object-fit:contain;display:block}
 .nav-logo-fallback{font-size:1rem;font-weight:800;letter-spacing:-.01em;color:var(--navy)}
