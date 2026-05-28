@@ -12,13 +12,11 @@
   <meta property="og:url" content="https://leckconstruction.co.uk/avon-wood">
   <meta property="og:title" content="Avon Wood, Walney Island — Coming Soon | Leck Homes">
   <meta property="og:description" content="12 quality family homes coming to Walney Island. Houses from £285,000. Register interest now.">
-  <meta property="og:image" content="images/projects/leck-homes-development.jpg">
+  <meta property="og:image" content="https://leckconstruction.co.uk/images/projects/leck-homes-development.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="images/projects/leck-homes-development.jpg" fetchpriority="high">
   <link rel="stylesheet" href="fonts.css?v=1">
-  <link rel="stylesheet" href="sector.css?v=21">
+  <link rel="stylesheet" href="sector.css?v=22">
   <style>
     /* Leck Homes shared styles */
     body.lh{background:#FAF8F4}
@@ -189,9 +187,11 @@
 <script type="speculationrules">
 {"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}
 </script>
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
 <body class="lh">
 
+<a class="skip-link" href="#main">Skip to main content</a>
 <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
 <!-- Back to main site bar -->
@@ -240,7 +240,7 @@
 </div>
 
 <!-- HERO -->
-<section class="aw-hero">
+<section class="aw-hero" id="main">
   <div class="aw-hero-bg" style="background-image:url('images/projects/leck-homes-development.jpg')"></div>
   <div class="aw-hero-shade"></div>
   <div class="container">
@@ -690,7 +690,7 @@
         </ul>
       </div>
 
-      <form class="aw-register-form reveal d1" id="registerForm" onsubmit="event.preventDefault();this.querySelector('button').textContent='Thank you — we’ll be in touch';this.querySelector('button').style.background='#5d8d3a';">
+      <form class="aw-register-form reveal d1" id="registerForm">
         <label for="reg-name">Name</label>
         <input type="text" id="reg-name" name="name" required>
 
@@ -725,7 +725,7 @@
   <div class="container">
     <div class="footer-main">
       <div class="footer-brand">
-        <img src="images/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <img src="images/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy">
         <span class="footer-logo-fallback" style="display:none">Leck Construction</span>
         <p class="footer-tagline">Leck Homes is the residential arm of Leck Construction Ltd — South Cumbria's commercial construction specialists since 1946.</p>
         <div class="footer-contact">
@@ -787,25 +787,46 @@
   const detailEl = document.getElementById('plotDetail');
   const plotGroups = document.querySelectorAll('.plot-grp');
 
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+
   function renderDetail(plotNum) {
     const d = plotData[plotNum];
     if (!d) return;
-    const subject = encodeURIComponent(`Plot ${plotNum} interest — Avon Wood`);
-    detailEl.innerHTML = `
-      <div class="aw-detail-tag">Avon Wood · ${d.phase}</div>
-      <div class="aw-detail-num">Plot ${plotNum}</div>
-      <div class="aw-detail-type">${d.name}</div>
-      <div class="aw-detail-status">Coming Soon · 2027</div>
-      <div class="aw-detail-row"><span class="aw-detail-key">Bedrooms</span><span class="aw-detail-val">${d.beds}</span></div>
-      <div class="aw-detail-row"><span class="aw-detail-key">Bathrooms</span><span class="aw-detail-val">${d.baths}</span></div>
-      <div class="aw-detail-row"><span class="aw-detail-key">Floor area</span><span class="aw-detail-val">${d.sqft} sq ft</span></div>
-      <div class="aw-detail-row"><span class="aw-detail-key">Garage</span><span class="aw-detail-val">${d.beds >= 4 ? 'Integral' : 'Single'}</span></div>
-      <div class="aw-detail-price">
-        <span class="aw-detail-price-lbl">Indicative<br>price from</span>
-        <span class="aw-detail-price-val">${d.price}</span>
-      </div>
-      <a href="mailto:info@leckconstruction.co?subject=${subject}" class="aw-detail-cta">Register interest in Plot ${plotNum} →</a>
-    `;
+    const subject = encodeURIComponent('Plot ' + plotNum + ' interest — Avon Wood');
+
+    const frag = document.createDocumentFragment();
+
+    frag.appendChild(el('div', 'aw-detail-tag', 'Avon Wood · ' + d.phase));
+    frag.appendChild(el('div', 'aw-detail-num', 'Plot ' + plotNum));
+    frag.appendChild(el('div', 'aw-detail-type', d.name));
+    frag.appendChild(el('div', 'aw-detail-status', 'Coming Soon · 2027'));
+
+    [['Bedrooms', d.beds], ['Bathrooms', d.baths], ['Floor area', d.sqft + ' sq ft'],
+     ['Garage', d.beds >= 4 ? 'Integral' : 'Single']].forEach(function(pair) {
+      var row = el('div', 'aw-detail-row');
+      row.appendChild(el('span', 'aw-detail-key', pair[0]));
+      row.appendChild(el('span', 'aw-detail-val', pair[1]));
+      frag.appendChild(row);
+    });
+
+    var price = el('div', 'aw-detail-price');
+    var lbl = el('span', 'aw-detail-price-lbl');
+    lbl.innerHTML = 'Indicative<br>price from';
+    price.appendChild(lbl);
+    price.appendChild(el('span', 'aw-detail-price-val', d.price));
+    frag.appendChild(price);
+
+    var cta = el('a', 'aw-detail-cta', 'Register interest in Plot ' + plotNum + ' →');
+    cta.href = 'mailto:info@leckconstruction.co?subject=' + subject;
+    frag.appendChild(cta);
+
+    detailEl.textContent = '';
+    detailEl.appendChild(frag);
   }
 
   plotGroups.forEach(g => {
@@ -821,5 +842,47 @@
     });
   });
 </script>
+<script>
+  (function () {
+    const form = document.getElementById('registerForm');
+    if (!form) return;
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      const original = btn.textContent;
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            type: 'avon-wood',
+            name: form.querySelector('#reg-name').value.trim(),
+            email: form.querySelector('#reg-email').value.trim(),
+            phone: form.querySelector('#reg-phone').value.trim(),
+            interest: form.querySelector('#reg-interest').value,
+            message: form.querySelector('#reg-msg').value.trim(),
+          }),
+        });
+        const data = await res.json();
+        if (data.success) {
+          btn.textContent = 'Thank you — we\'ll be in touch';
+          btn.style.background = '#5d8d3a';
+          form.querySelectorAll('input, select, textarea').forEach(function (el) { el.disabled = true; });
+        } else {
+          btn.textContent = original;
+          btn.disabled = false;
+          alert('Something went wrong. Please email us directly at info@leckconstruction.co');
+        }
+      } catch (err) {
+        btn.textContent = original;
+        btn.disabled = false;
+        alert('Something went wrong. Please email us directly at info@leckconstruction.co');
+      }
+    });
+  }());
+</script>
+  <script src="fallback.js" defer></script>
 </body>
 </html>

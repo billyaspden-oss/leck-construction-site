@@ -1,3 +1,19 @@
 .DS_Store
 Thumbs.db
 .claude/
+
+# Client documents — must not be committed to a public repo
+*.docx
+*.pdf
+*.pages
+*.xlsx
+*.xls
+*.pptx
+Leck/
+MEETING-TASKS-*.md
+PHOTO-MANIFEST-*.md
+transcript*.txt
+ruvector.db
+.wrangler/
+.swarm/
+.claude-flow/

@@ -1,0 +1,4 @@
+# Staging: disallow all crawling until the site is live at leckconstruction.co.uk
+# Switch to allow before go-live
+User-agent: *
+Disallow: /

@@ -1,0 +1,21 @@
+# Canonicalise .html URLs to clean URLs (matches sitemap + canonical tags)
+/approach.html                          /approach                           301
+/avon-wood.html                         /avon-wood                          301
+/commercial-education-health.html       /commercial-education-health        301
+/eight-decades-building-south-cumbria.html  /eight-decades-building-south-cumbria  301
+/heritage-conservation.html             /heritage-conservation              301
+/industrial-civil-engineering.html      /industrial-civil-engineering       301
+/insights.html                          /insights                           301
+/iso-14001-in-construction.html         /iso-14001-in-construction          301
+/leck-homes.html                        /leck-homes                         301
+/lime-mortar-vs-cement.html             /lime-mortar-vs-cement              301
+/news.html                              /news                               301
+/partnerships.html                      /partnerships                       301
+/private-social-housing.html            /private-social-housing             301
+/projects.html                          /projects                           301
+/sectors.html                           /sectors                            301
+/vacancies.html                         /vacancies                          301
+
+# Nav label "Careers" → vacancies page
+/careers                                /vacancies                          301
+/careers.html                           /vacancies                          301

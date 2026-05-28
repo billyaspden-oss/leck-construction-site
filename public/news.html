@@ -12,17 +12,15 @@
   <meta property="og:url" content="https://leckconstruction.co.uk/news">
   <meta property="og:title" content="News &amp; Updates | Leck Construction Ltd">
   <meta property="og:description" content="Latest news, project updates and company announcements from Leck Construction Ltd.">
-  <meta property="og:image" content="images/projects/waterside-staveley-03.jpg">
+  <meta property="og:image" content="https://leckconstruction.co.uk/images/projects/waterside-staveley-03.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="images/projects/waterside-staveley-03.jpg" fetchpriority="high">
   <link rel="stylesheet" href="fonts.css?v=1">
-  <link rel="stylesheet" href="sector.css?v=21">
+  <link rel="stylesheet" href="sector.css?v=22">
   <style>
     /* ── News page styles ───────────────────────────────────── */
     .news-intro{padding:72px 0 56px;background:var(--white);border-bottom:1px solid var(--grey-200)}
-    .news-intro h1{font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.03em;color:var(--navy);line-height:1.1;margin-bottom:14px}
+    .news-intro h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-.03em;color:var(--navy);line-height:1.1;margin-bottom:14px}
     .news-intro p{font-size:.95rem;line-height:1.85;color:var(--grey-500);max-width:580px}
     .news-section{padding:80px 0;background:var(--white)}
     .news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
@@ -45,15 +43,17 @@
 <script type="speculationrules">
 {"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}
 </script>
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to main content</a>
 <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
 <nav class="nav" id="nav">
   <div class="container"><div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <img src="images/leck-logo.png" alt="Leck Construction Ltd" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <img src="images/leck-logo.png" alt="Leck Construction Ltd">
       <span class="nav-logo-fallback" style="display:none">Leck Construction</span>
     </a>
     <ul class="nav-links">
@@ -86,7 +86,16 @@
         </div>
       </li>
       <li><a href="projects.html">Our Work</a></li>
-      <li><a href="news.html">News</a></li>
+      <li class="nav-has-drop">
+        <a href="insights.html" class="active">Insights</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">Insights</div>
+          <div class="mega-links">
+            <a href="insights.html">All Articles</a>
+            <a href="news.html" class="active">Company News</a>
+          </div>
+        </div>
+      </li>
       <li class="nav-has-drop">
         <a href="vacancies.html">Careers</a>
         <div class="nav-drop nav-drop--mega">
@@ -110,6 +119,7 @@
   <a href="index.html#about" class="mm-link">About</a>
   <a href="sectors.html" class="mm-link">Sectors</a>
   <a href="projects.html" class="mm-link">Our Work</a>
+  <a href="insights.html" class="mm-link">Insights</a>
   <a href="news.html" class="mm-link active">News</a>
   <a href="vacancies.html" class="mm-link">Careers</a>
   <a href="index.html#contact" class="mm-link">Contact</a>
@@ -117,7 +127,7 @@
 </div>
 
 <!-- HERO -->
-<section class="sec-hero">
+<section class="sec-hero" id="main">
   <div class="sh-bg" style="background-image:url('images/projects/waterside-staveley-03.jpg')"></div>
   <div class="sh-shade"></div>
   <div class="container">
@@ -134,7 +144,7 @@
 <section class="news-intro">
   <div class="container reveal">
     <div class="eyebrow">Latest Updates</div>
-    <h1>What's Been Happening</h1>
+    <h2>What's Been Happening</h2>
     <p>Keep up to date with our latest project completions, contract wins, accreditation renewals and company news. We'll be adding new articles regularly as work progresses across our six sectors.</p>
   </div>
 </section>
@@ -233,7 +243,7 @@
   <div class="container">
     <div class="footer-main">
       <div class="footer-brand">
-        <img src="images/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <img src="images/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy">
         <span class="footer-logo-fallback" style="display:none">Leck Construction</span>
         <p class="footer-tagline">Commercial construction specialists serving South Cumbria and the Lake District since 1946.</p>
         <div class="footer-contact">
@@ -285,5 +295,6 @@
   }, { threshold: 0.08, rootMargin: '0px 0px -36px 0px' });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
+  <script src="fallback.js" defer></script>
 </body>
 </html>

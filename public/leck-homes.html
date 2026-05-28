@@ -12,13 +12,11 @@
   <meta property="og:url" content="https://leckconstruction.co.uk/leck-homes">
   <meta property="og:title" content="Leck Homes — New Homes in South Cumbria">
   <meta property="og:description" content="The residential arm of Leck Construction. New homes coming soon at Avon Wood, Walney Island.">
-  <meta property="og:image" content="images/projects/leck-homes-development.jpg">
+  <meta property="og:image" content="https://leckconstruction.co.uk/images/projects/leck-homes-development.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="images/projects/leck-homes-development.jpg" fetchpriority="high">
   <link rel="stylesheet" href="fonts.css?v=1">
-  <link rel="stylesheet" href="sector.css?v=21">
+  <link rel="stylesheet" href="sector.css?v=22">
   <style>
     /* ────────────────────────────────────────────────────────────
        LECK HOMES — distinct visual identity within the main site
@@ -54,7 +52,7 @@
     .lh-backbar-tag strong{color:#fff;font-weight:700}
 
     /* Hero */
-    .lh-hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;overflow:hidden;padding-bottom:80px;background:var(--navy-3)}
+    .lh-hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;overflow:hidden;padding-top:160px;padding-bottom:80px;background:var(--navy-3)}
     .lh-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;will-change:transform;animation:lhZoom 20s ease-out infinite alternate}
     @keyframes lhZoom{from{transform:scale(1)}to{transform:scale(1.06)}}
     .lh-hero-shade{position:absolute;inset:0;background:linear-gradient(105deg,rgba(0,0,0,.75) 0%,rgba(0,0,0,.45) 50%,rgba(0,0,0,.15) 100%)}
@@ -153,9 +151,11 @@
 <script type="speculationrules">
 {"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}
 </script>
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
 <body class="lh">
 
+<a class="skip-link" href="#main">Skip to main content</a>
 <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
 <!-- Back to main site bar -->
@@ -204,7 +204,7 @@
 </div>
 
 <!-- HERO -->
-<section class="lh-hero">
+<section class="lh-hero" id="main">
   <div class="lh-hero-bg" style="background-image:url('images/projects/leck-homes-development.jpg')"></div>
   <div class="lh-hero-shade"></div>
   <div class="container">
@@ -408,7 +408,7 @@
   <div class="container">
     <div class="footer-main">
       <div class="footer-brand">
-        <img src="images/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <img src="images/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy">
         <span class="footer-logo-fallback" style="display:none">Leck Construction</span>
         <p class="footer-tagline">Leck Homes is the residential arm of Leck Construction Ltd — South Cumbria's commercial construction specialists since 1946.</p>
         <div class="footer-contact">
@@ -450,5 +450,6 @@
 </footer>
 
 <script src="sector.js"></script>
+  <script src="fallback.js" defer></script>
 </body>
 </html>

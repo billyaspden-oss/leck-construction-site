@@ -12,17 +12,15 @@
   <meta property="og:url" content="https://leckconstruction.co.uk/projects">
   <meta property="og:title" content="Our Work | Leck Construction Ltd">
   <meta property="og:description" content="Eight decades of construction projects across South Cumbria — filter by sector and location.">
-  <meta property="og:image" content="images/projects/waterside-staveley-03.jpg">
+  <meta property="og:image" content="https://leckconstruction.co.uk/images/projects/waterside-staveley-03.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="images/projects/waterside-staveley-03.jpg" fetchpriority="high">
   <link rel="stylesheet" href="fonts.css?v=1">
-  <link rel="stylesheet" href="sector.css?v=21">
+  <link rel="stylesheet" href="sector.css?v=22">
   <style>
     /* ── Projects page styles — left-sidebar filter layout ────────── */
     .pj-intro{padding:64px 0 24px;background:var(--white)}
-    .pj-intro h1{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;letter-spacing:-.03em;color:var(--navy);line-height:1.1;margin-bottom:14px}
+    .pj-intro h2{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;letter-spacing:-.03em;color:var(--navy);line-height:1.1;margin-bottom:14px}
     .pj-intro p{font-size:.95rem;line-height:1.85;color:var(--grey-500);max-width:680px}
 
     .pj-section{padding:24px 0 96px;background:var(--white)}
@@ -96,15 +94,17 @@
 <script type="speculationrules">
 {"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}
 </script>
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to main content</a>
 <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
 <nav class="nav" id="nav">
   <div class="container"><div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <img src="images/leck-logo.png" alt="Leck Construction Ltd" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <img src="images/leck-logo.png" alt="Leck Construction Ltd">
       <span class="nav-logo-fallback" style="display:none">Leck Construction</span>
     </a>
     <ul class="nav-links">
@@ -137,7 +137,16 @@
         </div>
       </li>
       <li><a href="projects.html" class="active">Our Work</a></li>
-      <li><a href="news.html">News</a></li>
+      <li class="nav-has-drop">
+        <a href="insights.html">Insights</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">Insights</div>
+          <div class="mega-links">
+            <a href="insights.html">All Articles</a>
+            <a href="news.html">Company News</a>
+          </div>
+        </div>
+      </li>
       <li class="nav-has-drop">
         <a href="vacancies.html">Careers</a>
         <div class="nav-drop nav-drop--mega">
@@ -161,6 +170,7 @@
   <a href="index.html#about" class="mm-link">About</a>
   <a href="sectors.html" class="mm-link">Sectors</a>
   <a href="projects.html" class="mm-link active">Our Work</a>
+  <a href="insights.html" class="mm-link">Insights</a>
   <a href="news.html" class="mm-link">News</a>
   <a href="vacancies.html" class="mm-link">Careers</a>
   <a href="index.html#contact" class="mm-link">Contact</a>
@@ -168,7 +178,7 @@
 </div>
 
 <!-- HERO -->
-<section class="sec-hero">
+<section class="sec-hero" id="main">
   <div class="sh-bg" style="background-image:url('images/projects/waterside-staveley-03.jpg')"></div>
   <div class="sh-shade"></div>
   <div class="container">
@@ -185,7 +195,7 @@
 <section class="pj-intro">
   <div class="container reveal">
     <div class="eyebrow">Our Portfolio</div>
-    <h1>Browse Our Projects</h1>
+    <h2>Browse Our Projects</h2>
     <p>From Lake District heritage restorations to nuclear-licensed defence sites, our work spans every corner of South Cumbria. Use the filters below to narrow by sector or location.</p>
   </div>
 </section>
@@ -373,6 +383,15 @@
       </a>
 
       <!-- LECK HOMES -->
+      <a class="pj-card" href="avon-wood.html" data-sector="leck-homes" data-location="barrow" data-keywords="avon wood walney island coming soon new development homes barrow 12 family">
+        <div class="pj-img"><img src="images/projects/bespoke-home-02.jpg" alt="Avon Wood, Walney Island — coming soon" loading="lazy"></div>
+        <div class="pj-body">
+          <div class="pj-tag">Coming Soon</div>
+          <div class="pj-title">Avon Wood</div>
+          <div class="pj-loc">Walney Island, Barrow</div>
+          <p class="pj-desc">A new development of 12 quality family homes coming to Walney Island — 3, 4 and 5-bedroom houses from £285,000. Register your interest now.</p>
+        </div>
+      </a>
       <a class="pj-card" href="leck-homes.html" data-sector="leck-homes" data-location="barrow" data-keywords="solway drive walney island development homes barrow">
         <div class="pj-img"><img src="images/projects/leck-homes-development.jpg" alt="Solway Drive, Walney Island" loading="lazy"></div>
         <div class="pj-body">
@@ -570,7 +589,7 @@
   <div class="container">
     <div class="footer-main">
       <div class="footer-brand">
-        <img src="images/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <img src="images/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy">
         <span class="footer-logo-fallback" style="display:none">Leck Construction</span>
         <p class="footer-tagline">Commercial construction specialists serving South Cumbria and the Lake District since 1946.</p>
         <div class="footer-contact">
@@ -708,5 +727,6 @@
   // Always run on load so the counter reflects actual card count
   applyFilters();
 </script>
+  <script src="fallback.js" defer></script>
 </body>
 </html>

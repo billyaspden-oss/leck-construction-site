@@ -12,17 +12,15 @@
   <meta property="og:url" content="https://leckconstruction.co.uk/sectors">
   <meta property="og:title" content="Our Sectors | Leck Construction Ltd">
   <meta property="og:description" content="Six specialist sectors delivered by Leck Construction across South Cumbria and the Lake District since 1946.">
-  <meta property="og:image" content="images/projects/waterside-staveley-03.jpg">
+  <meta property="og:image" content="https://leckconstruction.co.uk/images/projects/waterside-staveley-03.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="image" href="images/projects/waterside-staveley-03.jpg" fetchpriority="high">
   <link rel="stylesheet" href="fonts.css?v=1">
-  <link rel="stylesheet" href="sector.css?v=21">
+  <link rel="stylesheet" href="sector.css?v=22">
   <style>
     /* ── Sectors index ───────────────────────────────────── */
     .sx-intro{padding:64px 0 32px;background:var(--white)}
-    .sx-intro h1{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;letter-spacing:-.03em;color:var(--navy);line-height:1.1;margin-bottom:14px}
+    .sx-intro h2{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;letter-spacing:-.03em;color:var(--navy);line-height:1.1;margin-bottom:14px}
     .sx-intro p{font-size:.95rem;line-height:1.85;color:var(--grey-500);max-width:680px}
 
     .sx-section{padding:32px 0 96px;background:var(--white)}
@@ -49,15 +47,17 @@
 <script type="speculationrules">
 {"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}
 </script>
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to main content</a>
 <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
 <nav class="nav" id="nav">
   <div class="container"><div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <img src="images/leck-logo.png" alt="Leck Construction Ltd" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <img src="images/leck-logo.png" alt="Leck Construction Ltd">
       <span class="nav-logo-fallback" style="display:none">Leck Construction</span>
     </a>
     <ul class="nav-links">
@@ -90,7 +90,16 @@
         </div>
       </li>
       <li><a href="projects.html">Our Work</a></li>
-      <li><a href="news.html">News</a></li>
+      <li class="nav-has-drop">
+        <a href="insights.html">Insights</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">Insights</div>
+          <div class="mega-links">
+            <a href="insights.html">All Articles</a>
+            <a href="news.html">Company News</a>
+          </div>
+        </div>
+      </li>
       <li class="nav-has-drop">
         <a href="vacancies.html">Careers</a>
         <div class="nav-drop nav-drop--mega">
@@ -114,6 +123,7 @@
   <a href="index.html#about" class="mm-link">About</a>
   <a href="sectors.html" class="mm-link active">Sectors</a>
   <a href="projects.html" class="mm-link">Our Work</a>
+  <a href="insights.html" class="mm-link">Insights</a>
   <a href="news.html" class="mm-link">News</a>
   <a href="vacancies.html" class="mm-link">Careers</a>
   <a href="index.html#contact" class="mm-link">Contact</a>
@@ -121,7 +131,7 @@
 </div>
 
 <!-- HERO -->
-<section class="sec-hero">
+<section class="sec-hero" id="main">
   <div class="sh-bg" style="background-image:url('images/projects/waterside-staveley-03.jpg')"></div>
   <div class="sh-shade"></div>
   <div class="container">
@@ -138,7 +148,7 @@
 <section class="sx-intro">
   <div class="container reveal">
     <div class="eyebrow">Our Capabilities</div>
-    <h1>Six Areas of Expertise</h1>
+    <h2>Six Areas of Expertise</h2>
     <p>Eight decades of building in one region has given us deep specialism across six distinct sectors. Each has its own team, its own clients and its own track record — but all share the same approach: thorough planning, consistent delivery and accountability to a community we'll still be working in a generation from now.</p>
   </div>
 </section>
@@ -277,7 +287,7 @@
   <div class="container">
     <div class="footer-main">
       <div class="footer-brand">
-        <img src="images/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <img src="images/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy">
         <span class="footer-logo-fallback" style="display:none">Leck Construction</span>
         <p class="footer-tagline">Commercial construction specialists serving South Cumbria and the Lake District since 1946.</p>
         <div class="footer-contact">
@@ -323,5 +333,6 @@
 </footer>
 
 <script src="sector.js"></script>
+  <script src="fallback.js" defer></script>
 </body>
 </html>

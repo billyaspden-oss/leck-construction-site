@@ -12,14 +12,14 @@
   <meta property="og:url" content="https://leckconstruction.co.uk/insights">
   <meta property="og:title" content="Insights | Leck Construction Ltd">
   <meta property="og:description" content="Industry articles, technical guides and project deep-dives from Leck Construction.">
-  <meta property="og:image" content="images/projects/waterside-staveley-03.jpg">
+  <meta property="og:image" content="https://leckconstruction.co.uk/images/projects/waterside-staveley-03.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="fonts.css?v=1">
-  <link rel="stylesheet" href="sector.css?v=21">
+  <link rel="stylesheet" href="sector.css?v=22">
   <style>
     /* ── Insights index ───────────────────────────────────── */
     .ins-intro{padding:64px 0 32px;background:var(--white)}
-    .ins-intro h1{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;letter-spacing:-.03em;color:var(--navy);line-height:1.1;margin-bottom:14px}
+    .ins-intro h2{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;letter-spacing:-.03em;color:var(--navy);line-height:1.1;margin-bottom:14px}
     .ins-intro p{font-size:.95rem;line-height:1.85;color:var(--grey-500);max-width:620px}
 
     /* Category pills */
@@ -72,15 +72,17 @@
 <script type="speculationrules">
 {"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}
 </script>
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to main content</a>
 <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
 <nav class="nav" id="nav">
   <div class="container"><div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <img src="images/leck-logo.png" alt="Leck Construction Ltd" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <img src="images/leck-logo.png" alt="Leck Construction Ltd">
       <span class="nav-logo-fallback" style="display:none">Leck Construction</span>
     </a>
     <ul class="nav-links">
@@ -115,9 +117,12 @@
       <li><a href="projects.html">Our Work</a></li>
       <li class="nav-has-drop">
         <a href="insights.html" class="active">Insights</a>
-        <div class="nav-drop">
-          <a href="insights.html">All Articles</a>
-          <a href="news.html">Company News</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">Insights</div>
+          <div class="mega-links">
+            <a href="insights.html">All Articles</a>
+            <a href="news.html">Company News</a>
+          </div>
         </div>
       </li>
       <li class="nav-has-drop">
@@ -151,7 +156,7 @@
 </div>
 
 <!-- HERO -->
-<section class="sec-hero">
+<section class="sec-hero" id="main">
   <div class="sh-bg" style="background-image:url('images/projects/waterside-staveley-03.jpg')"></div>
   <div class="sh-shade"></div>
   <div class="container">
@@ -168,7 +173,7 @@
 <section class="ins-intro">
   <div class="container reveal">
     <div class="eyebrow">Knowledge &amp; Expertise</div>
-    <h1>Articles &amp; Guides</h1>
+    <h2>Articles &amp; Guides</h2>
     <p>Construction is a craft built on accumulated knowledge. The articles here share what our team has learned across heritage restoration, industrial partnerships, sustainable construction and building in some of England's most sensitive landscapes.</p>
   </div>
 </section>
@@ -265,7 +270,7 @@
   <div class="container">
     <div class="footer-main">
       <div class="footer-brand">
-        <img src="images/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <img src="images/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy">
         <span class="footer-logo-fallback" style="display:none">Leck Construction</span>
         <p class="footer-tagline">Commercial construction specialists serving South Cumbria and the Lake District since 1946.</p>
         <div class="footer-contact">
@@ -325,5 +330,6 @@
     });
   }));
 </script>
+  <script src="fallback.js" defer></script>
 </body>
 </html>

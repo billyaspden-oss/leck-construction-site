@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Eight Decades of Building South Cumbria: What's Changed, What Hasn't | Leck Construction Ltd</title>
   <meta name="description" content="Eighty years of construction in one community is unusual. The materials, methods and tools have changed completely. The things that matter haven't. A reflection on what keeps a construction business going through eight decades.">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://leckconstruction.co.uk/eight-decades-building-south-cumbria">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <meta property="og:type" content="article">
@@ -13,10 +13,10 @@
   <meta property="article:section" content="Community">
   <meta property="og:title" content="Eight Decades of Building South Cumbria: What's Changed, What Hasn't">
   <meta property="og:description" content="A reflection on eighty years of construction in one community — and the things that have kept Leck going.">
-  <meta property="og:image" content="images/projects/waterside-staveley-03.jpg">
+  <meta property="og:image" content="https://leckconstruction.co.uk/images/projects/waterside-staveley-03.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="fonts.css?v=1">
-  <link rel="stylesheet" href="sector.css?v=21">
+  <link rel="stylesheet" href="sector.css?v=22">
   <style>
     /* ── Article page styles ─────────────────────────────── */
     .art-hero{padding:120px 0 56px;background:var(--white);border-bottom:1px solid var(--grey-200)}
@@ -58,15 +58,17 @@
 <script type="speculationrules">
 {"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}
 </script>
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
 <body>
 
+<a class="skip-link" href="#main">Skip to main content</a>
 <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
 <nav class="nav" id="nav">
   <div class="container"><div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <img src="images/leck-logo.png" alt="Leck Construction Ltd" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+      <img src="images/leck-logo.png" alt="Leck Construction Ltd">
       <span class="nav-logo-fallback" style="display:none">Leck Construction</span>
     </a>
     <ul class="nav-links">
@@ -99,7 +101,16 @@
         </div>
       </li>
       <li><a href="projects.html">Our Work</a></li>
-      <li><a href="news.html">News</a></li>
+      <li class="nav-has-drop">
+        <a href="insights.html" class="active">Insights</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">Insights</div>
+          <div class="mega-links">
+            <a href="insights.html">All Articles</a>
+            <a href="news.html">Company News</a>
+          </div>
+        </div>
+      </li>
       <li class="nav-has-drop">
         <a href="vacancies.html">Careers</a>
         <div class="nav-drop nav-drop--mega">
@@ -123,6 +134,7 @@
   <a href="index.html#about" class="mm-link">About</a>
   <a href="sectors.html" class="mm-link">Sectors</a>
   <a href="projects.html" class="mm-link">Our Work</a>
+  <a href="insights.html" class="mm-link active">Insights</a>
   <a href="news.html" class="mm-link">News</a>
   <a href="vacancies.html" class="mm-link">Careers</a>
   <a href="index.html#contact" class="mm-link">Contact</a>
@@ -130,7 +142,7 @@
 </div>
 
 <!-- ARTICLE HEADER -->
-<section class="art-hero">
+<section class="art-hero" id="main">
   <div class="container">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="index.html">Home</a><span>/</span><a href="insights.html">Insights</a><span>/</span><span>Eight Decades of Building South Cumbria</span>
@@ -248,7 +260,7 @@
   <div class="container">
     <div class="footer-main">
       <div class="footer-brand">
-        <img src="images/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <img src="images/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy">
         <span class="footer-logo-fallback" style="display:none">Leck Construction</span>
         <p class="footer-tagline">Commercial construction specialists serving South Cumbria and the Lake District since 1946.</p>
         <div class="footer-contact">
@@ -294,5 +306,6 @@
 </footer>
 
 <script src="sector.js"></script>
+  <script src="fallback.js" defer></script>
 </body>
 </html>
