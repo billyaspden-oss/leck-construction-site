@@ -1139,8 +1139,7 @@
         });
         const json = await res.json();
         if (json.success) {
-          contactForm.hidden = true;
-          cfSuccess.hidden = false;
+          window.location.href = '/thank-you';
         } else {
           throw new Error(json.message);
         }
