@@ -3,4 +3,4 @@
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(self)
-  Content-Security-Policy: default-src 'self'; img-src 'self' data: https://www.google.com https://maps.gstatic.com https://*.openstreetmap.org https://*.tile.openstreetmap.org; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; frame-src https://www.google.com https://maps.google.com https://www.openstreetmap.org; connect-src 'self' https://api.web3forms.com
+  Content-Security-Policy: default-src 'self'; img-src 'self' data: https://cdn.sanity.io https://www.google.com https://maps.gstatic.com https://*.openstreetmap.org https://*.tile.openstreetmap.org; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; frame-src https://www.google.com https://maps.google.com https://www.openstreetmap.org; connect-src 'self' https://api.web3forms.com
