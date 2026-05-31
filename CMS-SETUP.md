@@ -65,21 +65,27 @@ static pages, untouched.
 ## Step 5 — Deploy
 
 Already done for you (on the branch): `wrangler.toml` now has `main = "src/index.js"`,
-the `ASSETS` binding, `run_worker_first = true`, and the Sanity vars. To go live:
+the `ASSETS` binding, `run_worker_first = true`, and the Sanity vars.
+
+This Worker **deploys the normal Leck way — push to `main`** (the Cloudflare Worker
+auto-builds from the connected GitHub repo; do NOT run `wrangler deploy`):
 
 ```
-npm install        # installs wrangler (repo root)
-npx wrangler dev   # optional: preview locally at http://localhost:8788
-npx wrangler deploy
+npm install                 # optional, only to preview locally
+npx wrangler dev            # optional: preview at http://localhost:8788
+# to ship:
+git checkout main && git merge feat/cms-vacancies-news
+git push origin main        # Cloudflare auto-builds the Worker
 ```
+Verify at **https://leck-construction-site.billy-aspden.workers.dev/** (not
+leckconstruction.co.uk — that still serves the old WordPress site until DNS cutover).
+
 What the Worker does: intercepts `/vacancies`, `/vacancies/<slug>`, `/news`,
 `/news/<slug>`; injects Sanity content into your existing pages via HTMLRewriter
 (design untouched); adds `JobPosting` JSON-LD to vacancies (→ Google Jobs eligible)
 and `Article` JSON-LD to news; everything else passes straight through to your static
 site. If Sanity is ever unreachable, routes fall back to the static page — the site
 can't go down because of the CMS.
-
-> Review the branch and merge to `main` before deploying from your normal pipeline.
 
 ## Step 6 — Handover
 
