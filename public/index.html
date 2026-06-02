@@ -1020,7 +1020,7 @@
     const pauseBtn = document.getElementById('slidePause');
     const hero     = document.querySelector('.hero');
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const DURATION = 8000;
+    const DURATION = 12000;
     let current = 0, timer = null;
     // Autoplay defaults off for reduced-motion users
     let paused = reduceMotion.matches;
@@ -1041,7 +1041,7 @@
       if (!reduceMotion.matches) {
         bg.style.animation = 'none';
         void bg.offsetWidth;
-        bg.style.animation = 'kenBurns 8s ease-out forwards';
+        bg.style.animation = `kenBurns ${DURATION}ms ease-out forwards`;
       }
       // Reset progress
       fill.style.transition = 'none';
