@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Contact | Leck Construction Ltd | Barrow-in-Furness</title>
+  <meta name="description" content="Talk to Leck Construction about your project. Call 01229 820394, email admin@leck.co, or visit us at Leck House, Ironworks Road, Barrow-in-Furness, LA14 2PQ.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leckconstruction.co.uk/contact">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leckconstruction.co.uk/contact">
+  <meta property="og:title" content="Contact | Leck Construction Ltd">
+  <meta property="og:description" content="Talk to Leck Construction about your project — call, email or visit us in Barrow-in-Furness.">
+  <meta property="og:image" content="https://leckconstruction.co.uk/images/projects/emlyn-hughes-01.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="fonts.css?v=1">
+  <link rel="stylesheet" href="sector.css?v=26">
+  <style>
+    /* ── Contact page ─────────────────────────────────────── */
+    .contact{padding:80px 0 100px;background:var(--white)}
+    .contact-head{max-width:680px;margin-bottom:48px}
+    .contact-head h2{font-size:clamp(1.9rem,3.5vw,2.8rem);font-weight:800;letter-spacing:-.03em;color:#111827;line-height:1.1;margin-bottom:16px;font-family:var(--display)}
+    .contact-head p{font-size:1rem;line-height:1.8;color:var(--grey-500)}
+    .contact-layout{display:grid;grid-template-columns:1fr;gap:48px;align-items:start}
+    @media(min-width:1024px){.contact-layout{grid-template-columns:1fr 1fr;gap:64px}}
+    /* Left column */
+    .contact-rows{display:grid;grid-template-columns:1fr;gap:0;margin-bottom:8px}
+    @media(min-width:560px){.contact-rows{grid-template-columns:1fr 1fr;gap:0 24px}}
+    .contact-row{display:flex;align-items:flex-start;gap:16px;margin-bottom:22px}
+    .contact-icon{width:40px;height:40px;flex-shrink:0;border:1px solid var(--grey-200);background:var(--white);display:flex;align-items:center;justify-content:center;color:var(--navy)}
+    .contact-detail-lbl{font-size:.58rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--grey-400);margin-bottom:3px}
+    .contact-detail-val{font-size:.95rem;font-weight:500;color:var(--grey-900);line-height:1.5}
+    .contact-detail-val a{transition:color .2s}
+    .contact-detail-val a:hover{color:var(--blue)}
+    .hours{width:100%;border-collapse:collapse;margin:8px 0 36px;max-width:380px}
+    .hours tr{border-bottom:1px solid var(--grey-200)}
+    .hours tr:last-child{border-bottom:none}
+    .hours td{padding:10px 0;font-size:.85rem;font-weight:400;color:var(--grey-500)}
+    .hours td:last-child{text-align:right;font-weight:600;color:var(--grey-700)}
+    .hours .closed{color:var(--grey-400)}
+    /* Form */
+    .cf-row-2{display:grid;grid-template-columns:1fr;gap:14px}
+    @media(min-width:560px){.cf-row-2{grid-template-columns:1fr 1fr}}
+    .cf-field{display:flex;flex-direction:column;gap:7px;margin-bottom:14px}
+    .cf-label{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--grey-500)}
+    .cf-label span{color:var(--blue)}
+    .cf-input{background:var(--white);border:1px solid var(--grey-200);color:var(--grey-900);font-family:var(--sans);font-size:max(16px,1rem);padding:12px 14px;width:100%;transition:border-color .2s;outline:none;-webkit-appearance:none}
+    .cf-input::placeholder{color:var(--grey-400)}
+    .cf-input:focus{border-color:var(--blue)}
+    .cf-textarea{resize:vertical;min-height:120px}
+    .cf-submit{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--navy);color:var(--white);font-family:var(--sans);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border:none;padding:15px 28px;cursor:pointer;width:100%;transition:background .2s;margin-top:4px}
+    .cf-submit:hover{background:var(--blue)}
+    .cf-submit:disabled{opacity:.55;cursor:not-allowed}
+    .cf-arrow{transition:transform .2s;display:inline-block}
+    .cf-submit:not(:disabled):hover .cf-arrow{transform:translateX(4px)}
+    .cf-card{background:var(--grey-50);border:1px solid var(--grey-200);padding:32px}
+    .cf-card h3{font-family:var(--display);font-size:1.2rem;font-weight:800;color:#111827;letter-spacing:-.02em;margin-bottom:6px}
+    .cf-card>p{font-size:.88rem;color:var(--grey-500);line-height:1.6;margin-bottom:22px}
+    .cf-success{display:flex;align-items:center;justify-content:center;min-height:300px;border:1px solid var(--grey-200);background:var(--white)}
+    .cf-success-inner{text-align:center;padding:40px}
+    .cf-tick{width:48px;height:48px;border:2px solid var(--blue);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:var(--blue);font-size:1.2rem;font-weight:700}
+    .cf-success-inner h3{font-size:1.4rem;font-weight:800;color:var(--grey-900);margin-bottom:8px;letter-spacing:-.02em}
+    .cf-success-inner p{font-size:.88rem;color:var(--grey-500)}
+    /* Map */
+    .contact-map{width:100%;border-radius:16px;overflow:hidden;border:1px solid var(--grey-200)}
+    .contact-map iframe{display:block;width:100%;height:100%;min-height:460px;border:0;filter:grayscale(20%)}
+    @media(min-width:1024px){.contact-map{position:sticky;top:120px}}
+  </style>
+<script type="speculationrules">
+{"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}
+</script>
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- TOP ACCENT BAR (navy, no text) -->
+<div class="topbar" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <div class="container"><div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/leck-logo.png" alt="Leck Construction Ltd">
+      <span class="nav-logo-fallback" style="display:none">Leck Construction</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li class="nav-has-drop">
+        <a href="approach.html">Our Approach</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">Our Approach</div>
+          <div class="mega-links">
+            <a href="approach.html#vision">Vision &amp; Values</a>
+            <a href="approach.html#health-safety">Health &amp; Safety</a>
+            <a href="approach.html#environment">Environment &amp; Sustainability</a>
+            <a href="approach.html#accreditations">Accreditations</a>
+            <a href="approach.html#community">Community &amp; Social Value</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-has-drop">
+        <a href="sectors.html">Sectors</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">What We Do</div>
+          <div class="mega-links">
+            <a href="partnerships.html">Strategic Partnerships</a>
+            <a href="commercial-education-health.html">Commercial, Education &amp; Health</a>
+            <a href="industrial-civil-engineering.html">Industrial &amp; Civil Engineering</a>
+            <a href="leck-homes.html">Leck Homes</a>
+            <a href="private-social-housing.html">Private &amp; Social Housing</a>
+            <a href="heritage-conservation.html">Heritage &amp; Conservation</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="projects.html">Our Work</a></li>
+      <li class="nav-has-drop">
+        <a href="insights.html">Insights</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">Insights</div>
+          <div class="mega-links">
+            <a href="insights.html">All Articles</a>
+            <a href="news.html">Company News</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-has-drop">
+        <a href="vacancies.html">Careers</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">Careers</div>
+          <div class="mega-links">
+            <a href="vacancies.html">Current Vacancies</a>
+            <a href="mailto:admin@leck.co">Send Your CV</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="leck-homes.html" class="nav-cta">Leck Homes ↗</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="about.html" class="mm-link">About</a>
+  <a href="approach.html" class="mm-link">Our Approach</a>
+  <a href="sectors.html" class="mm-link">Sectors</a>
+  <a href="projects.html" class="mm-link">Our Work</a>
+  <a href="insights.html" class="mm-link">Insights</a>
+  <a href="news.html" class="mm-link">News</a>
+  <a href="vacancies.html" class="mm-link">Careers</a>
+  <a href="contact.html" class="mm-link active">Contact</a>
+  <a href="tel:01229820394" class="mm-tel">01229 820394</a>
+</div>
+
+<!-- HERO -->
+<section class="sec-hero" id="main">
+  <div class="sh-bg" style="background-image:url('images/projects/emlyn-hughes-01.jpg')"></div>
+  <div class="sh-shade"></div>
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>/</span><span>Contact</span>
+    </nav>
+    <div class="sh-chip"><span>Get In Touch</span></div>
+    <h1 class="sh-title">Contact<br><em>Leck Construction.</em></h1>
+    <p class="sh-sub">Whether you have a project in mind, a tender to discuss, or you're looking to join the team — we'd be glad to hear from you.</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="container">
+    <div class="contact-head reveal">
+      <div class="eyebrow">Get In Touch</div>
+      <h2>Let's Talk About Your Project</h2>
+      <p>Call us, email us, or send a few details using the form below and we'll be in touch shortly. You'll also find us at our head office in Barrow-in-Furness.</p>
+    </div>
+
+    <div class="contact-layout">
+      <!-- LEFT: details + form -->
+      <div class="reveal">
+        <div class="contact-rows">
+          <div class="contact-row">
+            <div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg></div>
+            <div><div class="contact-detail-lbl">Telephone</div><div class="contact-detail-val"><a href="tel:01229820394">01229 820394</a></div></div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><div class="contact-detail-lbl">Email</div><div class="contact-detail-val"><a href="mailto:admin@leck.co">admin@leck.co</a></div></div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><div class="contact-detail-lbl">Head Office</div><div class="contact-detail-val">Leck House, Ironworks Road<br>Barrow-in-Furness, LA14 2PQ</div></div>
+          </div>
+        </div>
+
+        <table class="hours"><tbody>
+          <tr><td>Monday – Thursday</td><td>8:00 am – 5:00 pm</td></tr>
+          <tr><td>Friday</td><td>8:00 am – 1:00 pm</td></tr>
+          <tr><td>Saturday – Sunday</td><td class="closed">Closed</td></tr>
+        </tbody></table>
+
+        <div class="cf-card">
+          <h3>Send an Enquiry</h3>
+          <p>Tell us a little about your project and we'll get back to you.</p>
+          <form id="contactForm" novalidate>
+            <input type="hidden" name="access_key" value="5aed2b7f-91de-4a92-b5cb-9a97ec67f070">
+            <input type="hidden" name="subject" value="New Enquiry — Leck Construction Website">
+            <input type="hidden" name="from_name" value="Leck Construction Website">
+            <input type="checkbox" name="botcheck" style="display:none">
+            <div class="cf-row-2">
+              <div class="cf-field"><label class="cf-label" for="cf-name">Full Name <span>*</span></label><input class="cf-input" type="text" id="cf-name" name="name" required autocomplete="name" placeholder="John Smith"></div>
+              <div class="cf-field"><label class="cf-label" for="cf-phone">Phone Number</label><input class="cf-input" type="tel" id="cf-phone" name="phone" autocomplete="tel" placeholder="01229 820394"></div>
+            </div>
+            <div class="cf-field"><label class="cf-label" for="cf-email">Email Address <span>*</span></label><input class="cf-input" type="email" id="cf-email" name="email" required autocomplete="email" placeholder="you@example.com"></div>
+            <div class="cf-field"><label class="cf-label" for="cf-message">Tell Us About Your Project <span>*</span></label><textarea class="cf-input cf-textarea" id="cf-message" name="message" required rows="5" placeholder="Briefly describe your project, location and timescale…"></textarea></div>
+            <button type="submit" class="cf-submit">Send Enquiry <span class="cf-arrow">→</span></button>
+          </form>
+          <div class="cf-success" id="cfSuccess" hidden>
+            <div class="cf-success-inner"><div class="cf-tick">✓</div><h3>Message Sent</h3><p>Thank you — we'll be in touch shortly.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: map -->
+      <div class="contact-map reveal d1">
+        <iframe src="https://maps.google.com/maps?q=54.1140133,-3.2398485&z=16&output=embed" title="Leck Construction Ltd, Ironworks Road, Barrow-in-Furness, LA14 2PQ" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-card">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="images/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy">
+        <span class="footer-logo-fallback" style="display:none">Leck Construction</span>
+        <p class="footer-tagline">Commercial construction specialists serving South Cumbria and the Lake District since 1946.</p>
+        <div class="footer-contact">
+          <p>Leck House, Ironworks Road<br>Barrow-in-Furness, LA14 2PQ</p>
+          <a href="tel:01229820394">01229 820394</a>
+          <a href="mailto:admin@leck.co">admin@leck.co</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <div class="footer-col-title">Sectors</div>
+          <a href="partnerships.html">Strategic Partnerships</a>
+          <a href="commercial-education-health.html">Commercial &amp; Health</a>
+          <a href="industrial-civil-engineering.html">Industrial &amp; Civil</a>
+          <a href="leck-homes.html">Leck Homes</a>
+          <a href="private-social-housing.html">Private &amp; Social Housing</a>
+          <a href="heritage-conservation.html">Heritage &amp; Conservation</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Our Approach</div>
+          <a href="approach.html#vision">Vision &amp; Values</a>
+          <a href="approach.html#health-safety">Health &amp; Safety</a>
+          <a href="approach.html#environment">Environment</a>
+          <a href="approach.html#accreditations">Accreditations</a>
+          <a href="approach.html#community">Community</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Company</div>
+          <a href="about.html">About Us</a>
+          <a href="projects.html">Our Work</a>
+          <a href="news.html">News &amp; Updates</a>
+          <a href="vacancies.html">Careers</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-legal">© 2026 Leck Construction Ltd. All rights reserved.</p>
+      <p class="footer-reg">Company No. 00421094 · Leck House, Ironworks Road, Barrow-in-Furness LA14 2PQ</p>
+    </div>
+  </div>
+  </div>
+</footer>
+
+<script src="sector.js"></script>
+<script>
+  // ── Contact form
+  const contactForm = document.getElementById('contactForm');
+  const cfSuccess   = document.getElementById('cfSuccess');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async e => {
+      e.preventDefault();
+      if (!contactForm.checkValidity()) { contactForm.reportValidity(); return; }
+      const sb = contactForm.querySelector('.cf-submit');
+      sb.disabled = true; sb.innerHTML = 'Sending… <span class="cf-arrow">→</span>';
+      try {
+        const data = Object.fromEntries(new FormData(contactForm));
+        const res  = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const json = await res.json();
+        if (json.success) {
+          window.location.href = '/thank-you';
+        } else {
+          throw new Error(json.message);
+        }
+      } catch {
+        sb.disabled = false;
+        sb.innerHTML = 'Send Enquiry <span class="cf-arrow">→</span>';
+        alert('Something went wrong — please email admin@leck.co directly.');
+      }
+    });
+  }
+</script>
+  <script src="fallback.js" defer></script>
+</body>
+</html>

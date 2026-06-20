@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>About | Leck Construction Ltd | South Cumbria Since 1946</title>
+  <meta name="description" content="Family-owned commercial contractor in Barrow-in-Furness since 1946 — our vision, values, accreditations and environmental commitment across South Cumbria.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leckconstruction.co.uk/about">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leckconstruction.co.uk/about">
+  <meta property="og:title" content="About | Leck Construction Ltd">
+  <meta property="og:description" content="Family-owned commercial contractor in South Cumbria since 1946 — our vision, values and accreditations.">
+  <meta property="og:image" content="https://leckconstruction.co.uk/images/projects/kimberly-clark-02.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" as="image" href="images/projects/kimberly-clark-02.jpg" fetchpriority="high">
+  <link rel="stylesheet" href="fonts.css?v=1">
+  <link rel="stylesheet" href="sector.css?v=26">
+  <style>
+    /* ── About page ───────────────────────────────────────── */
+    .about{padding:100px 0;background:var(--white)}
+    .about-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:start}
+    .about-copy h2{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:800;line-height:1.1;letter-spacing:-.03em;color:#111827;margin-bottom:20px;font-family:var(--display)}
+    .about-copy>p{font-size:.96rem;line-height:1.82;color:var(--grey-500);margin-bottom:8px}
+    .about-copy>p strong{font-weight:600;color:var(--grey-700)}
+    /* Accordion */
+    .accord-list{margin-top:32px}
+    .accord-item{border-top:1px solid var(--grey-200)}
+    .accord-btn{display:flex;align-items:center;justify-content:space-between;width:100%;background:none;border:none;padding:18px 0;cursor:pointer;gap:16px;text-align:left}
+    .accord-label{font-size:1rem;font-weight:700;color:var(--grey-400);letter-spacing:-.01em;transition:color .25s}
+    .accord-item.open .accord-label{color:var(--navy)}
+    .accord-icon{width:18px;height:18px;flex-shrink:0;transition:transform .35s var(--ease-out);color:var(--grey-400)}
+    .accord-item.open .accord-icon{transform:rotate(45deg);color:var(--blue)}
+    .accord-body{max-height:0;overflow:hidden;transition:max-height .45s var(--ease-out)}
+    .accord-item.open .accord-body{max-height:320px}
+    .accord-inner{padding-bottom:20px;font-size:.9rem;line-height:1.8;color:var(--grey-500)}
+    .accord-inner ul{list-style:none;display:flex;flex-direction:column;gap:6px;margin-top:8px}
+    .accord-inner ul li{display:flex;align-items:center;gap:10px;font-weight:500;color:var(--grey-700)}
+    .accord-inner ul li::before{content:'';width:6px;height:6px;background:var(--blue);border-radius:50%;flex-shrink:0}
+    /* About actions */
+    .about-actions{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:36px;padding-top:32px;border-top:1px solid var(--grey-200)}
+    .btn-primary{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--navy);color:var(--white);padding:14px 28px;border-radius:6px;transition:background .2s}
+    .btn-primary:hover{background:var(--blue)}
+    .btn-text{font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--grey-500);border-bottom:2px solid var(--grey-200);padding-bottom:2px;transition:color .2s,border-color .2s}
+    .btn-text:hover{color:var(--navy);border-color:var(--blue)}
+    /* About photo */
+    .about-photo{display:none;position:sticky;top:120px}
+    .about-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2rem;display:block}
+    @media(min-width:1024px){
+      .about-grid{grid-template-columns:1fr 1fr;gap:80px}
+      .about-photo{display:block}
+    }
+  </style>
+<script type="speculationrules">
+{"prefetch":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}
+</script>
+  <noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- TOP ACCENT BAR (navy, no text) -->
+<div class="topbar" aria-hidden="true"></div>
+
+<nav class="nav" id="nav">
+  <div class="container"><div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="images/leck-logo.png" alt="Leck Construction Ltd">
+      <span class="nav-logo-fallback" style="display:none">Leck Construction</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html" class="active">About</a></li>
+      <li class="nav-has-drop">
+        <a href="approach.html">Our Approach</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">Our Approach</div>
+          <div class="mega-links">
+            <a href="approach.html#vision">Vision &amp; Values</a>
+            <a href="approach.html#health-safety">Health &amp; Safety</a>
+            <a href="approach.html#environment">Environment &amp; Sustainability</a>
+            <a href="approach.html#accreditations">Accreditations</a>
+            <a href="approach.html#community">Community &amp; Social Value</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-has-drop">
+        <a href="sectors.html">Sectors</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">What We Do</div>
+          <div class="mega-links">
+            <a href="partnerships.html">Strategic Partnerships</a>
+            <a href="commercial-education-health.html">Commercial, Education &amp; Health</a>
+            <a href="industrial-civil-engineering.html">Industrial &amp; Civil Engineering</a>
+            <a href="leck-homes.html">Leck Homes</a>
+            <a href="private-social-housing.html">Private &amp; Social Housing</a>
+            <a href="heritage-conservation.html">Heritage &amp; Conservation</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="projects.html">Our Work</a></li>
+      <li class="nav-has-drop">
+        <a href="insights.html">Insights</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">Insights</div>
+          <div class="mega-links">
+            <a href="insights.html">All Articles</a>
+            <a href="news.html">Company News</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-has-drop">
+        <a href="vacancies.html">Careers</a>
+        <div class="nav-drop nav-drop--mega">
+          <div class="mega-heading">Careers</div>
+          <div class="mega-links">
+            <a href="vacancies.html">Current Vacancies</a>
+            <a href="mailto:admin@leck.co">Send Your CV</a>
+          </div>
+        </div>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="leck-homes.html" class="nav-cta">Leck Homes ↗</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div></div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="about.html" class="mm-link active">About</a>
+  <a href="approach.html" class="mm-link">Our Approach</a>
+  <a href="sectors.html" class="mm-link">Sectors</a>
+  <a href="projects.html" class="mm-link">Our Work</a>
+  <a href="insights.html" class="mm-link">Insights</a>
+  <a href="news.html" class="mm-link">News</a>
+  <a href="vacancies.html" class="mm-link">Careers</a>
+  <a href="contact.html" class="mm-link">Contact</a>
+  <a href="tel:01229820394" class="mm-tel">01229 820394</a>
+</div>
+
+<!-- HERO -->
+<section class="sec-hero" id="main">
+  <div class="sh-bg" style="background-image:url('images/projects/kimberly-clark-02.jpg')"></div>
+  <div class="sh-shade"></div>
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>/</span><span>About</span>
+    </nav>
+    <div class="sh-chip"><span>Established 1946</span></div>
+    <h1 class="sh-title">About<br><em>Leck Construction.</em></h1>
+    <p class="sh-sub">Family-owned and operated from Barrow-in-Furness since 1946 — one of South Cumbria's most established commercial contractors, trusted by clients from GlaxoSmithKline and BAE Systems to the NHS and Cumbria County Council.</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="container">
+    <div class="about-grid">
+
+      <div class="about-copy reveal">
+        <div class="eyebrow">About Leck Construction</div>
+        <h2>Excellence in Construction Across South Cumbria</h2>
+        <p>Family-owned and operated from Barrow-in-Furness since 1946, Leck Construction is one of South Cumbria's most established contractors. Our client list includes <strong>GlaxoSmithKline</strong>, <strong>BAE Systems</strong>, the NHS and Cumbria County Council — from single bespoke homes to multi-million pound commercial and industrial contracts.</p>
+
+        <div class="accord-list">
+
+          <div class="accord-item open">
+            <button class="accord-btn" aria-expanded="true">
+              <span class="accord-label">Our Vision &amp; Values</span>
+              <svg class="accord-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="accord-body">
+              <div class="accord-inner">
+                <p>To be the most trusted commercial contractor in South Cumbria — delivering quality buildings on programme, within budget and to the highest standards of safety and sustainability. We are committed to investing in our people, our communities and our environment.</p>
+                <ul>
+                  <li>Quality and craftsmanship in everything we build</li>
+                  <li>Long-term relationships with clients and supply chain</li>
+                  <li>Safe sites, every day, on every project</li>
+                  <li>Reinvesting in Cumbrian communities</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accord-item">
+            <button class="accord-btn" aria-expanded="false">
+              <span class="accord-label">Accreditations &amp; Memberships</span>
+              <svg class="accord-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="accord-body">
+              <div class="accord-inner">
+                <p>Our standards are independently verified at a national level across quality, safety and environmental management.</p>
+                <ul>
+                  <li>NHBC — Grade A Rated Housebuilder</li>
+                  <li>ISO 9001:2015 — Quality Management</li>
+                  <li>ISO 14001:2015 — Environmental Management</li>
+                  <li>CHAS — Accredited Contractor</li>
+                  <li>NFB — National Federation of Builders</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accord-item">
+            <button class="accord-btn" aria-expanded="false">
+              <span class="accord-label">Environment &amp; Sustainability</span>
+              <svg class="accord-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="accord-body">
+              <div class="accord-inner">
+                <p>As holders of ISO 14001:2015, environmental responsibility is embedded across every project we deliver. From waste reduction on site to responsible sourcing of materials, we work to minimise our impact on the Lake District and Cumbrian landscapes we operate within.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="about-actions">
+          <a href="contact.html" class="btn-primary">Talk to Us About Your Project</a>
+          <a href="projects.html" class="btn-text">View Projects →</a>
+        </div>
+      </div>
+
+      <div class="about-photo reveal d2">
+        <img src="images/projects/bespoke-home-04.jpg" alt="A bespoke detached home built by Leck Construction in South Cumbria" loading="lazy">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec-cta">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <h2>Want to work with us?</h2>
+      <p>Whether you're a client with a project in mind, a subcontractor looking to get on our framework, or someone looking for a career — get in touch.</p>
+      <a href="contact.html" class="btn-gold">Get In Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-card">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="images/footer_logo.png" alt="Leck Construction Ltd" class="footer-logo-img" loading="lazy">
+        <span class="footer-logo-fallback" style="display:none">Leck Construction</span>
+        <p class="footer-tagline">Commercial construction specialists serving South Cumbria and the Lake District since 1946.</p>
+        <div class="footer-contact">
+          <p>Leck House, Ironworks Road<br>Barrow-in-Furness, LA14 2PQ</p>
+          <a href="tel:01229820394">01229 820394</a>
+          <a href="mailto:admin@leck.co">admin@leck.co</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <div class="footer-col-title">Sectors</div>
+          <a href="partnerships.html">Strategic Partnerships</a>
+          <a href="commercial-education-health.html">Commercial &amp; Health</a>
+          <a href="industrial-civil-engineering.html">Industrial &amp; Civil</a>
+          <a href="leck-homes.html">Leck Homes</a>
+          <a href="private-social-housing.html">Private &amp; Social Housing</a>
+          <a href="heritage-conservation.html">Heritage &amp; Conservation</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Our Approach</div>
+          <a href="approach.html#vision">Vision &amp; Values</a>
+          <a href="approach.html#health-safety">Health &amp; Safety</a>
+          <a href="approach.html#environment">Environment</a>
+          <a href="approach.html#accreditations">Accreditations</a>
+          <a href="approach.html#community">Community</a>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">Company</div>
+          <a href="about.html">About Us</a>
+          <a href="projects.html">Our Work</a>
+          <a href="news.html">News &amp; Updates</a>
+          <a href="vacancies.html">Careers</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-legal">© 2026 Leck Construction Ltd. All rights reserved.</p>
+      <p class="footer-reg">Company No. 00421094 · Leck House, Ironworks Road, Barrow-in-Furness LA14 2PQ</p>
+    </div>
+  </div>
+  </div>
+</footer>
+
+<script src="sector.js"></script>
+<script>
+  // ── Accordion
+  document.querySelectorAll('.accord-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.accord-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.accord-item').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.accord-btn').setAttribute('aria-expanded','false');
+      });
+      if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+    });
+  });
+</script>
+  <script src="fallback.js" defer></script>
+</body>
+</html>

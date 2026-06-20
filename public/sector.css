@@ -43,8 +43,11 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--blue);outline-offse
 #main{scroll-margin-top:120px}
 body.lh #main{scroll-margin-top:160px}
 
+/* ─── Top accent bar (navy, no text) ─────────────────────────────── */
+.topbar{background:var(--navy);position:fixed;top:0;left:0;right:0;height:16px;z-index:98}
+
 /* ─── Nav ────────────────────────────────────────────────────────── */
-.nav{position:fixed;inset:0 0 auto;z-index:100;padding:28px 0;background:#FFFFFF;box-shadow:0 1px 0 rgba(0,0,0,.06);border-top:3px solid var(--blue)}
+.nav{position:fixed;top:16px;left:0;right:0;z-index:100;padding:28px 0;background:#FFFFFF;box-shadow:0 1px 0 rgba(0,0,0,.06)}
 .nav .container{max-width:1600px;padding:0 clamp(32px,4vw,72px)}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
 .nav-logo img{height:52px;width:auto;object-fit:contain;display:block}
@@ -94,9 +97,9 @@ body.lh #main{scroll-margin-top:160px}
 
 /* ─── Hero ───────────────────────────────────────────────────────── */
 .sec-hero{position:relative;height:72vh;height:72svh;min-height:520px;display:flex;align-items:flex-end;padding-bottom:72px;overflow:hidden}
-.sh-bg{position:absolute;inset:-15%;background-size:cover;background-position:center;background-repeat:no-repeat;animation:kenBurns 24s ease-in-out infinite alternate;will-change:transform}
-@keyframes kenBurns{from{transform:scale(1) translate(0,0)}to{transform:scale(1.07) translate(-1.5%,-1%)}}
-.sh-shade{position:absolute;inset:0;background:linear-gradient(100deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.22) 100%)}
+.sh-bg{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat;animation:kenBurns 24s ease-in-out infinite alternate;will-change:transform}
+@keyframes kenBurns{from{transform:scale(1) translate(0,0)}to{transform:scale(1.06) translate(-1.2%,-.8%)}}
+.sh-shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.62) 0%,rgba(0,0,0,.28) 30%,rgba(0,0,0,0) 58%),linear-gradient(105deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,.12) 42%,rgba(0,0,0,0) 68%)}
 .sec-hero .container{position:relative;z-index:2;width:100%}
 .breadcrumb{font-size:.62rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:8px;margin-bottom:28px;position:absolute;top:calc(-72vh + 78px);left:20px}
 .breadcrumb a{color:rgba(255,255,255,.4);transition:color .2s}
@@ -151,6 +154,14 @@ body.lh #main{scroll-margin-top:160px}
 .sp-card--large .sp-desc{font-size:.88rem;line-height:1.75}
 
 /* ─── Other Sectors ──────────────────────────────────────────────── */
+/* ─── On-site gallery strip ──────────────────────────────────────── */
+.sec-gallery{padding:64px 0;background:var(--white);border-top:1px solid var(--grey-200)}
+.gal-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:8px}
+.gal-item{position:relative;overflow:hidden;border-radius:8px;aspect-ratio:4/3}
+.gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s var(--ease-out)}
+.gal-item:hover img{transform:scale(1.04)}
+@media(min-width:768px){.gal-grid{grid-template-columns:repeat(3,1fr)}.gal-item--wide{grid-column:span 2;aspect-ratio:auto}}
+
 .sec-others{padding:64px 0;background:var(--navy);border-top:1px solid var(--border-navy)}
 .sec-others .eyebrow{color:rgba(255,255,255,.5)}
 .sec-others .eyebrow::before{background:rgba(255,255,255,.35)}

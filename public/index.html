@@ -16,7 +16,7 @@
   <meta name="twitter:image" content="https://leckconstruction.co.uk/images/projects/waterside-staveley-03.jpg">
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Leck Construction Ltd","description":"NHBC Grade A rated commercial contractor serving South Cumbria since 1946","address":{"@type":"PostalAddress","streetAddress":"Leck House, Ironworks Road","addressLocality":"Barrow-in-Furness","addressRegion":"Cumbria","postalCode":"LA14 2PQ","addressCountry":"GB"},"telephone":"01229820394","email":"admin@leck.co","url":"https://leckconstruction.co.uk","foundingDate":"1946"}</script>
   <link rel="stylesheet" href="fonts.css?v=2">
-  <link rel="preload" as="image" href="images/projects/lanthwaite-dusk-02.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="images/projects/emlyn-hughes-01.jpg" fetchpriority="high">
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
@@ -46,8 +46,11 @@
     .skip-link:focus,.skip-link:focus-visible{transform:translateY(0);outline:2px solid var(--blue);outline-offset:0}
     #main{scroll-margin-top:120px}
 
+    /* ─── Top accent bar (blue, no text) ──────────────────── */
+    .topbar{background:var(--navy);position:fixed;top:0;left:0;right:0;height:16px;z-index:98}
+
     /* ─── Nav ─────────────────────────────────────────────── */
-    .nav{position:fixed;inset:0 0 auto;z-index:100;padding:28px 0;background:#FFFFFF;box-shadow:0 1px 0 rgba(0,0,0,.06);border-top:3px solid var(--blue)}
+    .nav{position:fixed;top:16px;left:0;right:0;z-index:100;padding:28px 0;background:#FFFFFF;box-shadow:0 1px 0 rgba(0,0,0,.06)}
     .nav .container{max-width:1600px;padding:0 clamp(32px,4vw,72px)}
     .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
     .nav-logo img{height:52px;width:auto;object-fit:contain;display:block}
@@ -91,8 +94,7 @@
     .slide.active{opacity:1;z-index:2;pointer-events:auto}
     .slide-bg{position:absolute;inset:-10%;background-size:cover;background-position:center;will-change:transform}
     .slide-bg--zoomout{inset:0}
-    .slide-shade{position:absolute;inset:0;background:linear-gradient(100deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.22) 100%)}
-    .slide:first-of-type .slide-shade{background:linear-gradient(100deg,rgba(0,0,0,.40) 0%,rgba(0,0,0,.20) 45%,rgba(0,0,0,.04) 100%)}
+    .slide-shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.62) 0%,rgba(0,0,0,.28) 30%,rgba(0,0,0,0) 58%),linear-gradient(105deg,rgba(0,0,0,.42) 0%,rgba(0,0,0,.12) 42%,rgba(0,0,0,0) 68%)}
     .slide-content{position:absolute;bottom:60px;left:0;right:0;z-index:3;padding:0 24px;max-width:1264px;margin:0 auto}
     @keyframes kenBurns{from{transform:scale(1)}to{transform:scale(1.06)}}
     @keyframes slideIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
@@ -214,6 +216,27 @@
     .accred-logos{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:32px}
     .accred-logos img{height:52px;width:auto;object-fit:contain;filter:grayscale(100%);opacity:.6;transition:filter .3s,opacity .3s}
     .accred-logos img:hover{filter:grayscale(0%);opacity:1}
+
+    /* ─── Rolling marquee (clients + accreditations) ──────── */
+    .marquee{overflow:hidden;width:100%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+    .marquee-track{display:flex;align-items:center;width:max-content;animation:marquee 38s linear infinite}
+    .marquee:hover .marquee-track{animation-play-state:paused}
+    @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+    @media(prefers-reduced-motion:reduce){.marquee-track{animation:none;flex-wrap:wrap;justify-content:center}}
+
+    /* ─── Clients band ────────────────────────────────────── */
+    .clients{padding:56px 0;background:var(--white);border-top:1px solid var(--grey-200)}
+    .clients-head{text-align:center;margin-bottom:36px}
+    .clients-head h3{font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--grey-400)}
+    .client-name{font-family:var(--display);font-size:clamp(1.1rem,2vw,1.6rem);font-weight:800;letter-spacing:-.02em;color:var(--grey-400);white-space:nowrap;padding:0 clamp(24px,4vw,52px);opacity:.7;transition:color .25s,opacity .25s}
+    .client-name:hover{color:var(--navy);opacity:1}
+    .client-logo{height:32px;width:auto;max-width:170px;object-fit:contain;margin:0 clamp(26px,4vw,52px);filter:grayscale(100%);opacity:.62;transition:filter .3s,opacity .3s}
+    .client-logo:hover{filter:grayscale(0%);opacity:1}
+    .client-logo--invert{filter:brightness(0);opacity:.5}
+    .client-logo--invert:hover{filter:brightness(0);opacity:.85}
+
+    /* ─── Join the Team — beige contrast band (matches Leck Homes) ─── */
+    .vacancies.vacancies--band{background:#F4EFE7;border-top:1px solid #E8DFD1}
 
     /* ─── Contact ─────────────────────────────────────────── */
     .contact{padding:100px 0;background:var(--grey-50);border-top:1px solid var(--grey-200)}
@@ -408,6 +431,9 @@
 
 <a class="skip-link" href="#main">Skip to main content</a>
 
+<!-- TOP ACCENT BAR (blue, no text) -->
+<div class="topbar" aria-hidden="true"></div>
+
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="container"><div class="nav-inner">
@@ -416,7 +442,7 @@
       <span class="nav-logo-fallback" style="display:none">Leck Construction</span>
     </a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
+      <li><a href="about.html">About</a></li>
       <li class="nav-has-drop">
         <a href="approach.html">Our Approach</a>
         <div class="nav-drop nav-drop--mega">
@@ -465,7 +491,7 @@
           </div>
         </div>
       </li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
       <li><a href="leck-homes.html" class="nav-cta">Leck Homes ↗</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
@@ -475,13 +501,13 @@
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#about" class="mm-link">About</a>
+  <a href="about.html" class="mm-link">About</a>
   <a href="sectors.html" class="mm-link">Sectors</a>
   <a href="projects.html" class="mm-link">Our Work</a>
   <a href="insights.html" class="mm-link">Insights</a>
   <a href="news.html" class="mm-link">News</a>
   <a href="vacancies.html" class="mm-link">Careers</a>
-  <a href="#contact" class="mm-link">Contact</a>
+  <a href="contact.html" class="mm-link">Contact</a>
   <a href="tel:01229820394" class="mm-tel">01229 820394</a>
 </div>
 
@@ -489,87 +515,39 @@
 <div class="hero-wrap" id="main">
 <section class="hero" aria-label="Sector slideshow">
 
-  <!-- Slide 0: Brand intro -->
+  <!-- Slide 1: Emlyn Hughes building (NHS) — main backdrop -->
   <div class="slide active" aria-hidden="false">
-    <div class="slide-bg" style="background-image:url('images/projects/lanthwaite-dusk-02.jpg')"></div>
+    <div class="slide-bg slide-bg--zoomout" style="background-image:url('images/projects/emlyn-hughes-01.jpg')"></div>
     <div class="slide-shade"></div>
     <div class="slide-content container">
-      <div class="slide-eyebrow">South Cumbria's Construction Specialist · Est. 1946</div>
+      <div class="slide-eyebrow">Est. 1946</div>
       <h1 class="slide-title">South Cumbria's<br><em>Construction Specialist.</em></h1>
       <p class="slide-desc">Eight decades of delivering commercial, industrial, housing and heritage projects across Cumbria and the North West — built on quality, safety and trust.</p>
-      <a href="#about" class="slide-cta">Find Out More →</a>
+      <a href="projects.html" class="slide-cta">View Our Work →</a>
     </div>
   </div>
 
-  <!-- Slide 1: Strategic Partnerships -->
+  <!-- Slide 2: Quality homes (zoomed out a smidge) -->
+  <div class="slide" aria-hidden="true">
+    <div class="slide-bg slide-bg--zoomout" style="background-image:url('images/projects/waterside-staveley-03.jpg')"></div>
+    <div class="slide-shade"></div>
+    <div class="slide-content container">
+      <div class="slide-eyebrow">Est. 1946</div>
+      <h2 class="slide-title">South Cumbria's<br><em>Construction Specialist.</em></h2>
+      <p class="slide-desc">Eight decades of delivering commercial, industrial, housing and heritage projects across Cumbria and the North West — built on quality, safety and trust.</p>
+      <a href="projects.html" class="slide-cta">View Our Work →</a>
+    </div>
+  </div>
+
+  <!-- Slide 3: Civils works at BAE -->
   <div class="slide" aria-hidden="true">
     <div class="slide-bg slide-bg--zoomout" style="background-image:url('images/projects/industrial-piling-01.jpg')"></div>
     <div class="slide-shade"></div>
     <div class="slide-content container">
-      <div class="slide-eyebrow">01 · Strategic Partnerships</div>
-      <h2 class="slide-title">Trusted by<br><em>Britain's Biggest Names.</em></h2>
-      <p class="slide-desc">Long-term measured term contracts with GlaxoSmithKline and BAE Systems — maintenance, refurbishment and major capital works on some of the UK's most critical sites.</p>
-      <a href="partnerships.html" class="slide-cta">Explore Sector →</a>
-    </div>
-  </div>
-
-  <!-- Slide 2: Commercial -->
-  <div class="slide" aria-hidden="true">
-    <div class="slide-bg" style="background-image:url('images/projects/emlyn-hughes-02.jpg')"></div>
-    <div class="slide-shade"></div>
-    <div class="slide-content container">
-      <div class="slide-eyebrow">02 · Commercial, Education &amp; Health</div>
-      <h2 class="slide-title">Public Sector<br><em>Builds, Delivered.</em></h2>
-      <p class="slide-desc">Schools, NHS healthcare facilities, sports halls, civic buildings and hospitality projects — complex public-sector builds delivered on programme and within budget.</p>
-      <a href="commercial-education-health.html" class="slide-cta">Explore Sector →</a>
-    </div>
-  </div>
-
-  <!-- Slide 3: Industrial -->
-  <div class="slide" aria-hidden="true">
-    <div class="slide-bg" style="background-image:url('images/projects/portal-frame-build.jpg')"></div>
-    <div class="slide-shade"></div>
-    <div class="slide-content container">
-      <div class="slide-eyebrow">03 · Industrial &amp; Civil Engineering</div>
-      <h2 class="slide-title">Heavy Civil<br><em>Expertise.</em></h2>
-      <p class="slide-desc">Portal frame buildings, reinforced concrete, water treatment, bunding, piling and road contracts — deployed across Cumbria and the wider North West.</p>
-      <a href="industrial-civil-engineering.html" class="slide-cta">Explore Sector →</a>
-    </div>
-  </div>
-
-  <!-- Slide 4: Leck Homes -->
-  <div class="slide" aria-hidden="true">
-    <div class="slide-bg" style="background-image:url('images/projects/leck-homes-development.jpg')"></div>
-    <div class="slide-shade"></div>
-    <div class="slide-content container">
-      <div class="slide-eyebrow">04 · Leck Homes</div>
-      <h2 class="slide-title">New Homes<br><em>Under Our Name.</em></h2>
-      <p class="slide-desc">Our own residential development arm — quality new homes built across South Cumbria, from Barrow and Walney Island to Ulverston and the Furness Peninsula.</p>
-      <a href="leck-homes.html" class="slide-cta">Explore Sector →</a>
-    </div>
-  </div>
-
-  <!-- Slide 5: Housing -->
-  <div class="slide" aria-hidden="true">
-    <div class="slide-bg" style="background-image:url('images/projects/waterside-staveley-03.jpg')"></div>
-    <div class="slide-shade"></div>
-    <div class="slide-content container">
-      <div class="slide-eyebrow">05 · Private &amp; Social Housing</div>
-      <h2 class="slide-title">Quality Homes,<br><em>Built to Last.</em></h2>
-      <p class="slide-desc">NHBC Grade A-rated residential builds — from bespoke Lake District homes to affordable housing partnerships with local authorities across Cumbria.</p>
-      <a href="private-social-housing.html" class="slide-cta">Explore Sector →</a>
-    </div>
-  </div>
-
-  <!-- Slide 6: Heritage -->
-  <div class="slide" aria-hidden="true">
-    <div class="slide-bg" style="background-image:url('images/projects/st-james-church-01.jpg')"></div>
-    <div class="slide-shade"></div>
-    <div class="slide-content container">
-      <div class="slide-eyebrow">06 · Heritage &amp; Conservation</div>
-      <h2 class="slide-title">Restoring the Past<br><em>with Precision.</em></h2>
-      <p class="slide-desc">English Heritage-trusted restoration and conservation of listed buildings and historic structures — including the Grade II listed Ship Inn on Piel Island.</p>
-      <a href="heritage-conservation.html" class="slide-cta">Explore Sector →</a>
+      <div class="slide-eyebrow">Est. 1946</div>
+      <h2 class="slide-title">South Cumbria's<br><em>Construction Specialist.</em></h2>
+      <p class="slide-desc">Eight decades of delivering commercial, industrial, housing and heritage projects across Cumbria and the North West — built on quality, safety and trust.</p>
+      <a href="projects.html" class="slide-cta">View Our Work →</a>
     </div>
   </div>
 
@@ -581,13 +559,9 @@
 
   <!-- Dots -->
   <div class="slide-dots" role="tablist" aria-label="Slides">
-    <button class="slide-dot active" role="tab" aria-selected="true" aria-label="Slide 1: About Leck"></button>
-    <button class="slide-dot" role="tab" aria-selected="false" aria-label="Slide 2: Strategic Partnerships"></button>
-    <button class="slide-dot" role="tab" aria-selected="false" aria-label="Slide 3: Commercial"></button>
-    <button class="slide-dot" role="tab" aria-selected="false" aria-label="Slide 4: Industrial"></button>
-    <button class="slide-dot" role="tab" aria-selected="false" aria-label="Slide 5: Leck Homes"></button>
-    <button class="slide-dot" role="tab" aria-selected="false" aria-label="Slide 6: Private & Social Housing"></button>
-    <button class="slide-dot" role="tab" aria-selected="false" aria-label="Slide 7: Heritage"></button>
+    <button class="slide-dot active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+    <button class="slide-dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+    <button class="slide-dot" role="tab" aria-selected="false" aria-label="Slide 3"></button>
     <button class="slide-pause" id="slidePause" type="button" aria-label="Pause slideshow" aria-pressed="false">&#10074;&#10074;</button>
   </div>
 
@@ -609,84 +583,6 @@
     <div class="cred reveal d4"><span class="cred-val">NFB</span><span class="cred-lbl">Member</span></div>
   </div>
 </div>
-
-<!-- ABOUT -->
-<section class="about" id="about">
-  <div class="container">
-    <div class="about-grid">
-
-      <div class="about-copy reveal">
-        <div class="eyebrow">About Leck Construction</div>
-        <h2>Excellence in Construction Across South Cumbria</h2>
-        <p>Family-owned and operated from Barrow-in-Furness since 1946, Leck Construction is one of South Cumbria's most established contractors. Our client list includes <strong>GlaxoSmithKline</strong>, <strong>BAE Systems</strong>, the NHS and Cumbria County Council — from single bespoke homes to multi-million pound commercial and industrial contracts.</p>
-
-        <div class="accord-list">
-
-          <div class="accord-item open">
-            <button class="accord-btn" aria-expanded="true">
-              <span class="accord-label">Our Vision &amp; Values</span>
-              <svg class="accord-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            </button>
-            <div class="accord-body">
-              <div class="accord-inner">
-                <p>To be the most trusted commercial contractor in South Cumbria — delivering quality buildings on programme, within budget and to the highest standards of safety and sustainability. We are committed to investing in our people, our communities and our environment.</p>
-                <ul>
-                  <li>Quality and craftsmanship in everything we build</li>
-                  <li>Long-term relationships with clients and supply chain</li>
-                  <li>Safe sites, every day, on every project</li>
-                  <li>Reinvesting in Cumbrian communities</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="accord-item">
-            <button class="accord-btn" aria-expanded="false">
-              <span class="accord-label">Accreditations &amp; Memberships</span>
-              <svg class="accord-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            </button>
-            <div class="accord-body">
-              <div class="accord-inner">
-                <p>Our standards are independently verified at a national level across quality, safety and environmental management.</p>
-                <ul>
-                  <li>NHBC — Grade A Rated Housebuilder</li>
-                  <li>ISO 9001:2015 — Quality Management</li>
-                  <li>ISO 14001:2015 — Environmental Management</li>
-                  <li>CHAS — Accredited Contractor</li>
-                  <li>NFB — National Federation of Builders</li>
-                  <li>Constructionline — Gold Member</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="accord-item">
-            <button class="accord-btn" aria-expanded="false">
-              <span class="accord-label">Environment &amp; Sustainability</span>
-              <svg class="accord-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-            </button>
-            <div class="accord-body">
-              <div class="accord-inner">
-                <p>As holders of ISO 14001:2015, environmental responsibility is embedded across every project we deliver. From waste reduction on site to responsible sourcing of materials, we work to minimise our impact on the Lake District and Cumbrian landscapes we operate within.</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="about-actions">
-          <a href="#contact" class="btn-primary">Talk to Us About Your Project</a>
-          <a href="projects.html" class="btn-text">View Projects →</a>
-        </div>
-      </div>
-
-      <div class="about-photo reveal d2">
-        <img src="images/projects/kimberly-clark-02.jpg" alt="Leck Construction team on the Kimberly-Clark foundation works — heavy civil engineering in South Cumbria" loading="lazy">
-      </div>
-
-    </div>
-  </div>
-</section>
 
 <!-- SECTORS -->
 <section class="sectors" id="services">
@@ -803,7 +699,7 @@
 
       <article class="news-card reveal d1">
         <div class="news-img">
-          <img src="images/projects/emlyn-hughes-01.jpg" alt="NHS healthcare facility, Ulverston" loading="lazy">
+          <img src="images/projects/commercial-modern-01.jpg" alt="NHS healthcare facility, Ulverston" loading="lazy">
         </div>
         <div class="news-date">March 2026</div>
         <h3 class="news-title">New NHS Healthcare Contract Awarded in Ulverston</h3>
@@ -818,20 +714,29 @@
         <div class="news-date">February 2026</div>
         <h3 class="news-title">ISO 14001:2015 Environmental Certification Successfully Renewed</h3>
         <p class="news-excerpt">Following an independent audit by NQA, Leck Construction has renewed its ISO 14001:2015 Environmental Management certification — reinforcing our commitment to reducing our environmental impact.</p>
-        <a href="news.html" class="news-link">Read More →</a>
+        <a href="iso-14001-in-construction.html" class="news-link">Read More →</a>
       </article>
 
     </div>
   </div>
 </section>
 
-<!-- PHOTO STRIP 1 -->
-<div class="photo-strip">
-  <img src="images/projects/bespoke-home-02.jpg" alt="Bespoke residential construction by Leck" loading="lazy">
-</div>
+<!-- ACCREDITATIONS (static) -->
+<section class="accreditations">
+  <div class="container">
+    <div class="accred-head reveal"><h3>Accreditations &amp; Memberships</h3></div>
+    <div class="accred-logos reveal d1">
+      <img src="images/accreditations/nfb.png" alt="NFB — National Federation of Builders" loading="lazy">
+      <img src="images/accreditations/iso-9001.png" alt="ISO 9001 Registered" loading="lazy">
+      <img src="images/accreditations/iso-14001.png" alt="ISO 14001 Registered" loading="lazy">
+      <img src="images/accreditations/nhbc.png" alt="NHBC Registered Builder" loading="lazy">
+      <img src="images/accreditations/chas.png" alt="CHAS Accredited Contractor" loading="lazy">
+    </div>
+  </div>
+</section>
 
-<!-- CAREERS TEASER -->
-<section class="vacancies" id="careers">
+<!-- CAREERS TEASER (Join the Team — contrast band) -->
+<section class="vacancies vacancies--band" id="careers">
   <div class="container">
     <div class="careers-teaser reveal">
       <div class="careers-teaser-copy">
@@ -851,78 +756,38 @@
   </div>
 </section>
 
-<!-- PHOTO TRIO -->
-<div class="photo-trio">
-  <img src="images/projects/industrial-fitout.jpg" alt="Industrial fit-out — Leck Construction" loading="lazy">
-  <img src="images/projects/bespoke-interior-01.jpg" alt="Bespoke residential interior — Leck Construction" loading="lazy">
-  <img src="images/projects/st-james-church-02.jpg" alt="Heritage restoration — Leck Construction" loading="lazy">
-</div>
-
-<!-- ACCREDITATIONS -->
-<section class="accreditations">
-  <div class="container">
-    <div class="accred-head reveal"><h3>Accreditations &amp; Memberships</h3></div>
-    <div class="accred-logos reveal d1">
-      <img src="images/accreditations/nfb.png" alt="NFB — National Federation of Builders" loading="lazy">
-      <img src="images/accreditations/iso-9001.png" alt="ISO 9001 Registered" loading="lazy">
-      <img src="images/accreditations/iso-14001.png" alt="ISO 14001 Registered" loading="lazy">
-      <img src="images/accreditations/nhbc.png" alt="NHBC Registered Builder" loading="lazy">
-      <img src="images/accreditations/chas.png" alt="CHAS Accredited Contractor" loading="lazy">
+<!-- CLIENTS & PARTNERS (rolling) -->
+<!-- Real client list (provided by Matthew, June 2026). Logos being harvested into images/clients/ —
+     swap each <span class="client-name"> for an <img> once the logo files land. -->
+<section class="clients">
+  <div class="container clients-head reveal"><h3>Trusted by Clients &amp; Partners Across the North West</h3></div>
+  <div class="marquee" aria-label="Clients and partners">
+    <div class="marquee-track">
+      <img class="client-logo" src="images/clients/bae-systems.svg" alt="BAE Systems" loading="lazy">
+      <img class="client-logo" src="images/clients/kimberly-clark.svg" alt="Kimberly-Clark" loading="lazy">
+      <img class="client-logo" src="images/clients/gsk.png" alt="GSK" loading="lazy">
+      <img class="client-logo" src="images/clients/orsted.svg" alt="Ørsted" loading="lazy">
+      <img class="client-logo" src="images/clients/westmorland-furness-council.svg" alt="Westmorland &amp; Furness Council" loading="lazy">
+      <img class="client-logo" src="images/clients/morecambe-bay-nhs.png" alt="Morecambe Bay NHS Trust" loading="lazy">
+      <img class="client-logo" src="images/clients/spar.svg" alt="SPAR" loading="lazy">
+      <img class="client-logo client-logo--invert" src="images/clients/south-lakes-housing.svg" alt="South Lakes Housing" loading="lazy">
+      <img class="client-logo" src="images/clients/jf-hunt.png" alt="John F Hunt" loading="lazy">
+      <img class="client-logo" src="images/clients/ng-bailey.svg" alt="NG Bailey" loading="lazy">
+      <img class="client-logo" src="images/clients/newriver.svg" alt="NewRiver" loading="lazy">
+      <img class="client-logo" src="images/clients/bae-systems.svg" alt="" aria-hidden="true" loading="lazy">
+      <img class="client-logo" src="images/clients/kimberly-clark.svg" alt="" aria-hidden="true" loading="lazy">
+      <img class="client-logo" src="images/clients/gsk.png" alt="" aria-hidden="true" loading="lazy">
+      <img class="client-logo" src="images/clients/orsted.svg" alt="" aria-hidden="true" loading="lazy">
+      <img class="client-logo" src="images/clients/westmorland-furness-council.svg" alt="" aria-hidden="true" loading="lazy">
+      <img class="client-logo" src="images/clients/morecambe-bay-nhs.png" alt="" aria-hidden="true" loading="lazy">
+      <img class="client-logo" src="images/clients/spar.svg" alt="" aria-hidden="true" loading="lazy">
+      <img class="client-logo client-logo--invert" src="images/clients/south-lakes-housing.svg" alt="" aria-hidden="true" loading="lazy">
+      <img class="client-logo" src="images/clients/jf-hunt.png" alt="" aria-hidden="true" loading="lazy">
+      <img class="client-logo" src="images/clients/ng-bailey.svg" alt="" aria-hidden="true" loading="lazy">
+      <img class="client-logo" src="images/clients/newriver.svg" alt="" aria-hidden="true" loading="lazy">
     </div>
   </div>
 </section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="contact-copy">
-        <div class="eyebrow reveal">Get In Touch</div>
-        <h2 class="reveal d1">Let's Talk About Your Project</h2>
-        <div class="contact-row reveal d2">
-          <div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14v2.92z"/></svg></div>
-          <div><div class="contact-detail-lbl">Telephone</div><div class="contact-detail-val"><a href="tel:01229820394">01229 820394</a></div></div>
-        </div>
-        <div class="contact-row reveal d3">
-          <div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div><div class="contact-detail-lbl">Email</div><div class="contact-detail-val"><a href="mailto:admin@leck.co">admin@leck.co</a></div></div>
-        </div>
-        <div class="contact-row reveal d4">
-          <div class="contact-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><div class="contact-detail-lbl">Head Office</div><div class="contact-detail-val">Leck House, Ironworks Road<br>Barrow-in-Furness, LA14 2PQ</div></div>
-        </div>
-        <table class="hours reveal d4"><tbody>
-          <tr><td>Monday – Thursday</td><td>8:00 am – 5:00 pm</td></tr>
-          <tr><td>Friday</td><td>8:00 am – 1:00 pm</td></tr>
-          <tr><td>Saturday – Sunday</td><td class="closed">Closed</td></tr>
-        </tbody></table>
-      </div>
-      <div class="reveal d2">
-        <form id="contactForm" novalidate>
-          <input type="hidden" name="access_key" value="5aed2b7f-91de-4a92-b5cb-9a97ec67f070">
-          <input type="hidden" name="subject" value="New Enquiry — Leck Construction Website">
-          <input type="hidden" name="from_name" value="Leck Construction Website">
-          <input type="checkbox" name="botcheck" style="display:none">
-          <div class="cf-row-2">
-            <div class="cf-field"><label class="cf-label" for="cf-name">Full Name <span>*</span></label><input class="cf-input" type="text" id="cf-name" name="name" required autocomplete="name" placeholder="John Smith"></div>
-            <div class="cf-field"><label class="cf-label" for="cf-phone">Phone Number</label><input class="cf-input" type="tel" id="cf-phone" name="phone" autocomplete="tel" placeholder="01229 820394"></div>
-          </div>
-          <div class="cf-field"><label class="cf-label" for="cf-email">Email Address <span>*</span></label><input class="cf-input" type="email" id="cf-email" name="email" required autocomplete="email" placeholder="you@example.com"></div>
-          <div class="cf-field"><label class="cf-label" for="cf-message">Tell Us About Your Project <span>*</span></label><textarea class="cf-input cf-textarea" id="cf-message" name="message" required rows="5" placeholder="Briefly describe your project, location and timescale…"></textarea></div>
-          <button type="submit" class="cf-submit">Send Enquiry <span class="cf-arrow">→</span></button>
-        </form>
-        <div class="cf-success" id="cfSuccess" hidden>
-          <div class="cf-success-inner"><div class="cf-tick">✓</div><h3>Message Sent</h3><p>Thank you — we'll be in touch shortly.</p></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MAP -->
-<div class="map-strip">
-  <iframe src="https://maps.google.com/maps?q=54.1140133,-3.2398485&z=16&output=embed" title="Leck Construction Ltd, Ironworks Road, Barrow-in-Furness, LA14 2PQ" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
-</div>
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -959,11 +824,11 @@
         </div>
         <div class="footer-col">
           <div class="footer-col-title">Company</div>
-          <a href="index.html#about">About Us</a>
+          <a href="about.html">About Us</a>
           <a href="projects.html">Our Work</a>
           <a href="news.html">News &amp; Updates</a>
           <a href="vacancies.html">Careers</a>
-          <a href="index.html#contact">Contact Us</a>
+          <a href="contact.html">Contact Us</a>
         </div>
       </div>
     </div>

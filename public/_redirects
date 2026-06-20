@@ -1,6 +1,8 @@
 # Canonicalise .html URLs to clean URLs (matches sitemap + canonical tags)
+/about.html                             /about                              301
 /approach.html                          /approach                           301
 /avon-wood.html                         /avon-wood                          301
+/contact.html                           /contact                            301
 /commercial-education-health.html       /commercial-education-health        301
 /eight-decades-building-south-cumbria.html  /eight-decades-building-south-cumbria  301
 /heritage-conservation.html             /heritage-conservation              301
